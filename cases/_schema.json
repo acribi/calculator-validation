@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/acribi/calculator-validation/cases/_schema.json",
+  "title": "Acribi calculator validation case file",
+  "type": "object",
+  "required": ["calculator", "acribi_page", "license", "cases"],
+  "properties": {
+    "calculator": { "type": "string", "description": "Human-readable name of the calculation." },
+    "acribi_page": { "type": "string", "format": "uri", "description": "Page on acribi.com where the calculation is used." },
+    "reference_implementation": { "type": "array", "items": { "type": "string" } },
+    "license": { "const": "CC-BY-4.0" },
+    "cases": { "type": "array", "items": { "$ref": "#/$defs/case" } }
+  },
+  "$defs": {
+    "quantity": {
+      "type": "object",
+      "required": ["value", "unit"],
+      "properties": {
+        "value": { "description": "Number, array, object, string or boolean. null stands for an absent limit or an infinite number of degrees of freedom." },
+        "unit": { "type": "string", "description": "\"1\" for dimensionless quantities; \"text\" or \"boolean\" for non-numeric options." }
+      }
+    },
+    "expected": {
+      "type": "object",
+      "required": ["unit"],
+      "description": "At least one of value (with tolerance), atMost or equals.",
+      "properties": {
+        "value": { "type": "number", "description": "Value as published by the source." },
+        "tolerance": { "type": "number", "minimum": 0, "description": "Absolute tolerance, in the same unit as value." },
+        "atMost": { "type": "number", "description": "Upper bound, when the source states a bound rather than a value." },
+        "equals": { "description": "Exact expected value (integers, booleans)." },
+        "unit": { "type": "string" },
+        "published": { "type": "string", "description": "The value as printed in the source." },
+        "recomputed": {
+          "type": "object",
+          "required": ["value", "tolerance"],
+          "description": "Higher-precision value recomputed by Acribi from the published inputs. Not a published value.",
+          "properties": { "value": { "type": "number" }, "tolerance": { "type": "number", "minimum": 0 } }
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["document", "publisher", "edition", "location", "kind"],
+      "properties": {
+        "document": { "type": "string" },
+        "publisher": { "type": "string" },
+        "edition": { "type": "string" },
+        "location": { "type": "string", "description": "Section, example, table or page in the source." },
+        "url": { "type": "string", "format": "uri" },
+        "kind": { "enum": ["official", "secondary"], "description": "official: standards body, metrology institute, accreditation body or government agency. secondary: journal, conference paper, manufacturer or software vendor." },
+        "note": { "type": "string" }
+      }
+    },
+    "case": {
+      "type": "object",
+      "required": ["id", "calculator", "operation", "title", "inputs", "expected", "source"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z-]+/[A-Za-z0-9._-]+$" },
+        "calculator": { "type": "string" },
+        "operation": { "type": "string", "description": "Name of the operation in runner/operations.mjs." },
+        "title": { "type": "string" },
+        "inputs": { "type": "object", "additionalProperties": { "$ref": "#/$defs/quantity" } },
+        "expected": { "type": "object", "additionalProperties": { "$ref": "#/$defs/expected" } },
+        "source": { "$ref": "#/$defs/source" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

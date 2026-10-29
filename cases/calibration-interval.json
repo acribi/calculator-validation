@@ -1,0 +1,68 @@
+{
+  "$schema": "./_schema.json",
+  "calculator": "Calibration interval reliability model",
+  "acribi_page": "https://acribi.com/learn/calibration-program/calibration-intervals/",
+  "reference_implementation": [
+    "reference/reliability.ts"
+  ],
+  "license": "CC-BY-4.0",
+  "cases": [
+    {
+      "id": "calibration-interval/nasa3-9.4-gamma",
+      "calculator": "calibration-interval",
+      "operation": "gamma-reliability",
+      "title": "Gamma reliability model: reliability and uncertainty growth at half the interval",
+      "inputs": {
+        "bop_reliability": {
+          "value": 0.98,
+          "unit": "1"
+        },
+        "eop_reliability": {
+          "value": 0.9,
+          "unit": "1"
+        },
+        "interval": {
+          "value": 1,
+          "unit": "year"
+        },
+        "time": {
+          "value": 0.5,
+          "unit": "year"
+        },
+        "initial_standard_uncertainty": {
+          "value": 1.5,
+          "unit": "µV"
+        }
+      },
+      "expected": {
+        "rate": {
+          "value": 1.62,
+          "unit": "1/year",
+          "tolerance": 0.005,
+          "published": "1.62 per year"
+        },
+        "reliability_at_time": {
+          "value": 0.9707,
+          "unit": "1",
+          "tolerance": 0.00005,
+          "published": "0.9707"
+        },
+        "standard_uncertainty_at_time": {
+          "value": 1.6,
+          "unit": "µV",
+          "tolerance": 0.005,
+          "published": "1.60 µV"
+        }
+      },
+      "source": {
+        "document": "NASA-HDBK-8739.19-3 Measurement Uncertainty Analysis Principles and Methods (Measurement Quality Assurance Handbook, Annex 3)",
+        "publisher": "NASA",
+        "edition": "Baseline, 2010-07-13",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/nasa-hdbk-873919-3.pdf",
+        "kind": "official",
+        "location": "§9.4 Analysis Example, eqs. (9-30) and (9-15), pp. 134–135"
+      },
+      "notes": "A 10 V parameter with tolerance ±5 µV calibrated annually; BOP reliability 0.98, EOP reliability 0.90."
+    }
+  ]
+}

@@ -1,0 +1,447 @@
+{
+  "$schema": "./_schema.json",
+  "calculator": "Gravimetric pipette calibration (water density, Z factor, volume)",
+  "acribi_page": "https://acribi.com/instruments/pipette/calibration-procedure/",
+  "reference_implementation": [
+    "reference/pipette.ts"
+  ],
+  "license": "CC-BY-4.0",
+  "cases": [
+    {
+      "id": "pipette-gravimetric/nist-glp10-air-free-10C",
+      "calculator": "pipette-gravimetric",
+      "operation": "water-density",
+      "title": "Air-free water density at 10 °C (Tanaka)",
+      "inputs": {
+        "water_temperature": {
+          "value": 10,
+          "unit": "°C"
+        },
+        "air_saturated": {
+          "value": false,
+          "unit": "boolean"
+        }
+      },
+      "expected": {
+        "water_density": {
+          "value": 0.9997027,
+          "unit": "g/cm³",
+          "tolerance": 6e-9,
+          "published": "0.99970270"
+        }
+      },
+      "source": {
+        "document": "NIST IR 7383-2019 Selected Procedures for Volumetric Calibrations, GLP 10",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2019",
+        "url": "https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.7383-2019.pdf",
+        "kind": "official",
+        "location": "GLP 10, Table 2"
+      }
+    },
+    {
+      "id": "pipette-gravimetric/nist-glp10-air-saturated-10C",
+      "calculator": "pipette-gravimetric",
+      "operation": "water-density",
+      "title": "Air-saturated water density at 10 °C (Tanaka)",
+      "inputs": {
+        "water_temperature": {
+          "value": 10,
+          "unit": "°C"
+        },
+        "air_saturated": {
+          "value": true,
+          "unit": "boolean"
+        }
+      },
+      "expected": {
+        "water_density": {
+          "value": 0.99969915,
+          "unit": "g/cm³",
+          "tolerance": 1e-8,
+          "published": "0.99969915"
+        }
+      },
+      "source": {
+        "document": "NIST IR 7383-2019 Selected Procedures for Volumetric Calibrations, GLP 10",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2019",
+        "url": "https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.7383-2019.pdf",
+        "kind": "official",
+        "location": "GLP 10, Table 2"
+      },
+      "notes": "The source adds the rounded air-free density and the air correction, so the last digit can differ by 1."
+    },
+    {
+      "id": "pipette-gravimetric/nist-glp10-air-free-15C",
+      "calculator": "pipette-gravimetric",
+      "operation": "water-density",
+      "title": "Air-free water density at 15 °C (Tanaka)",
+      "inputs": {
+        "water_temperature": {
+          "value": 15,
+          "unit": "°C"
+        },
+        "air_saturated": {
+          "value": false,
+          "unit": "boolean"
+        }
+      },
+      "expected": {
+        "water_density": {
+          "value": 0.99910257,
+          "unit": "g/cm³",
+          "tolerance": 6e-9,
+          "published": "0.99910257"
+        }
+      },
+      "source": {
+        "document": "NIST IR 7383-2019 Selected Procedures for Volumetric Calibrations, GLP 10",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2019",
+        "url": "https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.7383-2019.pdf",
+        "kind": "official",
+        "location": "GLP 10, Table 2"
+      }
+    },
+    {
+      "id": "pipette-gravimetric/nist-glp10-air-saturated-15C",
+      "calculator": "pipette-gravimetric",
+      "operation": "water-density",
+      "title": "Air-saturated water density at 15 °C (Tanaka)",
+      "inputs": {
+        "water_temperature": {
+          "value": 15,
+          "unit": "°C"
+        },
+        "air_saturated": {
+          "value": true,
+          "unit": "boolean"
+        }
+      },
+      "expected": {
+        "water_density": {
+          "value": 0.99909955,
+          "unit": "g/cm³",
+          "tolerance": 1e-8,
+          "published": "0.99909955"
+        }
+      },
+      "source": {
+        "document": "NIST IR 7383-2019 Selected Procedures for Volumetric Calibrations, GLP 10",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2019",
+        "url": "https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.7383-2019.pdf",
+        "kind": "official",
+        "location": "GLP 10, Table 2"
+      },
+      "notes": "The source adds the rounded air-free density and the air correction, so the last digit can differ by 1."
+    },
+    {
+      "id": "pipette-gravimetric/nist-glp10-air-free-20C",
+      "calculator": "pipette-gravimetric",
+      "operation": "water-density",
+      "title": "Air-free water density at 20 °C (Tanaka)",
+      "inputs": {
+        "water_temperature": {
+          "value": 20,
+          "unit": "°C"
+        },
+        "air_saturated": {
+          "value": false,
+          "unit": "boolean"
+        }
+      },
+      "expected": {
+        "water_density": {
+          "value": 0.99820675,
+          "unit": "g/cm³",
+          "tolerance": 6e-9,
+          "published": "0.99820675"
+        }
+      },
+      "source": {
+        "document": "NIST IR 7383-2019 Selected Procedures for Volumetric Calibrations, GLP 10",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2019",
+        "url": "https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.7383-2019.pdf",
+        "kind": "official",
+        "location": "GLP 10, Table 2"
+      }
+    },
+    {
+      "id": "pipette-gravimetric/nist-glp10-air-saturated-20C",
+      "calculator": "pipette-gravimetric",
+      "operation": "water-density",
+      "title": "Air-saturated water density at 20 °C (Tanaka)",
+      "inputs": {
+        "water_temperature": {
+          "value": 20,
+          "unit": "°C"
+        },
+        "air_saturated": {
+          "value": true,
+          "unit": "boolean"
+        }
+      },
+      "expected": {
+        "water_density": {
+          "value": 0.99820426,
+          "unit": "g/cm³",
+          "tolerance": 1e-8,
+          "published": "0.99820426"
+        }
+      },
+      "source": {
+        "document": "NIST IR 7383-2019 Selected Procedures for Volumetric Calibrations, GLP 10",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2019",
+        "url": "https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.7383-2019.pdf",
+        "kind": "official",
+        "location": "GLP 10, Table 2"
+      },
+      "notes": "The source adds the rounded air-free density and the air correction, so the last digit can differ by 1."
+    },
+    {
+      "id": "pipette-gravimetric/nist-glp10-air-free-25C",
+      "calculator": "pipette-gravimetric",
+      "operation": "water-density",
+      "title": "Air-free water density at 25 °C (Tanaka)",
+      "inputs": {
+        "water_temperature": {
+          "value": 25,
+          "unit": "°C"
+        },
+        "air_saturated": {
+          "value": false,
+          "unit": "boolean"
+        }
+      },
+      "expected": {
+        "water_density": {
+          "value": 0.99704702,
+          "unit": "g/cm³",
+          "tolerance": 6e-9,
+          "published": "0.99704702"
+        }
+      },
+      "source": {
+        "document": "NIST IR 7383-2019 Selected Procedures for Volumetric Calibrations, GLP 10",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2019",
+        "url": "https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.7383-2019.pdf",
+        "kind": "official",
+        "location": "GLP 10, Table 2"
+      }
+    },
+    {
+      "id": "pipette-gravimetric/nist-glp10-air-saturated-25C",
+      "calculator": "pipette-gravimetric",
+      "operation": "water-density",
+      "title": "Air-saturated water density at 25 °C (Tanaka)",
+      "inputs": {
+        "water_temperature": {
+          "value": 25,
+          "unit": "°C"
+        },
+        "air_saturated": {
+          "value": true,
+          "unit": "boolean"
+        }
+      },
+      "expected": {
+        "water_density": {
+          "value": 0.99704506,
+          "unit": "g/cm³",
+          "tolerance": 1e-8,
+          "published": "0.99704506"
+        }
+      },
+      "source": {
+        "document": "NIST IR 7383-2019 Selected Procedures for Volumetric Calibrations, GLP 10",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2019",
+        "url": "https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.7383-2019.pdf",
+        "kind": "official",
+        "location": "GLP 10, Table 2"
+      },
+      "notes": "The source adds the rounded air-free density and the air correction, so the last digit can differ by 1."
+    },
+    {
+      "id": "pipette-gravimetric/eppendorf-sop-z-20C",
+      "calculator": "pipette-gravimetric",
+      "operation": "z-factor",
+      "title": "Z correction factor at 20 °C and 1013 hPa",
+      "inputs": {
+        "water_temperature": {
+          "value": 20,
+          "unit": "°C"
+        },
+        "air_temperature": {
+          "value": null,
+          "unit": "°C"
+        },
+        "pressure": {
+          "value": 1013,
+          "unit": "hPa"
+        },
+        "relative_humidity": {
+          "value": 50,
+          "unit": "%"
+        }
+      },
+      "expected": {
+        "z_factor": {
+          "value": 1.0029,
+          "unit": "µL/mg",
+          "tolerance": 0.00005,
+          "published": "1.0029"
+        }
+      },
+      "source": {
+        "document": "Eppendorf, Standard Operating Procedure for manual dispensing systems",
+        "publisher": "Eppendorf",
+        "edition": "2019 (German version)",
+        "url": "https://www.eppendorf.com/media/MAIN/03-Service-Support/Pipette-Service/Eppendorf_Liquid-Handling_SOP_Pipettes_Standard-operating-procedure-manual-dispensing-systems.pdf",
+        "kind": "secondary",
+        "note": "Manufacturer document.",
+        "location": "§8.2, table of Z factors"
+      },
+      "notes": "Air temperature taken equal to the water temperature. The source does not state the humidity; 50 % is assumed. The reference implementation reproduces at least 98 % of the 217 table cells exactly after rounding to 4 decimals, all within 0.00006."
+    },
+    {
+      "id": "pipette-gravimetric/eppendorf-sop-z-21.5C",
+      "calculator": "pipette-gravimetric",
+      "operation": "z-factor",
+      "title": "Z correction factor at 21.5 °C and 1013 hPa",
+      "inputs": {
+        "water_temperature": {
+          "value": 21.5,
+          "unit": "°C"
+        },
+        "air_temperature": {
+          "value": null,
+          "unit": "°C"
+        },
+        "pressure": {
+          "value": 1013,
+          "unit": "hPa"
+        },
+        "relative_humidity": {
+          "value": 50,
+          "unit": "%"
+        }
+      },
+      "expected": {
+        "z_factor": {
+          "value": 1.0032,
+          "unit": "µL/mg",
+          "tolerance": 0.00005,
+          "published": "1.0032"
+        }
+      },
+      "source": {
+        "document": "Eppendorf, Standard Operating Procedure for manual dispensing systems",
+        "publisher": "Eppendorf",
+        "edition": "2019 (German version)",
+        "url": "https://www.eppendorf.com/media/MAIN/03-Service-Support/Pipette-Service/Eppendorf_Liquid-Handling_SOP_Pipettes_Standard-operating-procedure-manual-dispensing-systems.pdf",
+        "kind": "secondary",
+        "note": "Manufacturer document.",
+        "location": "§8.2, table of Z factors"
+      },
+      "notes": "Air temperature taken equal to the water temperature. The source does not state the humidity; 50 % is assumed. The reference implementation reproduces at least 98 % of the 217 table cells exactly after rounding to 4 decimals, all within 0.00006."
+    },
+    {
+      "id": "pipette-gravimetric/eppendorf-sop-z-25C",
+      "calculator": "pipette-gravimetric",
+      "operation": "z-factor",
+      "title": "Z correction factor at 25 °C and 1013 hPa",
+      "inputs": {
+        "water_temperature": {
+          "value": 25,
+          "unit": "°C"
+        },
+        "air_temperature": {
+          "value": null,
+          "unit": "°C"
+        },
+        "pressure": {
+          "value": 1013,
+          "unit": "hPa"
+        },
+        "relative_humidity": {
+          "value": 50,
+          "unit": "%"
+        }
+      },
+      "expected": {
+        "z_factor": {
+          "value": 1.004,
+          "unit": "µL/mg",
+          "tolerance": 0.00005,
+          "published": "1.0040"
+        }
+      },
+      "source": {
+        "document": "Eppendorf, Standard Operating Procedure for manual dispensing systems",
+        "publisher": "Eppendorf",
+        "edition": "2019 (German version)",
+        "url": "https://www.eppendorf.com/media/MAIN/03-Service-Support/Pipette-Service/Eppendorf_Liquid-Handling_SOP_Pipettes_Standard-operating-procedure-manual-dispensing-systems.pdf",
+        "kind": "secondary",
+        "note": "Manufacturer document.",
+        "location": "§8.2, table of Z factors"
+      },
+      "notes": "Air temperature taken equal to the water temperature. The source does not state the humidity; 50 % is assumed. The reference implementation reproduces at least 98 % of the 217 table cells exactly after rounding to 4 decimals, all within 0.00006."
+    },
+    {
+      "id": "pipette-gravimetric/integra-100uL",
+      "calculator": "pipette-gravimetric",
+      "operation": "pipette-series",
+      "title": "100 µL pipette: mean volume and systematic error from five weighings",
+      "inputs": {
+        "nominal_volume": {
+          "value": 100,
+          "unit": "µL"
+        },
+        "masses": {
+          "value": [
+            100.08,
+            100.1,
+            100.11,
+            100.22,
+            100.15
+          ],
+          "unit": "mg"
+        },
+        "z_factor": {
+          "value": 1.0032,
+          "unit": "µL/mg"
+        }
+      },
+      "expected": {
+        "mean_volume": {
+          "value": 100.45,
+          "unit": "µL",
+          "tolerance": 0.005,
+          "published": "100.45 µL"
+        },
+        "systematic_error_pct": {
+          "value": 0.45,
+          "unit": "%",
+          "tolerance": 0.005,
+          "published": "0.45 %"
+        }
+      },
+      "source": {
+        "document": "INTEGRA Biosciences, Calibration check – How to calculate the accuracy and precision of a pipette",
+        "publisher": "INTEGRA Biosciences",
+        "edition": "web page, consulted 2026-10-16",
+        "url": "https://www.integra-biosciences.com/united-states/en/calibration-check-how-calculate-accuracy-and-precision-pipette",
+        "kind": "secondary",
+        "note": "Manufacturer web page.",
+        "location": "worked example"
+      },
+      "notes": "Z = 1.0032 µL/mg at 21.5 °C and 101.3 kPa, as given in the source."
+    }
+  ]
+}

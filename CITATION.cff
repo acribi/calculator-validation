@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use these validation cases, please cite them as below and also cite the original source of each case (see the source field in cases/*.json)."
+title: "Acribi calculator validation cases"
+type: dataset
+authors:
+  - name: "Acribi"
+    website: "https://acribi.com"
+    email: "hello@acribi.com"
+repository-code: "https://github.com/acribi/calculator-validation"
+url: "https://acribi.com"
+license:
+  - CC-BY-4.0
+  - MIT
+version: "1.0.0"
+date-released: "2026-10-29"
+abstract: >-
+  Machine-readable test cases for metrology calculators (TUR and measurement
+  decision risk, guard banding, GUM uncertainty budgets with Welch-Satterthwaite,
+  gauge R&R, gravimetric pipette calibration, calibration intervals, pressure
+  gauges, scales and balances, boiling point of water). Each case traces to a
+  worked example in a published source and gives inputs, expected outputs with
+  units and tolerances, and the exact citation. Includes a small reference
+  runner in JavaScript for Node.js.
+keywords:
+  - metrology
+  - calibration
+  - measurement uncertainty
+  - GUM
+  - test uncertainty ratio
+  - decision rules
+  - guard banding
+  - gauge R&R
+  - validation

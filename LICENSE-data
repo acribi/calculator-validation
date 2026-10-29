@@ -1,0 +1,27 @@
+Case data: Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+The files in cases/ (the selection, structure, units, tolerances, notes and
+recomputed values) are © 2026 Acribi and are licensed under the Creative
+Commons Attribution 4.0 International License.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+Summary:           https://creativecommons.org/licenses/by/4.0/
+
+You may share and adapt the data for any purpose, including commercially,
+provided you give appropriate credit, link to the license and indicate if
+changes were made.
+
+Attribution. Please credit both Acribi and the original source of each case:
+
+  Acribi calculator validation cases (https://github.com/acribi/calculator-validation),
+  CC BY 4.0. Original worked example: <document, edition, location> as given in
+  the "source" field of the case.
+
+What this license does not cover. The numbers in each case come from worked
+examples published by third parties (JCGM/BIPM, NASA, Global ACI, European
+Accreditation, UKAS, NIST, IAPWS, OIML and others). This
+repository contains numeric inputs, numeric results and citations only. It
+does not contain text, figures or tables reproduced from those documents.
+The documents themselves remain under their publishers' terms; read them at
+the URLs given in each case. CC BY 4.0 grants no rights in the source
+documents.

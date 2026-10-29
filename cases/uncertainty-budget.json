@@ -1,0 +1,2226 @@
+{
+  "$schema": "./_schema.json",
+  "calculator": "Measurement uncertainty budget (GUM, Welch–Satterthwaite)",
+  "acribi_page": "https://acribi.com/tools/uncertainty-calculator/",
+  "reference_implementation": [
+    "reference/uncertainty.ts"
+  ],
+  "license": "CC-BY-4.0",
+  "cases": [
+    {
+      "id": "uncertainty-budget/gum-4.3.3",
+      "calculator": "uncertainty-budget",
+      "operation": "standard-uncertainty",
+      "title": "Standard uncertainty: normal-k",
+      "inputs": {
+        "kind": {
+          "value": "normal-k",
+          "unit": "text"
+        },
+        "value": {
+          "value": 240,
+          "unit": "µg"
+        },
+        "coverage_factor": {
+          "value": 3,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "standard_uncertainty": {
+          "value": 80,
+          "unit": "µg",
+          "tolerance": 0.5,
+          "published": "80 µg"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "§4.3.3, p. 12"
+      },
+      "notes": "Certificate value quoted as three standard deviations."
+    },
+    {
+      "id": "uncertainty-budget/gum-4.3.4",
+      "calculator": "uncertainty-budget",
+      "operation": "standard-uncertainty",
+      "title": "Standard uncertainty: normal-k",
+      "inputs": {
+        "kind": {
+          "value": "normal-k",
+          "unit": "text"
+        },
+        "value": {
+          "value": 129,
+          "unit": "µΩ"
+        },
+        "coverage_factor": {
+          "value": 2.58,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "standard_uncertainty": {
+          "value": 50,
+          "unit": "µΩ",
+          "tolerance": 0.5,
+          "published": "50 µΩ"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "§4.3.4, p. 12"
+      },
+      "notes": "Interval at 99 % divided by 2.58."
+    },
+    {
+      "id": "uncertainty-budget/gum-F.2.2.1",
+      "calculator": "uncertainty-budget",
+      "operation": "standard-uncertainty",
+      "title": "Standard uncertainty: resolution",
+      "inputs": {
+        "kind": {
+          "value": "resolution",
+          "unit": "text"
+        },
+        "value": {
+          "value": 1,
+          "unit": "g"
+        }
+      },
+      "expected": {
+        "standard_uncertainty": {
+          "value": 0.29,
+          "unit": "g",
+          "tolerance": 0.005,
+          "published": "0.29 g"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "§F.2.2.1, p. 64"
+      }
+    },
+    {
+      "id": "uncertainty-budget/gum-H.1.3.4",
+      "calculator": "uncertainty-budget",
+      "operation": "standard-uncertainty",
+      "title": "Standard uncertainty: u-shaped",
+      "inputs": {
+        "kind": {
+          "value": "u-shaped",
+          "unit": "text"
+        },
+        "value": {
+          "value": 0.5,
+          "unit": "°C"
+        }
+      },
+      "expected": {
+        "standard_uncertainty": {
+          "value": 0.35,
+          "unit": "°C",
+          "tolerance": 0.005,
+          "published": "0.35 °C"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "§H.1.3.4"
+      }
+    },
+    {
+      "id": "uncertainty-budget/gum-7.2.4",
+      "calculator": "uncertainty-budget",
+      "operation": "expanded-uncertainty",
+      "title": "Expanded uncertainty with k = 2.26 (t for ν = 9)",
+      "inputs": {
+        "combined_standard_uncertainty": {
+          "value": 0.35,
+          "unit": "mg"
+        },
+        "coverage_factor": {
+          "value": 2.26,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "expanded_uncertainty": {
+          "value": 0.79,
+          "unit": "mg",
+          "tolerance": 0.005,
+          "published": "0.79 mg"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "§7.2.4, p. 26"
+      }
+    },
+    {
+      "id": "uncertainty-budget/m3003-3.45-flagpole",
+      "calculator": "uncertainty-budget",
+      "operation": "expanded-uncertainty",
+      "title": "Expanded uncertainty, k = 2",
+      "inputs": {
+        "combined_standard_uncertainty": {
+          "value": 0.0863,
+          "unit": "m"
+        },
+        "coverage_factor": {
+          "value": 2,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "expanded_uncertainty": {
+          "value": 0.17,
+          "unit": "m",
+          "tolerance": 0.005,
+          "published": "0.17 m"
+        }
+      },
+      "source": {
+        "document": "UKAS M3003 The Expression of Uncertainty and Confidence in Measurement",
+        "publisher": "UKAS",
+        "edition": "Edition 6, March 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/M3003-The-expression-of-uncertainty-and-confidence-in-measurement.pdf",
+        "kind": "official",
+        "location": "§3.45"
+      }
+    },
+    {
+      "id": "uncertainty-budget/m3003-3.46-k1.64",
+      "calculator": "uncertainty-budget",
+      "operation": "coverage-probability-normal",
+      "title": "Coverage probability of k = 1.64 for a normal distribution",
+      "inputs": {
+        "coverage_factor": {
+          "value": 1.64,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_probability": {
+          "value": 0.9,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "90 %"
+        }
+      },
+      "source": {
+        "document": "UKAS M3003 The Expression of Uncertainty and Confidence in Measurement",
+        "publisher": "UKAS",
+        "edition": "Edition 6, March 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/M3003-The-expression-of-uncertainty-and-confidence-in-measurement.pdf",
+        "kind": "official",
+        "location": "§3.44 Note and §3.46 (PDF p. 18)"
+      }
+    },
+    {
+      "id": "uncertainty-budget/m3003-3.46-k1.96",
+      "calculator": "uncertainty-budget",
+      "operation": "coverage-probability-normal",
+      "title": "Coverage probability of k = 1.96 for a normal distribution",
+      "inputs": {
+        "coverage_factor": {
+          "value": 1.96,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_probability": {
+          "value": 0.95,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "95 %"
+        }
+      },
+      "source": {
+        "document": "UKAS M3003 The Expression of Uncertainty and Confidence in Measurement",
+        "publisher": "UKAS",
+        "edition": "Edition 6, March 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/M3003-The-expression-of-uncertainty-and-confidence-in-measurement.pdf",
+        "kind": "official",
+        "location": "§3.44 Note and §3.46 (PDF p. 18)"
+      }
+    },
+    {
+      "id": "uncertainty-budget/m3003-3.46-k2",
+      "calculator": "uncertainty-budget",
+      "operation": "coverage-probability-normal",
+      "title": "Coverage probability of k = 2 for a normal distribution",
+      "inputs": {
+        "coverage_factor": {
+          "value": 2,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_probability": {
+          "value": 0.9545,
+          "unit": "1",
+          "tolerance": 0.00005,
+          "published": "95.45 %"
+        }
+      },
+      "source": {
+        "document": "UKAS M3003 The Expression of Uncertainty and Confidence in Measurement",
+        "publisher": "UKAS",
+        "edition": "Edition 6, March 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/M3003-The-expression-of-uncertainty-and-confidence-in-measurement.pdf",
+        "kind": "official",
+        "location": "§3.44 Note and §3.46 (PDF p. 18)"
+      }
+    },
+    {
+      "id": "uncertainty-budget/m3003-3.46-k2.58",
+      "calculator": "uncertainty-budget",
+      "operation": "coverage-probability-normal",
+      "title": "Coverage probability of k = 2.58 for a normal distribution",
+      "inputs": {
+        "coverage_factor": {
+          "value": 2.58,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_probability": {
+          "value": 0.99,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "99 %"
+        }
+      },
+      "source": {
+        "document": "UKAS M3003 The Expression of Uncertainty and Confidence in Measurement",
+        "publisher": "UKAS",
+        "edition": "Edition 6, March 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/M3003-The-expression-of-uncertainty-and-confidence-in-measurement.pdf",
+        "kind": "official",
+        "location": "§3.44 Note and §3.46 (PDF p. 18)"
+      }
+    },
+    {
+      "id": "uncertainty-budget/m3003-3.46-k3",
+      "calculator": "uncertainty-budget",
+      "operation": "coverage-probability-normal",
+      "title": "Coverage probability of k = 3 for a normal distribution",
+      "inputs": {
+        "coverage_factor": {
+          "value": 3,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_probability": {
+          "value": 0.9973,
+          "unit": "1",
+          "tolerance": 0.00005,
+          "published": "99.73 %"
+        }
+      },
+      "source": {
+        "document": "UKAS M3003 The Expression of Uncertainty and Confidence in Measurement",
+        "publisher": "UKAS",
+        "edition": "Edition 6, March 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/M3003-The-expression-of-uncertainty-and-confidence-in-measurement.pdf",
+        "kind": "official",
+        "location": "§3.44 Note and §3.46 (PDF p. 18)"
+      }
+    },
+    {
+      "id": "uncertainty-budget/gum-4.4.3",
+      "calculator": "uncertainty-budget",
+      "operation": "type-a",
+      "title": "Type A evaluation from 20 temperature readings",
+      "inputs": {
+        "readings": {
+          "value": [
+            96.9,
+            98.18,
+            98.25,
+            98.61,
+            99.03,
+            99.49,
+            99.56,
+            99.74,
+            99.89,
+            100.07,
+            100.33,
+            100.42,
+            100.68,
+            100.95,
+            101.11,
+            101.2,
+            101.57,
+            101.84,
+            102.36,
+            102.72
+          ],
+          "unit": "°C"
+        }
+      },
+      "expected": {
+        "mean": {
+          "value": 100.145,
+          "unit": "°C",
+          "tolerance": 0.0005,
+          "published": "100.145 °C"
+        },
+        "standard_deviation": {
+          "value": 1.489,
+          "unit": "°C",
+          "tolerance": 0.0005,
+          "published": "1.489 °C"
+        },
+        "standard_uncertainty_of_mean": {
+          "value": 0.333,
+          "unit": "°C",
+          "tolerance": 0.0005,
+          "published": "0.333 °C"
+        },
+        "degrees_of_freedom": {
+          "equals": 19,
+          "unit": "1"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "§4.4.3 and Table 1, p. 15"
+      }
+    },
+    {
+      "id": "uncertainty-budget/ea402-S12-typeA",
+      "calculator": "uncertainty-budget",
+      "operation": "type-a",
+      "title": "Type A evaluation from 3 runs of a water meter",
+      "inputs": {
+        "readings": {
+          "value": [
+            0.0003,
+            0.0005,
+            0.0022
+          ],
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "mean": {
+          "value": 0.001,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "0.001"
+        },
+        "standard_deviation": {
+          "value": 0.001,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "0.001",
+          "recomputed": {
+            "value": 0.001044031,
+            "tolerance": 1e-9
+          }
+        },
+        "standard_uncertainty_of_mean": {
+          "value": 0.0006,
+          "unit": "1",
+          "tolerance": 0.000005,
+          "published": "0.60 × 10⁻³"
+        },
+        "degrees_of_freedom": {
+          "equals": 2,
+          "unit": "1"
+        }
+      },
+      "source": {
+        "document": "EA-4/02 M:2022 Evaluation of the Uncertainty of Measurement in Calibration",
+        "publisher": "European Accreditation",
+        "edition": "M:2022 (rev03, 2022-04-04)",
+        "url": "https://european-accreditation.org/wp-content/uploads/2025/10/EA-4-02.pdf",
+        "kind": "official",
+        "location": "Example S12, §S12.13–S12.14, pp. 71–72"
+      }
+    },
+    {
+      "id": "uncertainty-budget/ea402-S3-typeA",
+      "calculator": "uncertainty-budget",
+      "operation": "type-a",
+      "title": "Type A evaluation from 5 resistance ratio readings",
+      "inputs": {
+        "readings": {
+          "value": [
+            1.0000104,
+            1.0000107,
+            1.0000106,
+            1.0000103,
+            1.0000105
+          ],
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "mean": {
+          "value": 1.0000105,
+          "unit": "1",
+          "tolerance": 5e-8,
+          "published": "1.000 010 5"
+        },
+        "standard_deviation": {
+          "value": 1.58e-7,
+          "unit": "1",
+          "tolerance": 5e-10,
+          "published": "0.158 × 10⁻⁶"
+        },
+        "standard_uncertainty_of_mean": {
+          "value": 7.07e-8,
+          "unit": "1",
+          "tolerance": 5e-11,
+          "published": "0.0707 × 10⁻⁶"
+        },
+        "degrees_of_freedom": {
+          "equals": 4,
+          "unit": "1"
+        }
+      },
+      "source": {
+        "document": "EA-4/02 M:2022 Evaluation of the Uncertainty of Measurement in Calibration",
+        "publisher": "European Accreditation",
+        "edition": "M:2022 (rev03, 2022-04-04)",
+        "url": "https://european-accreditation.org/wp-content/uploads/2025/10/EA-4-02.pdf",
+        "kind": "official",
+        "location": "Example S3, §S3.8, p. 32"
+      }
+    },
+    {
+      "id": "uncertainty-budget/ea402-S7-typeA",
+      "calculator": "uncertainty-budget",
+      "operation": "type-a",
+      "title": "Type A evaluation from 4 attenuator readings",
+      "inputs": {
+        "readings": {
+          "value": [
+            30.033,
+            30.058,
+            30.018,
+            30.052
+          ],
+          "unit": "dB"
+        }
+      },
+      "expected": {
+        "mean": {
+          "value": 30.04,
+          "unit": "dB",
+          "tolerance": 0.0005,
+          "published": "30.040 dB"
+        },
+        "standard_deviation": {
+          "value": 0.018,
+          "unit": "dB",
+          "tolerance": 0.0005,
+          "published": "0.018 dB"
+        },
+        "standard_uncertainty_of_mean": {
+          "value": 0.009,
+          "unit": "dB",
+          "tolerance": 0.0005,
+          "published": "0.009 dB"
+        },
+        "degrees_of_freedom": {
+          "equals": 3,
+          "unit": "1"
+        }
+      },
+      "source": {
+        "document": "EA-4/02 M:2022 Evaluation of the Uncertainty of Measurement in Calibration",
+        "publisher": "European Accreditation",
+        "edition": "M:2022 (rev03, 2022-04-04)",
+        "url": "https://european-accreditation.org/wp-content/uploads/2025/10/EA-4-02.pdf",
+        "kind": "official",
+        "location": "Example S7, §S7.11, p. 49"
+      },
+      "notes": "Only the Type A part of S7 is used: the published contributions column contains a typo, so the combined uncertainty is not checked."
+    },
+    {
+      "id": "uncertainty-budget/ea402-S2-weight",
+      "calculator": "uncertainty-budget",
+      "operation": "uncertainty-budget",
+      "title": "Uncertainty budget: calibration of a 10 kg weight",
+      "inputs": {
+        "rows": {
+          "value": [
+            {
+              "name": "reference standard m_S (U = 45 mg, k = 2)",
+              "kind": "standard",
+              "value": 22.5,
+              "unit": "mg"
+            },
+            {
+              "name": "drift of the standard δm_D (±15 mg)",
+              "kind": "standard",
+              "value": 8.66,
+              "unit": "mg"
+            },
+            {
+              "name": "comparator repeatability δm (s_p = 25 mg, n = 3)",
+              "kind": "standard",
+              "value": 14.4,
+              "unit": "mg"
+            },
+            {
+              "name": "eccentricity and magnetism δm_C (±10 mg)",
+              "kind": "standard",
+              "value": 5.77,
+              "unit": "mg"
+            },
+            {
+              "name": "air buoyancy δB (±10 mg)",
+              "kind": "standard",
+              "value": 5.77,
+              "unit": "mg"
+            }
+          ],
+          "unit": "see rows"
+        },
+        "coverage_probability": {
+          "value": 0.9544997361036416,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "combined_standard_uncertainty": {
+          "value": 29.2,
+          "unit": "mg",
+          "tolerance": 0.05,
+          "published": "29.2 mg"
+        },
+        "coverage_factor": {
+          "value": 2,
+          "unit": "1",
+          "tolerance": 1e-9,
+          "published": "2"
+        },
+        "expanded_uncertainty": {
+          "value": 58,
+          "unit": "mg",
+          "tolerance": 0.5,
+          "published": "58 mg"
+        }
+      },
+      "source": {
+        "document": "EA-4/02 M:2022 Evaluation of the Uncertainty of Measurement in Calibration",
+        "publisher": "European Accreditation",
+        "edition": "M:2022 (rev03, 2022-04-04)",
+        "url": "https://european-accreditation.org/wp-content/uploads/2025/10/EA-4-02.pdf",
+        "kind": "official",
+        "location": "Example S2, §S2.1–S2.11, pp. 29–30"
+      },
+      "notes": "Rows are entered as the standard uncertainties tabulated in S2.9 (3 significant digits). From unrounded inputs u = 29.26 mg, which still gives U = 58 mg."
+    },
+    {
+      "id": "uncertainty-budget/ea402-S9-dmm",
+      "calculator": "uncertainty-budget",
+      "operation": "uncertainty-budget",
+      "title": "Uncertainty budget: handheld DMM at 100 V, resolution dominates",
+      "inputs": {
+        "rows": {
+          "value": [
+            {
+              "name": "calibrator output V_S (U = 0.002 V, k = 2)",
+              "kind": "normal-k",
+              "value": 0.002,
+              "coverage_factor": 2,
+              "sensitivity": -1,
+              "unit": "V"
+            },
+            {
+              "name": "DMM resolution δV_iX (0.1 V digit)",
+              "kind": "resolution",
+              "value": 0.1,
+              "unit": "V"
+            },
+            {
+              "name": "calibrator specification δV_S (±0.011 V)",
+              "kind": "rectangular",
+              "value": 0.011,
+              "sensitivity": -1,
+              "unit": "V"
+            }
+          ],
+          "unit": "see rows"
+        },
+        "coverage_probability": {
+          "value": 0.95,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "combined_standard_uncertainty": {
+          "value": 0.03,
+          "unit": "V",
+          "tolerance": 0.0005,
+          "published": "0.030 V",
+          "recomputed": {
+            "value": 0.02957,
+            "tolerance": 0.00001
+          }
+        },
+        "contribution_2": {
+          "value": 0.029,
+          "unit": "V",
+          "tolerance": 0.0005,
+          "published": "0.029 V"
+        },
+        "contribution_3": {
+          "value": 0.0064,
+          "unit": "V",
+          "tolerance": 0.00005,
+          "published": "0.0064 V"
+        },
+        "dominant_rectangular": {
+          "equals": true,
+          "unit": "1"
+        },
+        "dominant_row": {
+          "equals": 2,
+          "unit": "1"
+        },
+        "dominant_ratio": {
+          "value": 0.22,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "0.22"
+        },
+        "expanded_uncertainty_dominant": {
+          "value": 0.05,
+          "unit": "V",
+          "tolerance": 0.005,
+          "published": "0.05 V"
+        }
+      },
+      "source": {
+        "document": "EA-4/02 M:2022 Evaluation of the Uncertainty of Measurement in Calibration",
+        "publisher": "European Accreditation",
+        "edition": "M:2022 (rev03, 2022-04-04)",
+        "url": "https://european-accreditation.org/wp-content/uploads/2025/10/EA-4-02.pdf",
+        "kind": "official",
+        "location": "Example S9, §S9.1–S9.14, pp. 55–58"
+      },
+      "notes": "With a dominant rectangular contribution the source uses k = p·√3 = 1.65 for 95 % (see ea402-S9.14-k-rectangular), not a t factor. The reference implementation uses the rectangular-plus-normal factor of UKAS M3003 Appendix C (1.70 here); both give U = 0.05 V to one significant digit, which is what is checked."
+    },
+    {
+      "id": "uncertainty-budget/ea402-S12-water-meter",
+      "calculator": "uncertainty-budget",
+      "operation": "uncertainty-budget",
+      "title": "Uncertainty budget with Welch–Satterthwaite: water meter",
+      "inputs": {
+        "rows": {
+          "value": [
+            {
+              "name": "repeatability (3 runs)",
+              "readings": [
+                0.0003,
+                0.0005,
+                0.0022
+              ],
+              "unit": "1"
+            },
+            {
+              "name": "error of indication of a single run (S12.11)",
+              "kind": "standard",
+              "value": 0.00068,
+              "unit": "1"
+            }
+          ],
+          "unit": "see rows"
+        },
+        "coverage_probability": {
+          "value": 0.9544997361036416,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "combined_standard_uncertainty": {
+          "value": 0.00091,
+          "unit": "1",
+          "tolerance": 0.000005,
+          "published": "0.91 × 10⁻³"
+        },
+        "effective_degrees_of_freedom": {
+          "value": 10,
+          "unit": "1",
+          "tolerance": 0.5,
+          "published": "10",
+          "recomputed": {
+            "value": 10.33,
+            "tolerance": 0.01
+          }
+        },
+        "degrees_of_freedom_used": {
+          "equals": 10,
+          "unit": "1"
+        },
+        "coverage_factor": {
+          "value": 2.28,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "2.28"
+        },
+        "expanded_uncertainty": {
+          "value": 0.002,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "0.002"
+        },
+        "dominant_rectangular": {
+          "equals": false,
+          "unit": "1"
+        }
+      },
+      "source": {
+        "document": "EA-4/02 M:2022 Evaluation of the Uncertainty of Measurement in Calibration",
+        "publisher": "European Accreditation",
+        "edition": "M:2022 (rev03, 2022-04-04)",
+        "url": "https://european-accreditation.org/wp-content/uploads/2025/10/EA-4-02.pdf",
+        "kind": "official",
+        "location": "Example S12, §S12.13–S12.16, pp. 71–72"
+      },
+      "notes": "ν_eff is truncated to the next lower integer before looking up k (EA-4/02 Annex E); k comes from the 95.45 % column of Table E.1."
+    },
+    {
+      "id": "uncertainty-budget/ea402-S3-resistor",
+      "calculator": "uncertainty-budget",
+      "operation": "uncertainty-budget",
+      "title": "Uncertainty budget with sensitivity coefficients: 10 kΩ resistor",
+      "inputs": {
+        "rows": {
+          "value": [
+            {
+              "name": "reference standard R_S (±5 mΩ, k = 2)",
+              "kind": "normal-k",
+              "value": 0.005,
+              "coverage_factor": 2,
+              "unit": "Ω"
+            },
+            {
+              "name": "drift δR_D (±10 mΩ)",
+              "kind": "rectangular",
+              "value": 0.01,
+              "unit": "Ω"
+            },
+            {
+              "name": "temperature of the standard δR_TS (±2.75 mΩ)",
+              "kind": "rectangular",
+              "value": 0.00275,
+              "unit": "Ω"
+            },
+            {
+              "name": "temperature of the unknown δR_TX (±5.5 mΩ)",
+              "kind": "rectangular",
+              "value": 0.0055,
+              "unit": "Ω"
+            },
+            {
+              "name": "parasitic voltages and resolution r_C (±1.0 × 10⁻⁶)",
+              "kind": "triangular",
+              "value": 0.000001,
+              "sensitivity": 10000,
+              "unit": "1 (ratio); c in Ω"
+            },
+            {
+              "name": "observed ratio r (5 readings)",
+              "readings": [
+                1.0000104,
+                1.0000107,
+                1.0000106,
+                1.0000103,
+                1.0000105
+              ],
+              "sensitivity": 10000,
+              "unit": "1 (ratio); c in Ω"
+            }
+          ],
+          "unit": "see rows"
+        },
+        "coverage_probability": {
+          "value": 0.9544997361036416,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "contribution_1": {
+          "value": 0.0025,
+          "unit": "Ω",
+          "tolerance": 0.00005,
+          "published": "2.5 mΩ"
+        },
+        "contribution_2": {
+          "value": 0.0058,
+          "unit": "Ω",
+          "tolerance": 0.00005,
+          "published": "5.8 mΩ"
+        },
+        "contribution_3": {
+          "value": 0.0016,
+          "unit": "Ω",
+          "tolerance": 0.00005,
+          "published": "1.6 mΩ"
+        },
+        "contribution_4": {
+          "value": 0.0032,
+          "unit": "Ω",
+          "tolerance": 0.00005,
+          "published": "3.2 mΩ"
+        },
+        "contribution_5": {
+          "value": 0.0041,
+          "unit": "Ω",
+          "tolerance": 0.00005,
+          "published": "4.1 mΩ"
+        },
+        "contribution_6": {
+          "value": 0.0007,
+          "unit": "Ω",
+          "tolerance": 0.00005,
+          "published": "0.7 mΩ"
+        },
+        "combined_standard_uncertainty": {
+          "value": 0.00833,
+          "unit": "Ω",
+          "tolerance": 0.000005,
+          "published": "8.33 mΩ"
+        },
+        "coverage_factor": {
+          "value": 2,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "2"
+        },
+        "expanded_uncertainty": {
+          "value": 0.017,
+          "unit": "Ω",
+          "tolerance": 0.0005,
+          "published": "17 mΩ"
+        }
+      },
+      "source": {
+        "document": "EA-4/02 M:2022 Evaluation of the Uncertainty of Measurement in Calibration",
+        "publisher": "European Accreditation",
+        "edition": "M:2022 (rev03, 2022-04-04)",
+        "url": "https://european-accreditation.org/wp-content/uploads/2025/10/EA-4-02.pdf",
+        "kind": "official",
+        "location": "Example S3, §S3.3–S3.11, pp. 31–33"
+      }
+    },
+    {
+      "id": "uncertainty-budget/ea402-S11-temperature-block",
+      "calculator": "uncertainty-budget",
+      "operation": "uncertainty-budget",
+      "title": "Uncertainty budget: temperature block calibrator at 180 °C",
+      "inputs": {
+        "rows": {
+          "value": [
+            {
+              "name": "working standard t_S (U = 30 mK, k = 2)",
+              "kind": "normal-k",
+              "value": 0.03,
+              "coverage_factor": 2,
+              "unit": "°C"
+            },
+            {
+              "name": "resistance measurement δt_S",
+              "kind": "standard",
+              "value": 0.01,
+              "unit": "°C"
+            },
+            {
+              "name": "drift δt_D (±40 mK)",
+              "kind": "rectangular",
+              "value": 0.04,
+              "unit": "°C"
+            },
+            {
+              "name": "settability δt_iX (±50 mK)",
+              "kind": "rectangular",
+              "value": 0.05,
+              "sensitivity": -1,
+              "unit": "°C"
+            },
+            {
+              "name": "radial inhomogeneity δt_R (±100 mK)",
+              "kind": "rectangular",
+              "value": 0.1,
+              "unit": "°C"
+            },
+            {
+              "name": "axial inhomogeneity δt_A (±250 mK)",
+              "kind": "rectangular",
+              "value": 0.25,
+              "unit": "°C"
+            },
+            {
+              "name": "hysteresis δt_H (±50 mK)",
+              "kind": "rectangular",
+              "value": 0.05,
+              "unit": "°C"
+            },
+            {
+              "name": "instability δt_V (±30 mK)",
+              "kind": "rectangular",
+              "value": 0.03,
+              "unit": "°C"
+            }
+          ],
+          "unit": "see rows"
+        },
+        "coverage_probability": {
+          "value": 0.95,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "contribution_1": {
+          "value": 0.015,
+          "unit": "°C",
+          "tolerance": 0.0005,
+          "published": "15 mK"
+        },
+        "contribution_2": {
+          "value": 0.01,
+          "unit": "°C",
+          "tolerance": 0.0005,
+          "published": "10 mK"
+        },
+        "contribution_3": {
+          "value": 0.023,
+          "unit": "°C",
+          "tolerance": 0.0005,
+          "published": "23 mK"
+        },
+        "contribution_4": {
+          "value": 0.029,
+          "unit": "°C",
+          "tolerance": 0.0005,
+          "published": "29 mK"
+        },
+        "contribution_5": {
+          "value": 0.058,
+          "unit": "°C",
+          "tolerance": 0.0005,
+          "published": "58 mK"
+        },
+        "contribution_6": {
+          "value": 0.144,
+          "unit": "°C",
+          "tolerance": 0.0005,
+          "published": "144 mK"
+        },
+        "contribution_7": {
+          "value": 0.029,
+          "unit": "°C",
+          "tolerance": 0.0005,
+          "published": "29 mK"
+        },
+        "contribution_8": {
+          "value": 0.017,
+          "unit": "°C",
+          "tolerance": 0.0005,
+          "published": "17 mK"
+        },
+        "combined_standard_uncertainty": {
+          "value": 0.164,
+          "unit": "°C",
+          "tolerance": 0.0005,
+          "published": "164 mK"
+        },
+        "dominant_rectangular": {
+          "equals": true,
+          "unit": "1"
+        },
+        "dominant_row": {
+          "equals": 6,
+          "unit": "1"
+        },
+        "expanded_uncertainty_dominant": {
+          "value": 0.3,
+          "unit": "°C",
+          "tolerance": 0.05,
+          "published": "0.3 °C"
+        }
+      },
+      "source": {
+        "document": "EA-4/02 M:2022 Evaluation of the Uncertainty of Measurement in Calibration",
+        "publisher": "European Accreditation",
+        "edition": "M:2022 (rev03, 2022-04-04)",
+        "url": "https://european-accreditation.org/wp-content/uploads/2025/10/EA-4-02.pdf",
+        "kind": "official",
+        "location": "Example S11, §S11.2–S11.14, pp. 64–66"
+      },
+      "notes": "The source quotes k = 1.81 from a trapezoidal model; its own formula S10.10 with β = 0.43 gives 1.80, so k is not checked. U still rounds to 0.3 °C."
+    },
+    {
+      "id": "uncertainty-budget/ea402-S10-caliper",
+      "calculator": "uncertainty-budget",
+      "operation": "uncertainty-budget",
+      "title": "Uncertainty budget with a sensitivity coefficient in µm/K: caliper at 150 mm",
+      "inputs": {
+        "rows": {
+          "value": [
+            {
+              "name": "gauge block (±0.8 µm)",
+              "kind": "rectangular",
+              "value": 0.8,
+              "sensitivity": -1,
+              "unit": "µm"
+            },
+            {
+              "name": "temperature difference (±2 K), c = 150 mm × 11.5 × 10⁻⁶ /K",
+              "kind": "rectangular",
+              "value": 2,
+              "sensitivity": 1.725,
+              "unit": "K; c in µm/K"
+            },
+            {
+              "name": "vernier resolution (±25 µm)",
+              "kind": "rectangular",
+              "value": 25,
+              "unit": "µm"
+            },
+            {
+              "name": "mechanical effects (±50 µm)",
+              "kind": "rectangular",
+              "value": 50,
+              "unit": "µm"
+            }
+          ],
+          "unit": "see rows"
+        },
+        "coverage_probability": {
+          "value": 0.95,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "contribution_2": {
+          "value": 2,
+          "unit": "µm",
+          "tolerance": 0.05,
+          "published": "2.0 µm"
+        },
+        "combined_standard_uncertainty": {
+          "value": 32,
+          "unit": "µm",
+          "tolerance": 0.5,
+          "published": "32 µm"
+        }
+      },
+      "source": {
+        "document": "EA-4/02 M:2022 Evaluation of the Uncertainty of Measurement in Calibration",
+        "publisher": "European Accreditation",
+        "edition": "M:2022 (rev03, 2022-04-04)",
+        "url": "https://european-accreditation.org/wp-content/uploads/2025/10/EA-4-02.pdf",
+        "kind": "official",
+        "location": "Example S10, §S10.3–S10.9, pp. 59–62"
+      },
+      "notes": "Coverage factor for this example: see ea402-S10-k-trapezoidal."
+    },
+    {
+      "id": "uncertainty-budget/ea402-S10-k-trapezoidal",
+      "calculator": "uncertainty-budget",
+      "operation": "k-trapezoidal",
+      "title": "Coverage factor for a trapezoidal distribution, β = 1/3, 95 %",
+      "inputs": {
+        "beta": {
+          "value": 0.3333333333333333,
+          "unit": "1"
+        },
+        "coverage_probability": {
+          "value": 0.95,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 1.83,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "1.83"
+        }
+      },
+      "source": {
+        "document": "EA-4/02 M:2022 Evaluation of the Uncertainty of Measurement in Calibration",
+        "publisher": "European Accreditation",
+        "edition": "M:2022 (rev03, 2022-04-04)",
+        "url": "https://european-accreditation.org/wp-content/uploads/2025/10/EA-4-02.pdf",
+        "kind": "official",
+        "location": "Example S10, §S10.10, p. 62"
+      }
+    },
+    {
+      "id": "uncertainty-budget/ea402-S9.14-k-rectangular",
+      "calculator": "uncertainty-budget",
+      "operation": "k-rectangular",
+      "title": "Coverage factor when a rectangular contribution dominates, 95 %",
+      "inputs": {
+        "coverage_probability": {
+          "value": 0.95,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 1.65,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "1.65"
+        }
+      },
+      "source": {
+        "document": "EA-4/02 M:2022 Evaluation of the Uncertainty of Measurement in Calibration",
+        "publisher": "European Accreditation",
+        "edition": "M:2022 (rev03, 2022-04-04)",
+        "url": "https://european-accreditation.org/wp-content/uploads/2025/10/EA-4-02.pdf",
+        "kind": "official",
+        "location": "Example S9, §S9.14, p. 58"
+      }
+    },
+    {
+      "id": "uncertainty-budget/gum-G.4.1",
+      "calculator": "uncertainty-budget",
+      "operation": "welch-satterthwaite",
+      "title": "Welch–Satterthwaite with relative uncertainties",
+      "inputs": {
+        "rows": {
+          "value": [
+            {
+              "standard_uncertainty": 0.25,
+              "dof": 9
+            },
+            {
+              "standard_uncertainty": 0.57,
+              "dof": 4
+            },
+            {
+              "standard_uncertainty": 0.82,
+              "dof": 14
+            }
+          ],
+          "unit": "%"
+        }
+      },
+      "expected": {
+        "combined_standard_uncertainty": {
+          "value": 1.03,
+          "unit": "%",
+          "tolerance": 0.005,
+          "published": "1.03 %"
+        },
+        "effective_degrees_of_freedom": {
+          "value": 19,
+          "unit": "1",
+          "tolerance": 0.05,
+          "published": "19.0"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "§G.4.1, Example, p. 74"
+      },
+      "notes": "Then t95(19) = 2.09 and U95 = 2.2 %: see gum-G.4.1-t."
+    },
+    {
+      "id": "uncertainty-budget/gum-G.4.1-t",
+      "calculator": "uncertainty-budget",
+      "operation": "t-coverage-factor",
+      "title": "t factor for 95 % and ν = 19",
+      "inputs": {
+        "coverage_probability": {
+          "value": 0.95,
+          "unit": "1"
+        },
+        "dof": {
+          "value": 19,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 2.09,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "2.09"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "§G.4.1, Example, p. 74"
+      }
+    },
+    {
+      "id": "uncertainty-budget/gum-H.1-budget",
+      "calculator": "uncertainty-budget",
+      "operation": "uncertainty-budget",
+      "title": "End gauge calibration: finite ν on Type B inputs, 99 %",
+      "inputs": {
+        "rows": {
+          "value": [
+            {
+              "name": "calibration of the standard l_S",
+              "kind": "standard",
+              "value": 25,
+              "dof": 18
+            },
+            {
+              "name": "measured difference d",
+              "kind": "standard",
+              "value": 9.7,
+              "dof": 25.6
+            },
+            {
+              "name": "thermal expansion difference δα",
+              "kind": "standard",
+              "value": 2.9,
+              "dof": 50
+            },
+            {
+              "name": "temperature difference δθ",
+              "kind": "standard",
+              "value": 16.6,
+              "dof": 2
+            }
+          ],
+          "unit": "nm"
+        },
+        "coverage_probability": {
+          "value": 0.99,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "combined_standard_uncertainty": {
+          "value": 32,
+          "unit": "nm",
+          "tolerance": 0.5,
+          "published": "32 nm"
+        },
+        "degrees_of_freedom_used": {
+          "equals": 16,
+          "unit": "1"
+        },
+        "coverage_factor": {
+          "value": 2.92,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "2.92"
+        },
+        "expanded_uncertainty": {
+          "value": 93,
+          "unit": "nm",
+          "tolerance": 1,
+          "published": "93 nm"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "§H.1.4–H.1.6, pp. 82–84"
+      },
+      "notes": "The source multiplies k by u_c already rounded to 32 nm (2.92 × 32 = 93 nm); from unrounded values U = 92.5 nm, hence the 1 nm tolerance."
+    },
+    {
+      "id": "uncertainty-budget/gum-H.1.3.1-u-d",
+      "calculator": "uncertainty-budget",
+      "operation": "welch-satterthwaite",
+      "title": "End gauge: uncertainty of the measured difference d",
+      "inputs": {
+        "rows": {
+          "value": [
+            {
+              "standard_uncertainty": 5.8,
+              "dof": 24
+            },
+            {
+              "standard_uncertainty": 3.9,
+              "dof": 5
+            },
+            {
+              "standard_uncertainty": 6.7,
+              "dof": 8
+            }
+          ],
+          "unit": "nm"
+        }
+      },
+      "expected": {
+        "combined_standard_uncertainty": {
+          "value": 9.7,
+          "unit": "nm",
+          "tolerance": 0.05,
+          "published": "9.7 nm"
+        },
+        "effective_degrees_of_freedom": {
+          "value": 25.6,
+          "unit": "1",
+          "tolerance": 0.3,
+          "published": "25.6"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "§H.1.3.1, p. 81"
+      },
+      "notes": "The source computes ν_eff from u(d) rounded to 9.7 nm; from unrounded values ν_eff = 25.4."
+    },
+    {
+      "id": "uncertainty-budget/m3003-B.10",
+      "calculator": "uncertainty-budget",
+      "operation": "uncertainty-budget",
+      "title": "Welch–Satterthwaite with one Type A input of 4 readings, k from the printed t table",
+      "inputs": {
+        "rows": {
+          "value": [
+            {
+              "name": "Type A (4 readings)",
+              "kind": "standard",
+              "value": 3.5,
+              "dof": 3
+            },
+            {
+              "name": "Type B inputs, combined: √(5.7² − 3.5²)",
+              "kind": "standard",
+              "value": 4.498888751680798
+            }
+          ],
+          "unit": "1"
+        },
+        "coverage_probability": {
+          "value": 0.9544997361036416,
+          "unit": "1"
+        },
+        "dof_mode": {
+          "value": "table",
+          "unit": "text"
+        }
+      },
+      "expected": {
+        "combined_standard_uncertainty": {
+          "value": 5.7,
+          "unit": "1",
+          "tolerance": 1e-9,
+          "published": "5.7"
+        },
+        "effective_degrees_of_freedom": {
+          "value": 21.1,
+          "unit": "1",
+          "tolerance": 0.05,
+          "published": "21.1"
+        },
+        "degrees_of_freedom_used": {
+          "equals": 20,
+          "unit": "1"
+        },
+        "coverage_factor": {
+          "value": 2.13,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "2.13"
+        },
+        "expanded_uncertainty": {
+          "value": 12.14,
+          "unit": "1",
+          "tolerance": 0.02,
+          "published": "12.14"
+        }
+      },
+      "source": {
+        "document": "UKAS M3003 The Expression of Uncertainty and Confidence in Measurement",
+        "publisher": "UKAS",
+        "edition": "Edition 6, March 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/M3003-The-expression-of-uncertainty-and-confidence-in-measurement.pdf",
+        "kind": "official",
+        "location": "§B.10.1–B.10.2, p. 29"
+      },
+      "notes": "The source multiplies the rounded k = 2.13 by 5.7, hence the 0.02 tolerance on U. The five Type B inputs (all ν = ∞) are entered as their combined value, which is all Welch–Satterthwaite needs. k = 2.13 is reproduced only with the source method: use the table row at or below ν_eff (ν = 20); the exact t at ν = 21.1 is 2.126."
+    },
+    {
+      "id": "uncertainty-budget/gum-t-p95.45-nu1",
+      "calculator": "uncertainty-budget",
+      "operation": "t-coverage-factor",
+      "title": "Student t coverage factor, p = 95.45 %, ν = 1",
+      "inputs": {
+        "coverage_probability": {
+          "value": 0.9544997361036416,
+          "unit": "1"
+        },
+        "dof": {
+          "value": 1,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 13.97,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "13.97"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "Table G.2, p. 78"
+      }
+    },
+    {
+      "id": "uncertainty-budget/gum-t-p95.45-nu2",
+      "calculator": "uncertainty-budget",
+      "operation": "t-coverage-factor",
+      "title": "Student t coverage factor, p = 95.45 %, ν = 2",
+      "inputs": {
+        "coverage_probability": {
+          "value": 0.9544997361036416,
+          "unit": "1"
+        },
+        "dof": {
+          "value": 2,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 4.53,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "4.53"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "Table G.2, p. 78"
+      }
+    },
+    {
+      "id": "uncertainty-budget/gum-t-p95.45-nu10",
+      "calculator": "uncertainty-budget",
+      "operation": "t-coverage-factor",
+      "title": "Student t coverage factor, p = 95.45 %, ν = 10",
+      "inputs": {
+        "coverage_probability": {
+          "value": 0.9544997361036416,
+          "unit": "1"
+        },
+        "dof": {
+          "value": 10,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 2.28,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "2.28"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "Table G.2, p. 78"
+      }
+    },
+    {
+      "id": "uncertainty-budget/gum-t-p99.00-nu16",
+      "calculator": "uncertainty-budget",
+      "operation": "t-coverage-factor",
+      "title": "Student t coverage factor, p = 99.00 %, ν = 16",
+      "inputs": {
+        "coverage_probability": {
+          "value": 0.99,
+          "unit": "1"
+        },
+        "dof": {
+          "value": 16,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 2.92,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "2.92"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "Table G.2, p. 78"
+      }
+    },
+    {
+      "id": "uncertainty-budget/gum-t-p95.00-nu9",
+      "calculator": "uncertainty-budget",
+      "operation": "t-coverage-factor",
+      "title": "Student t coverage factor, p = 95.00 %, ν = 9",
+      "inputs": {
+        "coverage_probability": {
+          "value": 0.95,
+          "unit": "1"
+        },
+        "dof": {
+          "value": 9,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 2.26,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "2.26"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "§7.2.4 and Table G.2"
+      }
+    },
+    {
+      "id": "uncertainty-budget/gum-t-p95.00-nuinf",
+      "calculator": "uncertainty-budget",
+      "operation": "t-coverage-factor",
+      "title": "Student t coverage factor, p = 95.00 %, ν = ∞",
+      "inputs": {
+        "coverage_probability": {
+          "value": 0.95,
+          "unit": "1"
+        },
+        "dof": {
+          "value": null,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 1.96,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "1.960"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "Table G.2, p. 78 (ν = ∞)"
+      },
+      "notes": "ν = ∞ is written as null."
+    },
+    {
+      "id": "uncertainty-budget/gum-t-p95.45-nuinf",
+      "calculator": "uncertainty-budget",
+      "operation": "t-coverage-factor",
+      "title": "Student t coverage factor, p = 95.45 %, ν = ∞",
+      "inputs": {
+        "coverage_probability": {
+          "value": 0.9544997361036416,
+          "unit": "1"
+        },
+        "dof": {
+          "value": null,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 2,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "2.000"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "Table G.2, p. 78 (ν = ∞)"
+      },
+      "notes": "ν = ∞ is written as null."
+    },
+    {
+      "id": "uncertainty-budget/gum-t-p99.00-nuinf",
+      "calculator": "uncertainty-budget",
+      "operation": "t-coverage-factor",
+      "title": "Student t coverage factor, p = 99.00 %, ν = ∞",
+      "inputs": {
+        "coverage_probability": {
+          "value": 0.99,
+          "unit": "1"
+        },
+        "dof": {
+          "value": null,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 2.576,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "2.576"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "Table G.2, p. 78 (ν = ∞)"
+      },
+      "notes": "ν = ∞ is written as null."
+    },
+    {
+      "id": "uncertainty-budget/gum-t-p99.73-nuinf",
+      "calculator": "uncertainty-budget",
+      "operation": "t-coverage-factor",
+      "title": "Student t coverage factor, p = 99.73 %, ν = ∞",
+      "inputs": {
+        "coverage_probability": {
+          "value": 0.9973002039367398,
+          "unit": "1"
+        },
+        "dof": {
+          "value": null,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 3,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "3.000"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "Table G.2, p. 78 (ν = ∞)"
+      },
+      "notes": "ν = ∞ is written as null."
+    },
+    {
+      "id": "uncertainty-budget/tn1297-t-p95.00-nu8",
+      "calculator": "uncertainty-budget",
+      "operation": "t-coverage-factor",
+      "title": "Student t coverage factor, p = 95.00 %, ν = 8",
+      "inputs": {
+        "coverage_probability": {
+          "value": 0.95,
+          "unit": "1"
+        },
+        "dof": {
+          "value": 8,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 2.31,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "2.31 (stated as 2.3 in B.2)"
+        }
+      },
+      "source": {
+        "document": "NIST Technical Note 1297 Guidelines for Evaluating and Expressing the Uncertainty of NIST Measurement Results (Taylor & Kuyatt)",
+        "publisher": "NIST",
+        "edition": "1994",
+        "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/TN/nbstechnicalnote1297.pdf",
+        "kind": "official",
+        "location": "Appendix B.2, p. 9, and Table B.1, p. 10"
+      }
+    },
+    {
+      "id": "uncertainty-budget/gum5-2.4.1.4-nu5.2",
+      "calculator": "uncertainty-budget",
+      "operation": "t-coverage-factor",
+      "title": "t coverage factor for non-integer ν = 5.2, 95 %",
+      "inputs": {
+        "coverage_probability": {
+          "value": 0.95,
+          "unit": "1"
+        },
+        "dof": {
+          "value": 5.2,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 2.5,
+          "unit": "1",
+          "tolerance": 0.05,
+          "published": "2.5"
+        }
+      },
+      "source": {
+        "document": "JCGM GUM-5:2026 Guide to the expression of uncertainty in measurement – Part 5: Examples",
+        "publisher": "JCGM / BIPM",
+        "edition": "2026, 1st edition",
+        "url": "https://www.bipm.org/en/committees/jc/jcgm/publications",
+        "kind": "official",
+        "location": "§2.4.1.3–2.4.1.4, pp. 15–16"
+      },
+      "notes": "The t distribution is evaluated at the non-integer ν, without truncation."
+    },
+    {
+      "id": "uncertainty-budget/gum5-2.4.1.4-nu4.8",
+      "calculator": "uncertainty-budget",
+      "operation": "t-coverage-factor",
+      "title": "t coverage factor for non-integer ν = 4.8, 95 %",
+      "inputs": {
+        "coverage_probability": {
+          "value": 0.95,
+          "unit": "1"
+        },
+        "dof": {
+          "value": 4.8,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 2.6,
+          "unit": "1",
+          "tolerance": 0.05,
+          "published": "2.6"
+        }
+      },
+      "source": {
+        "document": "JCGM GUM-5:2026 Guide to the expression of uncertainty in measurement – Part 5: Examples",
+        "publisher": "JCGM / BIPM",
+        "edition": "2026, 1st edition",
+        "url": "https://www.bipm.org/en/committees/jc/jcgm/publications",
+        "kind": "official",
+        "location": "§2.4.1.3–2.4.1.4, pp. 15–16"
+      },
+      "notes": "The t distribution is evaluated at the non-integer ν, without truncation."
+    },
+    {
+      "id": "uncertainty-budget/gum-dof-reliability-0.25",
+      "calculator": "uncertainty-budget",
+      "operation": "dof-from-reliability",
+      "title": "Degrees of freedom of a Type B input judged reliable to 25 %",
+      "inputs": {
+        "relative_uncertainty_of_u": {
+          "value": 0.25,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "degrees_of_freedom": {
+          "value": 8,
+          "unit": "1",
+          "tolerance": 1e-9,
+          "published": "8"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "§G.4.2, eq. (G.3), p. 74"
+      }
+    },
+    {
+      "id": "uncertainty-budget/gum-dof-reliability-0.5",
+      "calculator": "uncertainty-budget",
+      "operation": "dof-from-reliability",
+      "title": "Degrees of freedom of a Type B input judged reliable to 50 %",
+      "inputs": {
+        "relative_uncertainty_of_u": {
+          "value": 0.5,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "degrees_of_freedom": {
+          "value": 2,
+          "unit": "1",
+          "tolerance": 1e-9,
+          "published": "2"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "§G.4.2, eq. (G.3), p. 74"
+      }
+    },
+    {
+      "id": "uncertainty-budget/gum-dof-reliability-0.1",
+      "calculator": "uncertainty-budget",
+      "operation": "dof-from-reliability",
+      "title": "Degrees of freedom of a Type B input judged reliable to 10 %",
+      "inputs": {
+        "relative_uncertainty_of_u": {
+          "value": 0.1,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "degrees_of_freedom": {
+          "value": 50,
+          "unit": "1",
+          "tolerance": 1e-9,
+          "published": "50"
+        }
+      },
+      "source": {
+        "document": "JCGM 100:2008 Evaluation of measurement data – Guide to the expression of uncertainty in measurement (GUM)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2008 (GUM 1995 with minor corrections)",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_100_2008_E.pdf",
+        "kind": "official",
+        "location": "§H.1.3.2"
+      }
+    },
+    {
+      "id": "uncertainty-budget/m3003-C.5-dominant",
+      "calculator": "uncertainty-budget",
+      "operation": "dominant-rectangular",
+      "title": "Dominant rectangular contribution: ratio and coverage factor",
+      "inputs": {
+        "contributions": {
+          "value": [
+            {
+              "standard_uncertainty": 0.095,
+              "distribution": "normal"
+            },
+            {
+              "standard_uncertainty": 0.02886751345948129,
+              "distribution": "rectangular"
+            },
+            {
+              "standard_uncertainty": 0.2886751345948129,
+              "distribution": "rectangular"
+            }
+          ],
+          "unit": "mV"
+        },
+        "coverage_probability": {
+          "value": 0.9544997361036416,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "u_rectangular": {
+          "value": 0.289,
+          "unit": "mV",
+          "tolerance": 0.0005,
+          "published": "0.289 mV"
+        },
+        "u_rest": {
+          "value": 0.099,
+          "unit": "mV",
+          "tolerance": 0.0005,
+          "published": "0.099 mV"
+        },
+        "ratio": {
+          "value": 0.344,
+          "unit": "1",
+          "tolerance": 0.001,
+          "published": "0.344"
+        },
+        "dominant": {
+          "equals": true,
+          "unit": "1"
+        },
+        "coverage_factor": {
+          "value": 1.77,
+          "unit": "1",
+          "tolerance": 0.006,
+          "published": "1.77"
+        }
+      },
+      "source": {
+        "document": "UKAS M3003 The Expression of Uncertainty and Confidence in Measurement",
+        "publisher": "UKAS",
+        "edition": "Edition 6, March 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/M3003-The-expression-of-uncertainty-and-confidence-in-measurement.pdf",
+        "kind": "official",
+        "location": "Appendix C, §C.5 and §C.8 (Table C.7)"
+      },
+      "notes": "Inputs: a normal contribution with U = 0.19 mV (k = 2) and rectangular half-widths of 0.05 mV and 0.5 mV. The published k is read from Table C.7, hence the 0.006 tolerance."
+    },
+    {
+      "id": "uncertainty-budget/m3003-tableC.7-ratio0",
+      "calculator": "uncertainty-budget",
+      "operation": "k-rectangular-plus-normal",
+      "title": "Coverage factor for a rectangular plus a normal contribution, ratio 0",
+      "inputs": {
+        "ratio": {
+          "value": 0,
+          "unit": "1"
+        },
+        "coverage_probability": {
+          "value": 0.9544997361036416,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 1.65,
+          "unit": "1",
+          "tolerance": 0.0101,
+          "published": "1.65"
+        }
+      },
+      "source": {
+        "document": "UKAS M3003 The Expression of Uncertainty and Confidence in Measurement",
+        "publisher": "UKAS",
+        "edition": "Edition 6, March 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/M3003-The-expression-of-uncertainty-and-confidence-in-measurement.pdf",
+        "kind": "official",
+        "location": "Appendix C, Table C.7"
+      },
+      "notes": "Ratio = u_rest / u_rectangular. A subset of the table; the reference implementation matches all 26 rows within ±0.01."
+    },
+    {
+      "id": "uncertainty-budget/m3003-tableC.7-ratio0.3",
+      "calculator": "uncertainty-budget",
+      "operation": "k-rectangular-plus-normal",
+      "title": "Coverage factor for a rectangular plus a normal contribution, ratio 0.3",
+      "inputs": {
+        "ratio": {
+          "value": 0.3,
+          "unit": "1"
+        },
+        "coverage_probability": {
+          "value": 0.9544997361036416,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 1.75,
+          "unit": "1",
+          "tolerance": 0.0101,
+          "published": "1.75"
+        }
+      },
+      "source": {
+        "document": "UKAS M3003 The Expression of Uncertainty and Confidence in Measurement",
+        "publisher": "UKAS",
+        "edition": "Edition 6, March 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/M3003-The-expression-of-uncertainty-and-confidence-in-measurement.pdf",
+        "kind": "official",
+        "location": "Appendix C, Table C.7"
+      },
+      "notes": "Ratio = u_rest / u_rectangular. A subset of the table; the reference implementation matches all 26 rows within ±0.01."
+    },
+    {
+      "id": "uncertainty-budget/m3003-tableC.7-ratio0.5",
+      "calculator": "uncertainty-budget",
+      "operation": "k-rectangular-plus-normal",
+      "title": "Coverage factor for a rectangular plus a normal contribution, ratio 0.5",
+      "inputs": {
+        "ratio": {
+          "value": 0.5,
+          "unit": "1"
+        },
+        "coverage_probability": {
+          "value": 0.9544997361036416,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 1.84,
+          "unit": "1",
+          "tolerance": 0.0101,
+          "published": "1.84"
+        }
+      },
+      "source": {
+        "document": "UKAS M3003 The Expression of Uncertainty and Confidence in Measurement",
+        "publisher": "UKAS",
+        "edition": "Edition 6, March 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/M3003-The-expression-of-uncertainty-and-confidence-in-measurement.pdf",
+        "kind": "official",
+        "location": "Appendix C, Table C.7"
+      },
+      "notes": "Ratio = u_rest / u_rectangular. A subset of the table; the reference implementation matches all 26 rows within ±0.01."
+    },
+    {
+      "id": "uncertainty-budget/m3003-tableC.7-ratio0.7",
+      "calculator": "uncertainty-budget",
+      "operation": "k-rectangular-plus-normal",
+      "title": "Coverage factor for a rectangular plus a normal contribution, ratio 0.7",
+      "inputs": {
+        "ratio": {
+          "value": 0.7,
+          "unit": "1"
+        },
+        "coverage_probability": {
+          "value": 0.9544997361036416,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 1.9,
+          "unit": "1",
+          "tolerance": 0.0101,
+          "published": "1.90"
+        }
+      },
+      "source": {
+        "document": "UKAS M3003 The Expression of Uncertainty and Confidence in Measurement",
+        "publisher": "UKAS",
+        "edition": "Edition 6, March 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/M3003-The-expression-of-uncertainty-and-confidence-in-measurement.pdf",
+        "kind": "official",
+        "location": "Appendix C, Table C.7"
+      },
+      "notes": "Ratio = u_rest / u_rectangular. A subset of the table; the reference implementation matches all 26 rows within ±0.01."
+    },
+    {
+      "id": "uncertainty-budget/m3003-tableC.7-ratio1",
+      "calculator": "uncertainty-budget",
+      "operation": "k-rectangular-plus-normal",
+      "title": "Coverage factor for a rectangular plus a normal contribution, ratio 1",
+      "inputs": {
+        "ratio": {
+          "value": 1,
+          "unit": "1"
+        },
+        "coverage_probability": {
+          "value": 0.9544997361036416,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 1.95,
+          "unit": "1",
+          "tolerance": 0.0101,
+          "published": "1.95"
+        }
+      },
+      "source": {
+        "document": "UKAS M3003 The Expression of Uncertainty and Confidence in Measurement",
+        "publisher": "UKAS",
+        "edition": "Edition 6, March 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/M3003-The-expression-of-uncertainty-and-confidence-in-measurement.pdf",
+        "kind": "official",
+        "location": "Appendix C, Table C.7"
+      },
+      "notes": "Ratio = u_rest / u_rectangular. A subset of the table; the reference implementation matches all 26 rows within ±0.01."
+    },
+    {
+      "id": "uncertainty-budget/m3003-tableC.7-ratio2.5",
+      "calculator": "uncertainty-budget",
+      "operation": "k-rectangular-plus-normal",
+      "title": "Coverage factor for a rectangular plus a normal contribution, ratio 2.5",
+      "inputs": {
+        "ratio": {
+          "value": 2.5,
+          "unit": "1"
+        },
+        "coverage_probability": {
+          "value": 0.9544997361036416,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "coverage_factor": {
+          "value": 2,
+          "unit": "1",
+          "tolerance": 0.0101,
+          "published": "2.00"
+        }
+      },
+      "source": {
+        "document": "UKAS M3003 The Expression of Uncertainty and Confidence in Measurement",
+        "publisher": "UKAS",
+        "edition": "Edition 6, March 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/M3003-The-expression-of-uncertainty-and-confidence-in-measurement.pdf",
+        "kind": "official",
+        "location": "Appendix C, Table C.7"
+      },
+      "notes": "Ratio = u_rest / u_rectangular. A subset of the table; the reference implementation matches all 26 rows within ±0.01."
+    }
+  ]
+}

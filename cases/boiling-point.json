@@ -1,0 +1,644 @@
+{
+  "$schema": "./_schema.json",
+  "calculator": "Boiling point of water versus pressure and altitude",
+  "acribi_page": "https://acribi.com/instruments/thermometer/calibration-procedure/",
+  "reference_implementation": [
+    "reference/boiling-point.ts"
+  ],
+  "license": "CC-BY-4.0",
+  "cases": [
+    {
+      "id": "boiling-point/iapws-if97-table36-0.1MPa",
+      "calculator": "boiling-point",
+      "operation": "saturation-temperature",
+      "title": "Saturation temperature at 0.1 MPa (IF97 equation 31)",
+      "inputs": {
+        "pressure": {
+          "value": 0.1,
+          "unit": "MPa"
+        }
+      },
+      "expected": {
+        "saturation_temperature": {
+          "value": 372.755919,
+          "unit": "K",
+          "tolerance": 5e-7,
+          "published": "372.755919 K"
+        }
+      },
+      "source": {
+        "document": "IAPWS R7-97(2012) Revised Release on the IAPWS Industrial Formulation 1997 for the Thermodynamic Properties of Water and Steam",
+        "publisher": "International Association for the Properties of Water and Steam",
+        "edition": "2012 revision",
+        "url": "https://iapws.org/technical-guidance/release/IF97-Rev",
+        "kind": "official",
+        "location": "§8.2, Table 36 (computer-program verification values)"
+      }
+    },
+    {
+      "id": "boiling-point/iapws-if97-table36-1MPa",
+      "calculator": "boiling-point",
+      "operation": "saturation-temperature",
+      "title": "Saturation temperature at 1 MPa (IF97 equation 31)",
+      "inputs": {
+        "pressure": {
+          "value": 1,
+          "unit": "MPa"
+        }
+      },
+      "expected": {
+        "saturation_temperature": {
+          "value": 453.035632,
+          "unit": "K",
+          "tolerance": 5e-7,
+          "published": "453.035632 K"
+        }
+      },
+      "source": {
+        "document": "IAPWS R7-97(2012) Revised Release on the IAPWS Industrial Formulation 1997 for the Thermodynamic Properties of Water and Steam",
+        "publisher": "International Association for the Properties of Water and Steam",
+        "edition": "2012 revision",
+        "url": "https://iapws.org/technical-guidance/release/IF97-Rev",
+        "kind": "official",
+        "location": "§8.2, Table 36 (computer-program verification values)"
+      }
+    },
+    {
+      "id": "boiling-point/iapws-if97-table36-10MPa",
+      "calculator": "boiling-point",
+      "operation": "saturation-temperature",
+      "title": "Saturation temperature at 10 MPa (IF97 equation 31)",
+      "inputs": {
+        "pressure": {
+          "value": 10,
+          "unit": "MPa"
+        }
+      },
+      "expected": {
+        "saturation_temperature": {
+          "value": 584.149488,
+          "unit": "K",
+          "tolerance": 5e-7,
+          "published": "584.149488 K"
+        }
+      },
+      "source": {
+        "document": "IAPWS R7-97(2012) Revised Release on the IAPWS Industrial Formulation 1997 for the Thermodynamic Properties of Water and Steam",
+        "publisher": "International Association for the Properties of Water and Steam",
+        "edition": "2012 revision",
+        "url": "https://iapws.org/technical-guidance/release/IF97-Rev",
+        "kind": "official",
+        "location": "§8.2, Table 36 (computer-program verification values)"
+      }
+    },
+    {
+      "id": "boiling-point/nist-webbook-1013.25hPa",
+      "calculator": "boiling-point",
+      "operation": "boiling-point",
+      "title": "Boiling point of water at 1013.25 hPa",
+      "inputs": {
+        "pressure": {
+          "value": 1013.25,
+          "unit": "hPa"
+        }
+      },
+      "expected": {
+        "boiling_point": {
+          "value": 99.9743,
+          "unit": "°C",
+          "tolerance": 0.005,
+          "published": "99.9743 °C"
+        }
+      },
+      "source": {
+        "document": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems: water, saturation properties (IAPWS-95 formulation)",
+        "publisher": "NIST",
+        "edition": "queried 2026-10-16",
+        "url": "https://webbook.nist.gov/chemistry/fluid/",
+        "kind": "official",
+        "location": "saturation properties at the given pressure"
+      },
+      "notes": "The WebBook uses IAPWS-95; the reference implementation uses IAPWS-IF97, which agrees within a few mK in this range, hence the tolerance."
+    },
+    {
+      "id": "boiling-point/nist-webbook-1000hPa",
+      "calculator": "boiling-point",
+      "operation": "boiling-point",
+      "title": "Boiling point of water at 1000 hPa",
+      "inputs": {
+        "pressure": {
+          "value": 1000,
+          "unit": "hPa"
+        }
+      },
+      "expected": {
+        "boiling_point": {
+          "value": 99.6059,
+          "unit": "°C",
+          "tolerance": 0.005,
+          "published": "99.6059 °C"
+        }
+      },
+      "source": {
+        "document": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems: water, saturation properties (IAPWS-95 formulation)",
+        "publisher": "NIST",
+        "edition": "queried 2026-10-16",
+        "url": "https://webbook.nist.gov/chemistry/fluid/",
+        "kind": "official",
+        "location": "saturation properties at the given pressure"
+      },
+      "notes": "The WebBook uses IAPWS-95; the reference implementation uses IAPWS-IF97, which agrees within a few mK in this range, hence the tolerance."
+    },
+    {
+      "id": "boiling-point/nist-webbook-800hPa",
+      "calculator": "boiling-point",
+      "operation": "boiling-point",
+      "title": "Boiling point of water at 800 hPa",
+      "inputs": {
+        "pressure": {
+          "value": 800,
+          "unit": "hPa"
+        }
+      },
+      "expected": {
+        "boiling_point": {
+          "value": 93.4855,
+          "unit": "°C",
+          "tolerance": 0.005,
+          "published": "93.4855 °C"
+        }
+      },
+      "source": {
+        "document": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems: water, saturation properties (IAPWS-95 formulation)",
+        "publisher": "NIST",
+        "edition": "queried 2026-10-16",
+        "url": "https://webbook.nist.gov/chemistry/fluid/",
+        "kind": "official",
+        "location": "saturation properties at the given pressure"
+      },
+      "notes": "The WebBook uses IAPWS-95; the reference implementation uses IAPWS-IF97, which agrees within a few mK in this range, hence the tolerance."
+    },
+    {
+      "id": "boiling-point/nist-webbook-600hPa",
+      "calculator": "boiling-point",
+      "operation": "boiling-point",
+      "title": "Boiling point of water at 600 hPa",
+      "inputs": {
+        "pressure": {
+          "value": 600,
+          "unit": "hPa"
+        }
+      },
+      "expected": {
+        "boiling_point": {
+          "value": 85.926,
+          "unit": "°C",
+          "tolerance": 0.005,
+          "published": "85.926 °C"
+        }
+      },
+      "source": {
+        "document": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems: water, saturation properties (IAPWS-95 formulation)",
+        "publisher": "NIST",
+        "edition": "queried 2026-10-16",
+        "url": "https://webbook.nist.gov/chemistry/fluid/",
+        "kind": "official",
+        "location": "saturation properties at the given pressure"
+      },
+      "notes": "The WebBook uses IAPWS-95; the reference implementation uses IAPWS-IF97, which agrees within a few mK in this range, hence the tolerance."
+    },
+    {
+      "id": "boiling-point/nist-webbook-977.15hPa",
+      "calculator": "boiling-point",
+      "operation": "boiling-point",
+      "title": "Boiling point of water at 977.15 hPa",
+      "inputs": {
+        "pressure": {
+          "value": 977.15,
+          "unit": "hPa"
+        }
+      },
+      "expected": {
+        "boiling_point": {
+          "value": 98.96106,
+          "unit": "°C",
+          "tolerance": 0.002,
+          "published": "98.96106 °C"
+        }
+      },
+      "source": {
+        "document": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems: water, saturation properties (IAPWS-95 formulation)",
+        "publisher": "NIST",
+        "edition": "queried 2026-10-16",
+        "url": "https://webbook.nist.gov/chemistry/fluid/",
+        "kind": "official",
+        "location": "saturation properties at the given pressure"
+      },
+      "notes": "The WebBook uses IAPWS-95; the reference implementation uses IAPWS-IF97, which agrees within a few mK in this range, hence the tolerance."
+    },
+    {
+      "id": "boiling-point/nist-webbook-696.7hPa",
+      "calculator": "boiling-point",
+      "operation": "boiling-point",
+      "title": "Boiling point of water at 696.7 hPa",
+      "inputs": {
+        "pressure": {
+          "value": 696.7,
+          "unit": "hPa"
+        }
+      },
+      "expected": {
+        "boiling_point": {
+          "value": 89.80742,
+          "unit": "°C",
+          "tolerance": 0.002,
+          "published": "89.80742 °C"
+        }
+      },
+      "source": {
+        "document": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems: water, saturation properties (IAPWS-95 formulation)",
+        "publisher": "NIST",
+        "edition": "queried 2026-10-16",
+        "url": "https://webbook.nist.gov/chemistry/fluid/",
+        "kind": "official",
+        "location": "saturation properties at the given pressure"
+      },
+      "notes": "The WebBook uses IAPWS-95; the reference implementation uses IAPWS-IF97, which agrees within a few mK in this range, hence the tolerance."
+    },
+    {
+      "id": "boiling-point/faa-standard-atmosphere-0ft",
+      "calculator": "boiling-point",
+      "operation": "standard-atmosphere-pressure",
+      "title": "Standard atmosphere pressure at 0 ft",
+      "inputs": {
+        "altitude": {
+          "value": 0,
+          "unit": "ft"
+        }
+      },
+      "expected": {
+        "pressure_inhg": {
+          "value": 29.92,
+          "unit": "inHg",
+          "tolerance": 0.01,
+          "published": "29.92 inHg"
+        }
+      },
+      "source": {
+        "document": "FAA-H-8083-25B Pilot's Handbook of Aeronautical Knowledge, Chapter 11",
+        "publisher": "Federal Aviation Administration",
+        "edition": "2016",
+        "url": "https://www.faa.gov/sites/faa.gov/files/13_phak_ch11.pdf",
+        "kind": "official",
+        "location": "Figure 11-2, Properties of standard atmosphere"
+      },
+      "notes": "Pressure from the NWS pressure-altitude formula; 1 inHg = 33.8638 hPa. Tolerance 0.01 inHg covers the rounding of the printed table."
+    },
+    {
+      "id": "boiling-point/faa-standard-atmosphere-1000ft",
+      "calculator": "boiling-point",
+      "operation": "standard-atmosphere-pressure",
+      "title": "Standard atmosphere pressure at 1000 ft",
+      "inputs": {
+        "altitude": {
+          "value": 1000,
+          "unit": "ft"
+        }
+      },
+      "expected": {
+        "pressure_inhg": {
+          "value": 28.86,
+          "unit": "inHg",
+          "tolerance": 0.01,
+          "published": "28.86 inHg"
+        }
+      },
+      "source": {
+        "document": "FAA-H-8083-25B Pilot's Handbook of Aeronautical Knowledge, Chapter 11",
+        "publisher": "Federal Aviation Administration",
+        "edition": "2016",
+        "url": "https://www.faa.gov/sites/faa.gov/files/13_phak_ch11.pdf",
+        "kind": "official",
+        "location": "Figure 11-2, Properties of standard atmosphere"
+      },
+      "notes": "Pressure from the NWS pressure-altitude formula; 1 inHg = 33.8638 hPa. Tolerance 0.01 inHg covers the rounding of the printed table."
+    },
+    {
+      "id": "boiling-point/faa-standard-atmosphere-2000ft",
+      "calculator": "boiling-point",
+      "operation": "standard-atmosphere-pressure",
+      "title": "Standard atmosphere pressure at 2000 ft",
+      "inputs": {
+        "altitude": {
+          "value": 2000,
+          "unit": "ft"
+        }
+      },
+      "expected": {
+        "pressure_inhg": {
+          "value": 27.82,
+          "unit": "inHg",
+          "tolerance": 0.01,
+          "published": "27.82 inHg"
+        }
+      },
+      "source": {
+        "document": "FAA-H-8083-25B Pilot's Handbook of Aeronautical Knowledge, Chapter 11",
+        "publisher": "Federal Aviation Administration",
+        "edition": "2016",
+        "url": "https://www.faa.gov/sites/faa.gov/files/13_phak_ch11.pdf",
+        "kind": "official",
+        "location": "Figure 11-2, Properties of standard atmosphere"
+      },
+      "notes": "Pressure from the NWS pressure-altitude formula; 1 inHg = 33.8638 hPa. Tolerance 0.01 inHg covers the rounding of the printed table."
+    },
+    {
+      "id": "boiling-point/faa-standard-atmosphere-3000ft",
+      "calculator": "boiling-point",
+      "operation": "standard-atmosphere-pressure",
+      "title": "Standard atmosphere pressure at 3000 ft",
+      "inputs": {
+        "altitude": {
+          "value": 3000,
+          "unit": "ft"
+        }
+      },
+      "expected": {
+        "pressure_inhg": {
+          "value": 26.82,
+          "unit": "inHg",
+          "tolerance": 0.01,
+          "published": "26.82 inHg"
+        }
+      },
+      "source": {
+        "document": "FAA-H-8083-25B Pilot's Handbook of Aeronautical Knowledge, Chapter 11",
+        "publisher": "Federal Aviation Administration",
+        "edition": "2016",
+        "url": "https://www.faa.gov/sites/faa.gov/files/13_phak_ch11.pdf",
+        "kind": "official",
+        "location": "Figure 11-2, Properties of standard atmosphere"
+      },
+      "notes": "Pressure from the NWS pressure-altitude formula; 1 inHg = 33.8638 hPa. Tolerance 0.01 inHg covers the rounding of the printed table."
+    },
+    {
+      "id": "boiling-point/faa-standard-atmosphere-4000ft",
+      "calculator": "boiling-point",
+      "operation": "standard-atmosphere-pressure",
+      "title": "Standard atmosphere pressure at 4000 ft",
+      "inputs": {
+        "altitude": {
+          "value": 4000,
+          "unit": "ft"
+        }
+      },
+      "expected": {
+        "pressure_inhg": {
+          "value": 25.84,
+          "unit": "inHg",
+          "tolerance": 0.01,
+          "published": "25.84 inHg"
+        }
+      },
+      "source": {
+        "document": "FAA-H-8083-25B Pilot's Handbook of Aeronautical Knowledge, Chapter 11",
+        "publisher": "Federal Aviation Administration",
+        "edition": "2016",
+        "url": "https://www.faa.gov/sites/faa.gov/files/13_phak_ch11.pdf",
+        "kind": "official",
+        "location": "Figure 11-2, Properties of standard atmosphere"
+      },
+      "notes": "Pressure from the NWS pressure-altitude formula; 1 inHg = 33.8638 hPa. Tolerance 0.01 inHg covers the rounding of the printed table."
+    },
+    {
+      "id": "boiling-point/faa-standard-atmosphere-5000ft",
+      "calculator": "boiling-point",
+      "operation": "standard-atmosphere-pressure",
+      "title": "Standard atmosphere pressure at 5000 ft",
+      "inputs": {
+        "altitude": {
+          "value": 5000,
+          "unit": "ft"
+        }
+      },
+      "expected": {
+        "pressure_inhg": {
+          "value": 24.89,
+          "unit": "inHg",
+          "tolerance": 0.01,
+          "published": "24.89 inHg"
+        }
+      },
+      "source": {
+        "document": "FAA-H-8083-25B Pilot's Handbook of Aeronautical Knowledge, Chapter 11",
+        "publisher": "Federal Aviation Administration",
+        "edition": "2016",
+        "url": "https://www.faa.gov/sites/faa.gov/files/13_phak_ch11.pdf",
+        "kind": "official",
+        "location": "Figure 11-2, Properties of standard atmosphere"
+      },
+      "notes": "Pressure from the NWS pressure-altitude formula; 1 inHg = 33.8638 hPa. Tolerance 0.01 inHg covers the rounding of the printed table."
+    },
+    {
+      "id": "boiling-point/faa-standard-atmosphere-6000ft",
+      "calculator": "boiling-point",
+      "operation": "standard-atmosphere-pressure",
+      "title": "Standard atmosphere pressure at 6000 ft",
+      "inputs": {
+        "altitude": {
+          "value": 6000,
+          "unit": "ft"
+        }
+      },
+      "expected": {
+        "pressure_inhg": {
+          "value": 23.98,
+          "unit": "inHg",
+          "tolerance": 0.01,
+          "published": "23.98 inHg"
+        }
+      },
+      "source": {
+        "document": "FAA-H-8083-25B Pilot's Handbook of Aeronautical Knowledge, Chapter 11",
+        "publisher": "Federal Aviation Administration",
+        "edition": "2016",
+        "url": "https://www.faa.gov/sites/faa.gov/files/13_phak_ch11.pdf",
+        "kind": "official",
+        "location": "Figure 11-2, Properties of standard atmosphere"
+      },
+      "notes": "Pressure from the NWS pressure-altitude formula; 1 inHg = 33.8638 hPa. Tolerance 0.01 inHg covers the rounding of the printed table."
+    },
+    {
+      "id": "boiling-point/faa-standard-atmosphere-7000ft",
+      "calculator": "boiling-point",
+      "operation": "standard-atmosphere-pressure",
+      "title": "Standard atmosphere pressure at 7000 ft",
+      "inputs": {
+        "altitude": {
+          "value": 7000,
+          "unit": "ft"
+        }
+      },
+      "expected": {
+        "pressure_inhg": {
+          "value": 23.09,
+          "unit": "inHg",
+          "tolerance": 0.01,
+          "published": "23.09 inHg"
+        }
+      },
+      "source": {
+        "document": "FAA-H-8083-25B Pilot's Handbook of Aeronautical Knowledge, Chapter 11",
+        "publisher": "Federal Aviation Administration",
+        "edition": "2016",
+        "url": "https://www.faa.gov/sites/faa.gov/files/13_phak_ch11.pdf",
+        "kind": "official",
+        "location": "Figure 11-2, Properties of standard atmosphere"
+      },
+      "notes": "Pressure from the NWS pressure-altitude formula; 1 inHg = 33.8638 hPa. Tolerance 0.01 inHg covers the rounding of the printed table."
+    },
+    {
+      "id": "boiling-point/faa-standard-atmosphere-8000ft",
+      "calculator": "boiling-point",
+      "operation": "standard-atmosphere-pressure",
+      "title": "Standard atmosphere pressure at 8000 ft",
+      "inputs": {
+        "altitude": {
+          "value": 8000,
+          "unit": "ft"
+        }
+      },
+      "expected": {
+        "pressure_inhg": {
+          "value": 22.22,
+          "unit": "inHg",
+          "tolerance": 0.01,
+          "published": "22.22 inHg"
+        }
+      },
+      "source": {
+        "document": "FAA-H-8083-25B Pilot's Handbook of Aeronautical Knowledge, Chapter 11",
+        "publisher": "Federal Aviation Administration",
+        "edition": "2016",
+        "url": "https://www.faa.gov/sites/faa.gov/files/13_phak_ch11.pdf",
+        "kind": "official",
+        "location": "Figure 11-2, Properties of standard atmosphere"
+      },
+      "notes": "Pressure from the NWS pressure-altitude formula; 1 inHg = 33.8638 hPa. Tolerance 0.01 inHg covers the rounding of the printed table."
+    },
+    {
+      "id": "boiling-point/faa-standard-atmosphere-9000ft",
+      "calculator": "boiling-point",
+      "operation": "standard-atmosphere-pressure",
+      "title": "Standard atmosphere pressure at 9000 ft",
+      "inputs": {
+        "altitude": {
+          "value": 9000,
+          "unit": "ft"
+        }
+      },
+      "expected": {
+        "pressure_inhg": {
+          "value": 21.38,
+          "unit": "inHg",
+          "tolerance": 0.01,
+          "published": "21.38 inHg"
+        }
+      },
+      "source": {
+        "document": "FAA-H-8083-25B Pilot's Handbook of Aeronautical Knowledge, Chapter 11",
+        "publisher": "Federal Aviation Administration",
+        "edition": "2016",
+        "url": "https://www.faa.gov/sites/faa.gov/files/13_phak_ch11.pdf",
+        "kind": "official",
+        "location": "Figure 11-2, Properties of standard atmosphere"
+      },
+      "notes": "Pressure from the NWS pressure-altitude formula; 1 inHg = 33.8638 hPa. Tolerance 0.01 inHg covers the rounding of the printed table."
+    },
+    {
+      "id": "boiling-point/faa-standard-atmosphere-10000ft",
+      "calculator": "boiling-point",
+      "operation": "standard-atmosphere-pressure",
+      "title": "Standard atmosphere pressure at 10000 ft",
+      "inputs": {
+        "altitude": {
+          "value": 10000,
+          "unit": "ft"
+        }
+      },
+      "expected": {
+        "pressure_inhg": {
+          "value": 20.57,
+          "unit": "inHg",
+          "tolerance": 0.01,
+          "published": "20.57 inHg"
+        }
+      },
+      "source": {
+        "document": "FAA-H-8083-25B Pilot's Handbook of Aeronautical Knowledge, Chapter 11",
+        "publisher": "Federal Aviation Administration",
+        "edition": "2016",
+        "url": "https://www.faa.gov/sites/faa.gov/files/13_phak_ch11.pdf",
+        "kind": "official",
+        "location": "Figure 11-2, Properties of standard atmosphere"
+      },
+      "notes": "Pressure from the NWS pressure-altitude formula; 1 inHg = 33.8638 hPa. Tolerance 0.01 inHg covers the rounding of the printed table."
+    },
+    {
+      "id": "boiling-point/usda-fsis-2000ft",
+      "calculator": "boiling-point",
+      "operation": "boiling-point-at-altitude",
+      "title": "Boiling point of water at 2000 ft",
+      "inputs": {
+        "altitude": {
+          "value": 2000,
+          "unit": "ft"
+        }
+      },
+      "expected": {
+        "boiling_point_f": {
+          "value": 208,
+          "unit": "°F",
+          "tolerance": 0.5,
+          "published": "208 °F"
+        }
+      },
+      "source": {
+        "document": "USDA FSIS, High Altitude Cooking and Food Safety",
+        "publisher": "USDA Food Safety and Inspection Service",
+        "edition": "web page (read via the Internet Archive, 2026-10-04)",
+        "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/high-altitude-cooking",
+        "kind": "official",
+        "location": "High Altitude Cooking and Food Safety"
+      }
+    },
+    {
+      "id": "boiling-point/usda-fsis-7500ft",
+      "calculator": "boiling-point",
+      "operation": "boiling-point-at-altitude",
+      "title": "Boiling point of water at 7500 ft",
+      "inputs": {
+        "altitude": {
+          "value": 7500,
+          "unit": "ft"
+        }
+      },
+      "expected": {
+        "boiling_point_f": {
+          "value": 198,
+          "unit": "°F",
+          "tolerance": 0.5,
+          "published": "about 198 °F"
+        }
+      },
+      "source": {
+        "document": "USDA FSIS, High Altitude Cooking and Food Safety",
+        "publisher": "USDA Food Safety and Inspection Service",
+        "edition": "web page (read via the Internet Archive, 2026-10-04)",
+        "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/high-altitude-cooking",
+        "kind": "official",
+        "location": "High Altitude Cooking and Food Safety"
+      }
+    }
+  ]
+}

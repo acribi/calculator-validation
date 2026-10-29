@@ -1,0 +1,15 @@
+{
+  "name": "acribi-calculator-validation",
+  "version": "1.0.0",
+  "description": "Validation cases for metrology calculators, traced to worked examples in official sources (JCGM, NASA, Global ACI, EA, UKAS, NIST, IAPWS, OIML).",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "author": "Acribi (https://acribi.com)",
+  "homepage": "https://github.com/acribi/calculator-validation",
+  "repository": { "type": "git", "url": "https://github.com/acribi/calculator-validation.git" },
+  "engines": { "node": ">=22.6" },
+  "scripts": {
+    "test": "node --experimental-strip-types --no-warnings runner/run.mjs"
+  }
+}

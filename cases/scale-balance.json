@@ -1,0 +1,635 @@
+{
+  "$schema": "./_schema.json",
+  "calculator": "Scale and balance calibration (tolerances, budget, minimum weight)",
+  "acribi_page": "https://acribi.com/instruments/scale/calibration-procedure/",
+  "reference_implementation": [
+    "reference/scale-tests.ts"
+  ],
+  "license": "CC-BY-4.0",
+  "cases": [
+    {
+      "id": "scale-balance/hb44-table6-III-500e",
+      "calculator": "scale-balance",
+      "operation": "hb44-tolerance",
+      "title": "Handbook 44 tolerance, class III, load 500 e",
+      "inputs": {
+        "accuracy_class": {
+          "value": "III",
+          "unit": "text"
+        },
+        "load_in_e": {
+          "value": 500,
+          "unit": "e"
+        }
+      },
+      "expected": {
+        "maintenance_tolerance_e": {
+          "value": 1,
+          "unit": "e",
+          "tolerance": 1e-9,
+          "published": "1 e"
+        },
+        "acceptance_tolerance_e": {
+          "value": 0.5,
+          "unit": "e",
+          "tolerance": 1e-9
+        }
+      },
+      "source": {
+        "document": "NIST Handbook 44 Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, Section 2.20 Scales",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2026",
+        "url": "https://www.nist.gov/pml/owm/nist-handbook-44-current-edition",
+        "kind": "official",
+        "location": "Section 2.20, Table 6 (maintenance tolerances) and T.N.3.2 (acceptance tolerance = one half of maintenance)"
+      }
+    },
+    {
+      "id": "scale-balance/hb44-table6-III-501e",
+      "calculator": "scale-balance",
+      "operation": "hb44-tolerance",
+      "title": "Handbook 44 tolerance, class III, load 501 e",
+      "inputs": {
+        "accuracy_class": {
+          "value": "III",
+          "unit": "text"
+        },
+        "load_in_e": {
+          "value": 501,
+          "unit": "e"
+        }
+      },
+      "expected": {
+        "maintenance_tolerance_e": {
+          "value": 2,
+          "unit": "e",
+          "tolerance": 1e-9,
+          "published": "2 e"
+        },
+        "acceptance_tolerance_e": {
+          "value": 1,
+          "unit": "e",
+          "tolerance": 1e-9
+        }
+      },
+      "source": {
+        "document": "NIST Handbook 44 Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, Section 2.20 Scales",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2026",
+        "url": "https://www.nist.gov/pml/owm/nist-handbook-44-current-edition",
+        "kind": "official",
+        "location": "Section 2.20, Table 6 (maintenance tolerances) and T.N.3.2 (acceptance tolerance = one half of maintenance)"
+      }
+    },
+    {
+      "id": "scale-balance/hb44-table6-III-2000e",
+      "calculator": "scale-balance",
+      "operation": "hb44-tolerance",
+      "title": "Handbook 44 tolerance, class III, load 2000 e",
+      "inputs": {
+        "accuracy_class": {
+          "value": "III",
+          "unit": "text"
+        },
+        "load_in_e": {
+          "value": 2000,
+          "unit": "e"
+        }
+      },
+      "expected": {
+        "maintenance_tolerance_e": {
+          "value": 2,
+          "unit": "e",
+          "tolerance": 1e-9,
+          "published": "2 e"
+        },
+        "acceptance_tolerance_e": {
+          "value": 1,
+          "unit": "e",
+          "tolerance": 1e-9
+        }
+      },
+      "source": {
+        "document": "NIST Handbook 44 Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, Section 2.20 Scales",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2026",
+        "url": "https://www.nist.gov/pml/owm/nist-handbook-44-current-edition",
+        "kind": "official",
+        "location": "Section 2.20, Table 6 (maintenance tolerances) and T.N.3.2 (acceptance tolerance = one half of maintenance)"
+      }
+    },
+    {
+      "id": "scale-balance/hb44-table6-III-2001e",
+      "calculator": "scale-balance",
+      "operation": "hb44-tolerance",
+      "title": "Handbook 44 tolerance, class III, load 2001 e",
+      "inputs": {
+        "accuracy_class": {
+          "value": "III",
+          "unit": "text"
+        },
+        "load_in_e": {
+          "value": 2001,
+          "unit": "e"
+        }
+      },
+      "expected": {
+        "maintenance_tolerance_e": {
+          "value": 3,
+          "unit": "e",
+          "tolerance": 1e-9,
+          "published": "3 e"
+        },
+        "acceptance_tolerance_e": {
+          "value": 1.5,
+          "unit": "e",
+          "tolerance": 1e-9
+        }
+      },
+      "source": {
+        "document": "NIST Handbook 44 Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, Section 2.20 Scales",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2026",
+        "url": "https://www.nist.gov/pml/owm/nist-handbook-44-current-edition",
+        "kind": "official",
+        "location": "Section 2.20, Table 6 (maintenance tolerances) and T.N.3.2 (acceptance tolerance = one half of maintenance)"
+      }
+    },
+    {
+      "id": "scale-balance/hb44-table6-III-4001e",
+      "calculator": "scale-balance",
+      "operation": "hb44-tolerance",
+      "title": "Handbook 44 tolerance, class III, load 4001 e",
+      "inputs": {
+        "accuracy_class": {
+          "value": "III",
+          "unit": "text"
+        },
+        "load_in_e": {
+          "value": 4001,
+          "unit": "e"
+        }
+      },
+      "expected": {
+        "maintenance_tolerance_e": {
+          "value": 5,
+          "unit": "e",
+          "tolerance": 1e-9,
+          "published": "5 e"
+        },
+        "acceptance_tolerance_e": {
+          "value": 2.5,
+          "unit": "e",
+          "tolerance": 1e-9
+        }
+      },
+      "source": {
+        "document": "NIST Handbook 44 Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, Section 2.20 Scales",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2026",
+        "url": "https://www.nist.gov/pml/owm/nist-handbook-44-current-edition",
+        "kind": "official",
+        "location": "Section 2.20, Table 6 (maintenance tolerances) and T.N.3.2 (acceptance tolerance = one half of maintenance)"
+      }
+    },
+    {
+      "id": "scale-balance/hb44-table6-II-5000e",
+      "calculator": "scale-balance",
+      "operation": "hb44-tolerance",
+      "title": "Handbook 44 tolerance, class II, load 5000 e",
+      "inputs": {
+        "accuracy_class": {
+          "value": "II",
+          "unit": "text"
+        },
+        "load_in_e": {
+          "value": 5000,
+          "unit": "e"
+        }
+      },
+      "expected": {
+        "maintenance_tolerance_e": {
+          "value": 1,
+          "unit": "e",
+          "tolerance": 1e-9,
+          "published": "1 e"
+        },
+        "acceptance_tolerance_e": {
+          "value": 0.5,
+          "unit": "e",
+          "tolerance": 1e-9
+        }
+      },
+      "source": {
+        "document": "NIST Handbook 44 Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, Section 2.20 Scales",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2026",
+        "url": "https://www.nist.gov/pml/owm/nist-handbook-44-current-edition",
+        "kind": "official",
+        "location": "Section 2.20, Table 6 (maintenance tolerances) and T.N.3.2 (acceptance tolerance = one half of maintenance)"
+      }
+    },
+    {
+      "id": "scale-balance/hb44-table6-II-20001e",
+      "calculator": "scale-balance",
+      "operation": "hb44-tolerance",
+      "title": "Handbook 44 tolerance, class II, load 20001 e",
+      "inputs": {
+        "accuracy_class": {
+          "value": "II",
+          "unit": "text"
+        },
+        "load_in_e": {
+          "value": 20001,
+          "unit": "e"
+        }
+      },
+      "expected": {
+        "maintenance_tolerance_e": {
+          "value": 3,
+          "unit": "e",
+          "tolerance": 1e-9,
+          "published": "3 e"
+        },
+        "acceptance_tolerance_e": {
+          "value": 1.5,
+          "unit": "e",
+          "tolerance": 1e-9
+        }
+      },
+      "source": {
+        "document": "NIST Handbook 44 Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, Section 2.20 Scales",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2026",
+        "url": "https://www.nist.gov/pml/owm/nist-handbook-44-current-edition",
+        "kind": "official",
+        "location": "Section 2.20, Table 6 (maintenance tolerances) and T.N.3.2 (acceptance tolerance = one half of maintenance)"
+      }
+    },
+    {
+      "id": "scale-balance/hb44-table6-I-200000e",
+      "calculator": "scale-balance",
+      "operation": "hb44-tolerance",
+      "title": "Handbook 44 tolerance, class I, load 200000 e",
+      "inputs": {
+        "accuracy_class": {
+          "value": "I",
+          "unit": "text"
+        },
+        "load_in_e": {
+          "value": 200000,
+          "unit": "e"
+        }
+      },
+      "expected": {
+        "maintenance_tolerance_e": {
+          "value": 2,
+          "unit": "e",
+          "tolerance": 1e-9,
+          "published": "2 e"
+        },
+        "acceptance_tolerance_e": {
+          "value": 1,
+          "unit": "e",
+          "tolerance": 1e-9
+        }
+      },
+      "source": {
+        "document": "NIST Handbook 44 Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, Section 2.20 Scales",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2026",
+        "url": "https://www.nist.gov/pml/owm/nist-handbook-44-current-edition",
+        "kind": "official",
+        "location": "Section 2.20, Table 6 (maintenance tolerances) and T.N.3.2 (acceptance tolerance = one half of maintenance)"
+      }
+    },
+    {
+      "id": "scale-balance/hb44-table6-IIII-401e",
+      "calculator": "scale-balance",
+      "operation": "hb44-tolerance",
+      "title": "Handbook 44 tolerance, class IIII, load 401 e",
+      "inputs": {
+        "accuracy_class": {
+          "value": "IIII",
+          "unit": "text"
+        },
+        "load_in_e": {
+          "value": 401,
+          "unit": "e"
+        }
+      },
+      "expected": {
+        "maintenance_tolerance_e": {
+          "value": 5,
+          "unit": "e",
+          "tolerance": 1e-9,
+          "published": "5 e"
+        },
+        "acceptance_tolerance_e": {
+          "value": 2.5,
+          "unit": "e",
+          "tolerance": 1e-9
+        }
+      },
+      "source": {
+        "document": "NIST Handbook 44 Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, Section 2.20 Scales",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2026",
+        "url": "https://www.nist.gov/pml/owm/nist-handbook-44-current-edition",
+        "kind": "official",
+        "location": "Section 2.20, Table 6 (maintenance tolerances) and T.N.3.2 (acceptance tolerance = one half of maintenance)"
+      }
+    },
+    {
+      "id": "scale-balance/hb44-table6-IIIL-1000e",
+      "calculator": "scale-balance",
+      "operation": "hb44-tolerance",
+      "title": "Handbook 44 tolerance, class IIIL, load 1000 e",
+      "inputs": {
+        "accuracy_class": {
+          "value": "IIIL",
+          "unit": "text"
+        },
+        "load_in_e": {
+          "value": 1000,
+          "unit": "e"
+        }
+      },
+      "expected": {
+        "maintenance_tolerance_e": {
+          "value": 2,
+          "unit": "e",
+          "tolerance": 1e-9,
+          "published": "2 e"
+        },
+        "acceptance_tolerance_e": {
+          "value": 1,
+          "unit": "e",
+          "tolerance": 1e-9
+        }
+      },
+      "source": {
+        "document": "NIST Handbook 44 Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, Section 2.20 Scales",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2026",
+        "url": "https://www.nist.gov/pml/owm/nist-handbook-44-current-edition",
+        "kind": "official",
+        "location": "Section 2.20, Table 6 (maintenance tolerances) and T.N.3.2 (acceptance tolerance = one half of maintenance)"
+      }
+    },
+    {
+      "id": "scale-balance/hb44-table6-IIIL-1001e",
+      "calculator": "scale-balance",
+      "operation": "hb44-tolerance",
+      "title": "Handbook 44 tolerance, class IIIL, load 1001 e",
+      "inputs": {
+        "accuracy_class": {
+          "value": "IIIL",
+          "unit": "text"
+        },
+        "load_in_e": {
+          "value": 1001,
+          "unit": "e"
+        }
+      },
+      "expected": {
+        "maintenance_tolerance_e": {
+          "value": 3,
+          "unit": "e",
+          "tolerance": 1e-9,
+          "published": "3 e"
+        },
+        "acceptance_tolerance_e": {
+          "value": 1.5,
+          "unit": "e",
+          "tolerance": 1e-9
+        }
+      },
+      "source": {
+        "document": "NIST Handbook 44 Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, Section 2.20 Scales",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2026",
+        "url": "https://www.nist.gov/pml/owm/nist-handbook-44-current-edition",
+        "kind": "official",
+        "location": "Section 2.20, Table 6 (maintenance tolerances) and T.N.3.2 (acceptance tolerance = one half of maintenance)"
+      }
+    },
+    {
+      "id": "scale-balance/hb44-table6-IIIL-2000e",
+      "calculator": "scale-balance",
+      "operation": "hb44-tolerance",
+      "title": "Handbook 44 tolerance, class IIIL, load 2000 e",
+      "inputs": {
+        "accuracy_class": {
+          "value": "IIIL",
+          "unit": "text"
+        },
+        "load_in_e": {
+          "value": 2000,
+          "unit": "e"
+        }
+      },
+      "expected": {
+        "maintenance_tolerance_e": {
+          "value": 4,
+          "unit": "e",
+          "tolerance": 1e-9,
+          "published": "4 e"
+        },
+        "acceptance_tolerance_e": {
+          "value": 2,
+          "unit": "e",
+          "tolerance": 1e-9
+        }
+      },
+      "source": {
+        "document": "NIST Handbook 44 Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices, Section 2.20 Scales",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2026",
+        "url": "https://www.nist.gov/pml/owm/nist-handbook-44-current-edition",
+        "kind": "official",
+        "location": "Section 2.20, Table 6 (maintenance tolerances) and T.N.3.2 (acceptance tolerance = one half of maintenance)"
+      }
+    },
+    {
+      "id": "scale-balance/oiml-r76-table6-III-500e",
+      "calculator": "scale-balance",
+      "operation": "oiml-r76-mpe",
+      "title": "OIML R 76 maximum permissible error, class III, load 500 e",
+      "inputs": {
+        "accuracy_class": {
+          "value": "III",
+          "unit": "text"
+        },
+        "load_in_e": {
+          "value": 500,
+          "unit": "e"
+        }
+      },
+      "expected": {
+        "mpe_initial_e": {
+          "value": 0.5,
+          "unit": "e",
+          "tolerance": 1e-9,
+          "published": "0.5 e"
+        },
+        "mpe_in_service_e": {
+          "value": 1,
+          "unit": "e",
+          "tolerance": 1e-9
+        }
+      },
+      "source": {
+        "document": "OIML R 76-1 Non-automatic weighing instruments, Part 1: Metrological and technical requirements – Tests",
+        "publisher": "OIML",
+        "edition": "2006",
+        "url": "https://www.oiml.org/en/files/pdf_r/r076-1-e06.pdf",
+        "kind": "official",
+        "location": "Table 6 (initial verification) and 3.5.2 (in service = twice the initial MPE)"
+      }
+    },
+    {
+      "id": "scale-balance/oiml-r76-table6-III-501e",
+      "calculator": "scale-balance",
+      "operation": "oiml-r76-mpe",
+      "title": "OIML R 76 maximum permissible error, class III, load 501 e",
+      "inputs": {
+        "accuracy_class": {
+          "value": "III",
+          "unit": "text"
+        },
+        "load_in_e": {
+          "value": 501,
+          "unit": "e"
+        }
+      },
+      "expected": {
+        "mpe_initial_e": {
+          "value": 1,
+          "unit": "e",
+          "tolerance": 1e-9,
+          "published": "1 e"
+        },
+        "mpe_in_service_e": {
+          "value": 2,
+          "unit": "e",
+          "tolerance": 1e-9
+        }
+      },
+      "source": {
+        "document": "OIML R 76-1 Non-automatic weighing instruments, Part 1: Metrological and technical requirements – Tests",
+        "publisher": "OIML",
+        "edition": "2006",
+        "url": "https://www.oiml.org/en/files/pdf_r/r076-1-e06.pdf",
+        "kind": "official",
+        "location": "Table 6 (initial verification) and 3.5.2 (in service = twice the initial MPE)"
+      }
+    },
+    {
+      "id": "scale-balance/oiml-r76-table6-III-3000e",
+      "calculator": "scale-balance",
+      "operation": "oiml-r76-mpe",
+      "title": "OIML R 76 maximum permissible error, class III, load 3000 e",
+      "inputs": {
+        "accuracy_class": {
+          "value": "III",
+          "unit": "text"
+        },
+        "load_in_e": {
+          "value": 3000,
+          "unit": "e"
+        }
+      },
+      "expected": {
+        "mpe_initial_e": {
+          "value": 1.5,
+          "unit": "e",
+          "tolerance": 1e-9,
+          "published": "1.5 e"
+        },
+        "mpe_in_service_e": {
+          "value": 3,
+          "unit": "e",
+          "tolerance": 1e-9
+        }
+      },
+      "source": {
+        "document": "OIML R 76-1 Non-automatic weighing instruments, Part 1: Metrological and technical requirements – Tests",
+        "publisher": "OIML",
+        "edition": "2006",
+        "url": "https://www.oiml.org/en/files/pdf_r/r076-1-e06.pdf",
+        "kind": "official",
+        "location": "Table 6 (initial verification) and 3.5.2 (in service = twice the initial MPE)"
+      }
+    },
+    {
+      "id": "scale-balance/oiml-r76-table6-II-20000e",
+      "calculator": "scale-balance",
+      "operation": "oiml-r76-mpe",
+      "title": "OIML R 76 maximum permissible error, class II, load 20000 e",
+      "inputs": {
+        "accuracy_class": {
+          "value": "II",
+          "unit": "text"
+        },
+        "load_in_e": {
+          "value": 20000,
+          "unit": "e"
+        }
+      },
+      "expected": {
+        "mpe_initial_e": {
+          "value": 1,
+          "unit": "e",
+          "tolerance": 1e-9,
+          "published": "1 e"
+        },
+        "mpe_in_service_e": {
+          "value": 2,
+          "unit": "e",
+          "tolerance": 1e-9
+        }
+      },
+      "source": {
+        "document": "OIML R 76-1 Non-automatic weighing instruments, Part 1: Metrological and technical requirements – Tests",
+        "publisher": "OIML",
+        "edition": "2006",
+        "url": "https://www.oiml.org/en/files/pdf_r/r076-1-e06.pdf",
+        "kind": "official",
+        "location": "Table 6 (initial verification) and 3.5.2 (in service = twice the initial MPE)"
+      }
+    },
+    {
+      "id": "scale-balance/nist-hb105-1-class-II",
+      "calculator": "scale-balance",
+      "operation": "hb44-tolerance",
+      "title": "Class II balance, 5000 e: maintenance tolerance 1 e",
+      "inputs": {
+        "accuracy_class": {
+          "value": "II",
+          "unit": "text"
+        },
+        "load_in_e": {
+          "value": 5000,
+          "unit": "e"
+        }
+      },
+      "expected": {
+        "maintenance_tolerance_e": {
+          "value": 1,
+          "unit": "e",
+          "tolerance": 1e-9,
+          "published": "0.001 g with e = 0.001 g"
+        }
+      },
+      "source": {
+        "document": "NIST Handbook 105-1 Specifications and Tolerances for Field Standard Weights",
+        "publisher": "NIST Office of Weights and Measures",
+        "edition": "2019",
+        "url": "https://nvlpubs.nist.gov/nistpubs/hb/2019/NIST.HB.105-1-2019.pdf",
+        "kind": "official",
+        "location": "§4, note"
+      }
+    }
+  ]
+}

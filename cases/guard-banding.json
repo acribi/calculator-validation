@@ -1,0 +1,1170 @@
+{
+  "$schema": "./_schema.json",
+  "calculator": "Guard banding and decision rules",
+  "acribi_page": "https://acribi.com/learn/measurement-uncertainty/guard-banding/",
+  "reference_implementation": [
+    "reference/guardband.ts",
+    "reference/risk.ts"
+  ],
+  "license": "CC-BY-4.0",
+  "cases": [
+    {
+      "id": "guard-banding/lab48-ex13-y1.7",
+      "calculator": "guard-banding",
+      "operation": "specific-risk",
+      "title": "Specific PFA for a result of 1.7 on a 1.5–1.9 tolerance",
+      "inputs": {
+        "measured_value": {
+          "value": 1.7,
+          "unit": "1"
+        },
+        "standard_uncertainty": {
+          "value": 0.05,
+          "unit": "1"
+        },
+        "tolerance_lower": {
+          "value": 1.5,
+          "unit": "1"
+        },
+        "tolerance_upper": {
+          "value": 1.9,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "probability_of_nonconformity": {
+          "value": 0.0001,
+          "unit": "1",
+          "tolerance": 0.00005,
+          "published": "0.01 %"
+        }
+      },
+      "source": {
+        "document": "UKAS LAB 48 Decision rules and statements of conformity",
+        "publisher": "UKAS",
+        "edition": "Edition 5, July 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/LAB-48-Decision-rules-and-statements-of-conformity.pdf",
+        "kind": "official",
+        "location": "Example 13, p. 31"
+      }
+    },
+    {
+      "id": "guard-banding/lab48-ex13-y1.75",
+      "calculator": "guard-banding",
+      "operation": "specific-risk",
+      "title": "Specific PFA for a result of 1.75 on a 1.5–1.9 tolerance",
+      "inputs": {
+        "measured_value": {
+          "value": 1.75,
+          "unit": "1"
+        },
+        "standard_uncertainty": {
+          "value": 0.05,
+          "unit": "1"
+        },
+        "tolerance_lower": {
+          "value": 1.5,
+          "unit": "1"
+        },
+        "tolerance_upper": {
+          "value": 1.9,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "probability_of_nonconformity": {
+          "value": 0.0014,
+          "unit": "1",
+          "tolerance": 0.00005,
+          "published": "0.14 %"
+        }
+      },
+      "source": {
+        "document": "UKAS LAB 48 Decision rules and statements of conformity",
+        "publisher": "UKAS",
+        "edition": "Edition 5, July 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/LAB-48-Decision-rules-and-statements-of-conformity.pdf",
+        "kind": "official",
+        "location": "Example 13, p. 31"
+      }
+    },
+    {
+      "id": "guard-banding/lab48-ex13-y1.8",
+      "calculator": "guard-banding",
+      "operation": "specific-risk",
+      "title": "Specific PFA for a result of 1.8 on a 1.5–1.9 tolerance",
+      "inputs": {
+        "measured_value": {
+          "value": 1.8,
+          "unit": "1"
+        },
+        "standard_uncertainty": {
+          "value": 0.05,
+          "unit": "1"
+        },
+        "tolerance_lower": {
+          "value": 1.5,
+          "unit": "1"
+        },
+        "tolerance_upper": {
+          "value": 1.9,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "probability_of_nonconformity": {
+          "value": 0.023,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "2.3 %"
+        }
+      },
+      "source": {
+        "document": "UKAS LAB 48 Decision rules and statements of conformity",
+        "publisher": "UKAS",
+        "edition": "Edition 5, July 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/LAB-48-Decision-rules-and-statements-of-conformity.pdf",
+        "kind": "official",
+        "location": "Example 13, p. 31"
+      }
+    },
+    {
+      "id": "guard-banding/lab48-ex13-y1.85",
+      "calculator": "guard-banding",
+      "operation": "specific-risk",
+      "title": "Specific PFA for a result of 1.85 on a 1.5–1.9 tolerance",
+      "inputs": {
+        "measured_value": {
+          "value": 1.85,
+          "unit": "1"
+        },
+        "standard_uncertainty": {
+          "value": 0.05,
+          "unit": "1"
+        },
+        "tolerance_lower": {
+          "value": 1.5,
+          "unit": "1"
+        },
+        "tolerance_upper": {
+          "value": 1.9,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "probability_of_nonconformity": {
+          "value": 0.16,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "16 %"
+        }
+      },
+      "source": {
+        "document": "UKAS LAB 48 Decision rules and statements of conformity",
+        "publisher": "UKAS",
+        "edition": "Edition 5, July 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/LAB-48-Decision-rules-and-statements-of-conformity.pdf",
+        "kind": "official",
+        "location": "Example 13, p. 31"
+      }
+    },
+    {
+      "id": "guard-banding/lab48-ex13-y1.9",
+      "calculator": "guard-banding",
+      "operation": "specific-risk",
+      "title": "Specific PFA for a result of 1.9 on a 1.5–1.9 tolerance",
+      "inputs": {
+        "measured_value": {
+          "value": 1.9,
+          "unit": "1"
+        },
+        "standard_uncertainty": {
+          "value": 0.05,
+          "unit": "1"
+        },
+        "tolerance_lower": {
+          "value": 1.5,
+          "unit": "1"
+        },
+        "tolerance_upper": {
+          "value": 1.9,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "probability_of_nonconformity": {
+          "value": 0.5,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "50 %"
+        }
+      },
+      "source": {
+        "document": "UKAS LAB 48 Decision rules and statements of conformity",
+        "publisher": "UKAS",
+        "edition": "Edition 5, July 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/LAB-48-Decision-rules-and-statements-of-conformity.pdf",
+        "kind": "official",
+        "location": "Example 13, p. 31"
+      }
+    },
+    {
+      "id": "guard-banding/lab48-ex5-error0.25",
+      "calculator": "guard-banding",
+      "operation": "specific-risk",
+      "title": "Probability of conformity for an error of 0.25 % FS (tolerance ±0.5 % FS)",
+      "inputs": {
+        "measured_value": {
+          "value": 0.25,
+          "unit": "% FS"
+        },
+        "standard_uncertainty": {
+          "value": 0.1,
+          "unit": "% FS"
+        },
+        "tolerance_lower": {
+          "value": -0.5,
+          "unit": "% FS"
+        },
+        "tolerance_upper": {
+          "value": 0.5,
+          "unit": "% FS"
+        }
+      },
+      "expected": {
+        "probability_of_conformity": {
+          "value": 0.994,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "0.994"
+        }
+      },
+      "source": {
+        "document": "UKAS LAB 48 Decision rules and statements of conformity",
+        "publisher": "UKAS",
+        "edition": "Edition 5, July 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/LAB-48-Decision-rules-and-statements-of-conformity.pdf",
+        "kind": "official",
+        "location": "Example 5, p. 20"
+      }
+    },
+    {
+      "id": "guard-banding/lab48-ex5-error0.3",
+      "calculator": "guard-banding",
+      "operation": "specific-risk",
+      "title": "Probability of conformity for an error of 0.3 % FS (tolerance ±0.5 % FS)",
+      "inputs": {
+        "measured_value": {
+          "value": 0.3,
+          "unit": "% FS"
+        },
+        "standard_uncertainty": {
+          "value": 0.1,
+          "unit": "% FS"
+        },
+        "tolerance_lower": {
+          "value": -0.5,
+          "unit": "% FS"
+        },
+        "tolerance_upper": {
+          "value": 0.5,
+          "unit": "% FS"
+        }
+      },
+      "expected": {
+        "probability_of_conformity": {
+          "value": 0.977,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "0.977"
+        }
+      },
+      "source": {
+        "document": "UKAS LAB 48 Decision rules and statements of conformity",
+        "publisher": "UKAS",
+        "edition": "Edition 5, July 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/LAB-48-Decision-rules-and-statements-of-conformity.pdf",
+        "kind": "official",
+        "location": "Example 5, p. 20"
+      }
+    },
+    {
+      "id": "guard-banding/lab48-ex5-error0.35",
+      "calculator": "guard-banding",
+      "operation": "specific-risk",
+      "title": "Probability of conformity for an error of 0.35 % FS (tolerance ±0.5 % FS)",
+      "inputs": {
+        "measured_value": {
+          "value": 0.35,
+          "unit": "% FS"
+        },
+        "standard_uncertainty": {
+          "value": 0.1,
+          "unit": "% FS"
+        },
+        "tolerance_lower": {
+          "value": -0.5,
+          "unit": "% FS"
+        },
+        "tolerance_upper": {
+          "value": 0.5,
+          "unit": "% FS"
+        }
+      },
+      "expected": {
+        "probability_of_conformity": {
+          "value": 0.933,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "0.933"
+        }
+      },
+      "source": {
+        "document": "UKAS LAB 48 Decision rules and statements of conformity",
+        "publisher": "UKAS",
+        "edition": "Edition 5, July 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/LAB-48-Decision-rules-and-statements-of-conformity.pdf",
+        "kind": "official",
+        "location": "Example 5, p. 20"
+      }
+    },
+    {
+      "id": "guard-banding/lab48-ex5-error0.4",
+      "calculator": "guard-banding",
+      "operation": "specific-risk",
+      "title": "Probability of conformity for an error of 0.4 % FS (tolerance ±0.5 % FS)",
+      "inputs": {
+        "measured_value": {
+          "value": 0.4,
+          "unit": "% FS"
+        },
+        "standard_uncertainty": {
+          "value": 0.1,
+          "unit": "% FS"
+        },
+        "tolerance_lower": {
+          "value": -0.5,
+          "unit": "% FS"
+        },
+        "tolerance_upper": {
+          "value": 0.5,
+          "unit": "% FS"
+        }
+      },
+      "expected": {
+        "probability_of_conformity": {
+          "value": 0.841,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "0.841"
+        }
+      },
+      "source": {
+        "document": "UKAS LAB 48 Decision rules and statements of conformity",
+        "publisher": "UKAS",
+        "edition": "Edition 5, July 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/LAB-48-Decision-rules-and-statements-of-conformity.pdf",
+        "kind": "official",
+        "location": "Example 5, p. 20"
+      }
+    },
+    {
+      "id": "guard-banding/lab48-ex3-pc",
+      "calculator": "guard-banding",
+      "operation": "specific-risk",
+      "title": "Probability of conformity at a measured 10.1 N against a 10 N minimum",
+      "inputs": {
+        "measured_value": {
+          "value": 10.1,
+          "unit": "N"
+        },
+        "standard_uncertainty": {
+          "value": 0.05,
+          "unit": "N"
+        },
+        "tolerance_lower": {
+          "value": 10,
+          "unit": "N"
+        },
+        "tolerance_upper": {
+          "value": null,
+          "unit": "N"
+        }
+      },
+      "expected": {
+        "probability_of_conformity": {
+          "value": 0.97725,
+          "unit": "1",
+          "tolerance": 0.000005,
+          "published": "0.97725"
+        }
+      },
+      "source": {
+        "document": "UKAS LAB 48 Decision rules and statements of conformity",
+        "publisher": "UKAS",
+        "edition": "Edition 5, July 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/LAB-48-Decision-rules-and-statements-of-conformity.pdf",
+        "kind": "official",
+        "location": "Example 3, pp. 17–18"
+      }
+    },
+    {
+      "id": "guard-banding/lab48-ex8-zener",
+      "calculator": "guard-banding",
+      "operation": "guard-factor-one-sided",
+      "title": "Guard band factor for 0.5 % PFA, upper limit −5.40 V",
+      "inputs": {
+        "tolerance_upper": {
+          "value": -5.4,
+          "unit": "V"
+        },
+        "standard_uncertainty": {
+          "value": 0.05,
+          "unit": "V"
+        },
+        "max_pfa": {
+          "value": 0.005,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "guard_factor": {
+          "value": 2.58,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "2.58",
+          "recomputed": {
+            "value": 2.5758,
+            "tolerance": 0.0001
+          }
+        },
+        "acceptance_limit": {
+          "value": -5.53,
+          "unit": "V",
+          "tolerance": 0.005,
+          "published": "−5.53 V",
+          "recomputed": {
+            "value": -5.5288,
+            "tolerance": 0.0001
+          }
+        }
+      },
+      "source": {
+        "document": "UKAS LAB 48 Decision rules and statements of conformity",
+        "publisher": "UKAS",
+        "edition": "Edition 5, July 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/LAB-48-Decision-rules-and-statements-of-conformity.pdf",
+        "kind": "official",
+        "location": "Example 8, p. 24"
+      }
+    },
+    {
+      "id": "guard-banding/lab48-ex9",
+      "calculator": "guard-banding",
+      "operation": "guard-factor-one-sided",
+      "title": "Guard band factor for 10 % PFA, upper limit 50 mm",
+      "inputs": {
+        "tolerance_upper": {
+          "value": 50,
+          "unit": "mm"
+        },
+        "standard_uncertainty": {
+          "value": 5,
+          "unit": "mm"
+        },
+        "max_pfa": {
+          "value": 0.1,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "guard_factor": {
+          "value": 1.28,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "1.28",
+          "recomputed": {
+            "value": 1.2816,
+            "tolerance": 0.0001
+          }
+        },
+        "acceptance_limit": {
+          "value": 43.6,
+          "unit": "mm",
+          "tolerance": 0.05,
+          "published": "43.6 mm"
+        }
+      },
+      "source": {
+        "document": "UKAS LAB 48 Decision rules and statements of conformity",
+        "publisher": "UKAS",
+        "edition": "Edition 5, July 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/LAB-48-Decision-rules-and-statements-of-conformity.pdf",
+        "kind": "official",
+        "location": "Example 9, p. 25"
+      }
+    },
+    {
+      "id": "guard-banding/lab48-appC-u1",
+      "calculator": "guard-banding",
+      "operation": "guard-factor-two-sided",
+      "title": "Two-sided ±4 tolerance, u = 1, PFA 5 %",
+      "inputs": {
+        "tolerance_limit": {
+          "value": 4,
+          "unit": "1"
+        },
+        "standard_uncertainty": {
+          "value": 1,
+          "unit": "1"
+        },
+        "max_pfa": {
+          "value": 0.05,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "guard_factor": {
+          "value": 1.64485,
+          "unit": "1",
+          "tolerance": 0.0001,
+          "published": "1.64485"
+        },
+        "acceptance_limit": {
+          "value": 2.35515,
+          "unit": "1",
+          "tolerance": 0.0001,
+          "published": "±2.35515"
+        }
+      },
+      "source": {
+        "document": "UKAS LAB 48 Decision rules and statements of conformity",
+        "publisher": "UKAS",
+        "edition": "Edition 5, July 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/LAB-48-Decision-rules-and-statements-of-conformity.pdf",
+        "kind": "official",
+        "location": "Appendix C, pp. 42–43"
+      },
+      "notes": "With u = 1 the far limit adds nothing and the one-sided factor applies."
+    },
+    {
+      "id": "guard-banding/lab48-appC-u2-one-sided-factor",
+      "calculator": "guard-banding",
+      "operation": "specific-risk",
+      "title": "Two-sided ±4, u = 2: PFA when the one-sided factor 1.64485 is used",
+      "inputs": {
+        "measured_value": {
+          "value": 0.7103000000000002,
+          "unit": "1"
+        },
+        "standard_uncertainty": {
+          "value": 2,
+          "unit": "1"
+        },
+        "tolerance_lower": {
+          "value": -4,
+          "unit": "1"
+        },
+        "tolerance_upper": {
+          "value": 4,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "probability_of_nonconformity": {
+          "value": 0.05926,
+          "unit": "1",
+          "tolerance": 0.00005,
+          "published": "0.05926"
+        }
+      },
+      "source": {
+        "document": "UKAS LAB 48 Decision rules and statements of conformity",
+        "publisher": "UKAS",
+        "edition": "Edition 5, July 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/LAB-48-Decision-rules-and-statements-of-conformity.pdf",
+        "kind": "official",
+        "location": "Appendix C, pp. 42–43"
+      }
+    },
+    {
+      "id": "guard-banding/lab48-appC-u2",
+      "calculator": "guard-banding",
+      "operation": "guard-factor-two-sided",
+      "title": "Two-sided ±4 tolerance, u = 2, PFA 5 %",
+      "inputs": {
+        "tolerance_limit": {
+          "value": 4,
+          "unit": "1"
+        },
+        "standard_uncertainty": {
+          "value": 2,
+          "unit": "1"
+        },
+        "max_pfa": {
+          "value": 0.05,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "guard_factor": {
+          "value": 1.796,
+          "unit": "1",
+          "tolerance": 0.001,
+          "published": "1.796"
+        },
+        "acceptance_limit": {
+          "value": 0.408,
+          "unit": "1",
+          "tolerance": 0.002,
+          "published": "±0.408"
+        }
+      },
+      "source": {
+        "document": "UKAS LAB 48 Decision rules and statements of conformity",
+        "publisher": "UKAS",
+        "edition": "Edition 5, July 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/LAB-48-Decision-rules-and-statements-of-conformity.pdf",
+        "kind": "official",
+        "location": "Appendix C, pp. 42–43"
+      },
+      "notes": "Tolerances reflect the 3-decimal rounding of the published factor."
+    },
+    {
+      "id": "guard-banding/lab48-appD-u2",
+      "calculator": "guard-banding",
+      "operation": "specific-risk",
+      "title": "Result 0.5 on a ±1 tolerance with u = 2: still a PASS under unconstrained simple acceptance",
+      "inputs": {
+        "measured_value": {
+          "value": 0.5,
+          "unit": "1"
+        },
+        "standard_uncertainty": {
+          "value": 2,
+          "unit": "1"
+        },
+        "tolerance_lower": {
+          "value": -1,
+          "unit": "1"
+        },
+        "tolerance_upper": {
+          "value": 1,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "probability_of_conformity": {
+          "value": 0.37,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "37 %",
+          "recomputed": {
+            "value": 0.372,
+            "tolerance": 0.001
+          }
+        }
+      },
+      "source": {
+        "document": "UKAS LAB 48 Decision rules and statements of conformity",
+        "publisher": "UKAS",
+        "edition": "Edition 5, July 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/LAB-48-Decision-rules-and-statements-of-conformity.pdf",
+        "kind": "official",
+        "location": "Appendix D, pp. 44–45"
+      }
+    },
+    {
+      "id": "guard-banding/lab48-appD-u10",
+      "calculator": "guard-banding",
+      "operation": "specific-risk",
+      "title": "Result 0.5 on a ±1 tolerance with u = 10: still a PASS under unconstrained simple acceptance",
+      "inputs": {
+        "measured_value": {
+          "value": 0.5,
+          "unit": "1"
+        },
+        "standard_uncertainty": {
+          "value": 10,
+          "unit": "1"
+        },
+        "tolerance_lower": {
+          "value": -1,
+          "unit": "1"
+        },
+        "tolerance_upper": {
+          "value": 1,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "probability_of_conformity": {
+          "value": 0.08,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "8 %",
+          "recomputed": {
+            "value": 0.0796,
+            "tolerance": 0.001
+          }
+        }
+      },
+      "source": {
+        "document": "UKAS LAB 48 Decision rules and statements of conformity",
+        "publisher": "UKAS",
+        "edition": "Edition 5, July 2024",
+        "url": "https://www.ukas.com/wp-content/uploads/2023/05/LAB-48-Decision-rules-and-statements-of-conformity.pdf",
+        "kind": "official",
+        "location": "Appendix D, pp. 44–45"
+      }
+    },
+    {
+      "id": "guard-banding/dobbert2008-table1-tur1.5-simple",
+      "calculator": "guard-banding",
+      "operation": "worst-case-global-pfa",
+      "title": "Worst-case global PFA over all EOPRs, TUR 1.5:1, simple acceptance",
+      "inputs": {
+        "tur": {
+          "value": 1.5,
+          "unit": "1"
+        },
+        "coverage_factor": {
+          "value": 1.96,
+          "unit": "1"
+        },
+        "guard_band_multiplier": {
+          "value": 0,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "max_pfa": {
+          "value": 0.0542,
+          "unit": "1",
+          "tolerance": 0.000005,
+          "published": "5.420 %"
+        },
+        "eopr_at_max": {
+          "value": 0.5962,
+          "unit": "1",
+          "tolerance": 0.003,
+          "published": "59.62 %"
+        }
+      },
+      "source": {
+        "document": "Dobbert, M., A Guard-Band Strategy for Managing False-Accept Risk, NCSL International Workshop & Symposium 2008 (Keysight white paper 5991-1267EN)",
+        "publisher": "Keysight Technologies",
+        "edition": "2008 (white paper published 2018-12-19)",
+        "url": "https://keysight.zinfi.net/concierge/OEMs/keysight/wwwcontent/Syndication/pdf/MeasurementFundamentasKR/5991-1267.pdf",
+        "kind": "secondary",
+        "note": "Original paper of the managed guard band method; cited by Global ACI-TECH-1-002.",
+        "location": "Table 1, pp. 5–6"
+      },
+      "notes": "Tolerance ±1, U95 = 1.96u, centered normal process. The EOPR at the maximum is located with a tolerance of 0.3 percentage points because the PFA curve is flat there."
+    },
+    {
+      "id": "guard-banding/dobbert2008-table1-tur1.5-managed",
+      "calculator": "guard-banding",
+      "operation": "worst-case-global-pfa",
+      "title": "Worst-case global PFA with the managed guard band M = 0.3589, TUR 1.5:1",
+      "inputs": {
+        "tur": {
+          "value": 1.5,
+          "unit": "1"
+        },
+        "coverage_factor": {
+          "value": 1.96,
+          "unit": "1"
+        },
+        "guard_band_multiplier": {
+          "value": 0.3589,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "max_pfa": {
+          "value": 0.02,
+          "unit": "1",
+          "tolerance": 0.0002,
+          "published": "2 %"
+        }
+      },
+      "source": {
+        "document": "Dobbert, M., A Guard-Band Strategy for Managing False-Accept Risk, NCSL International Workshop & Symposium 2008 (Keysight white paper 5991-1267EN)",
+        "publisher": "Keysight Technologies",
+        "edition": "2008 (white paper published 2018-12-19)",
+        "url": "https://keysight.zinfi.net/concierge/OEMs/keysight/wwwcontent/Syndication/pdf/MeasurementFundamentasKR/5991-1267.pdf",
+        "kind": "secondary",
+        "note": "Original paper of the managed guard band method; cited by Global ACI-TECH-1-002.",
+        "location": "Table 1, pp. 5–6"
+      },
+      "notes": "Acceptance limit A = L − M·U."
+    },
+    {
+      "id": "guard-banding/dobbert2008-eq4-tur1.5",
+      "calculator": "guard-banding",
+      "operation": "dobbert-multiplier",
+      "title": "Equation 4 fit of the guard band multiplier, TUR 1.5:1",
+      "inputs": {
+        "tur": {
+          "value": 1.5,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "guard_band_multiplier": {
+          "value": 0.3589,
+          "unit": "1",
+          "tolerance": 0.003,
+          "published": "Table 1: 0.3589"
+        }
+      },
+      "source": {
+        "document": "Dobbert, M., A Guard-Band Strategy for Managing False-Accept Risk, NCSL International Workshop & Symposium 2008 (Keysight white paper 5991-1267EN)",
+        "publisher": "Keysight Technologies",
+        "edition": "2008 (white paper published 2018-12-19)",
+        "url": "https://keysight.zinfi.net/concierge/OEMs/keysight/wwwcontent/Syndication/pdf/MeasurementFundamentasKR/5991-1267.pdf",
+        "kind": "secondary",
+        "note": "Original paper of the managed guard band method; cited by Global ACI-TECH-1-002.",
+        "location": "equation 4 and Table 1, pp. 5–6"
+      },
+      "notes": "Equation 4 is an approximate fit to Table 1, so the check uses a tolerance of 0.003."
+    },
+    {
+      "id": "guard-banding/dobbert2008-table1-tur2-simple",
+      "calculator": "guard-banding",
+      "operation": "worst-case-global-pfa",
+      "title": "Worst-case global PFA over all EOPRs, TUR 2:1, simple acceptance",
+      "inputs": {
+        "tur": {
+          "value": 2,
+          "unit": "1"
+        },
+        "coverage_factor": {
+          "value": 1.96,
+          "unit": "1"
+        },
+        "guard_band_multiplier": {
+          "value": 0,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "max_pfa": {
+          "value": 0.04249,
+          "unit": "1",
+          "tolerance": 0.000005,
+          "published": "4.249 %"
+        },
+        "eopr_at_max": {
+          "value": 0.615,
+          "unit": "1",
+          "tolerance": 0.003,
+          "published": "61.50 %"
+        }
+      },
+      "source": {
+        "document": "Dobbert, M., A Guard-Band Strategy for Managing False-Accept Risk, NCSL International Workshop & Symposium 2008 (Keysight white paper 5991-1267EN)",
+        "publisher": "Keysight Technologies",
+        "edition": "2008 (white paper published 2018-12-19)",
+        "url": "https://keysight.zinfi.net/concierge/OEMs/keysight/wwwcontent/Syndication/pdf/MeasurementFundamentasKR/5991-1267.pdf",
+        "kind": "secondary",
+        "note": "Original paper of the managed guard band method; cited by Global ACI-TECH-1-002.",
+        "location": "Table 1, pp. 5–6"
+      },
+      "notes": "Tolerance ±1, U95 = 1.96u, centered normal process. The EOPR at the maximum is located with a tolerance of 0.3 percentage points because the PFA curve is flat there."
+    },
+    {
+      "id": "guard-banding/dobbert2008-table1-tur2-managed",
+      "calculator": "guard-banding",
+      "operation": "worst-case-global-pfa",
+      "title": "Worst-case global PFA with the managed guard band M = 0.2793, TUR 2:1",
+      "inputs": {
+        "tur": {
+          "value": 2,
+          "unit": "1"
+        },
+        "coverage_factor": {
+          "value": 1.96,
+          "unit": "1"
+        },
+        "guard_band_multiplier": {
+          "value": 0.2793,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "max_pfa": {
+          "value": 0.02,
+          "unit": "1",
+          "tolerance": 0.0002,
+          "published": "2 %"
+        }
+      },
+      "source": {
+        "document": "Dobbert, M., A Guard-Band Strategy for Managing False-Accept Risk, NCSL International Workshop & Symposium 2008 (Keysight white paper 5991-1267EN)",
+        "publisher": "Keysight Technologies",
+        "edition": "2008 (white paper published 2018-12-19)",
+        "url": "https://keysight.zinfi.net/concierge/OEMs/keysight/wwwcontent/Syndication/pdf/MeasurementFundamentasKR/5991-1267.pdf",
+        "kind": "secondary",
+        "note": "Original paper of the managed guard band method; cited by Global ACI-TECH-1-002.",
+        "location": "Table 1, pp. 5–6"
+      },
+      "notes": "Acceptance limit A = L − M·U."
+    },
+    {
+      "id": "guard-banding/dobbert2008-eq4-tur2",
+      "calculator": "guard-banding",
+      "operation": "dobbert-multiplier",
+      "title": "Equation 4 fit of the guard band multiplier, TUR 2:1",
+      "inputs": {
+        "tur": {
+          "value": 2,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "guard_band_multiplier": {
+          "value": 0.2793,
+          "unit": "1",
+          "tolerance": 0.003,
+          "published": "Table 1: 0.2793"
+        }
+      },
+      "source": {
+        "document": "Dobbert, M., A Guard-Band Strategy for Managing False-Accept Risk, NCSL International Workshop & Symposium 2008 (Keysight white paper 5991-1267EN)",
+        "publisher": "Keysight Technologies",
+        "edition": "2008 (white paper published 2018-12-19)",
+        "url": "https://keysight.zinfi.net/concierge/OEMs/keysight/wwwcontent/Syndication/pdf/MeasurementFundamentasKR/5991-1267.pdf",
+        "kind": "secondary",
+        "note": "Original paper of the managed guard band method; cited by Global ACI-TECH-1-002.",
+        "location": "equation 4 and Table 1, pp. 5–6"
+      },
+      "notes": "Equation 4 is an approximate fit to Table 1, so the check uses a tolerance of 0.003."
+    },
+    {
+      "id": "guard-banding/dobbert2008-table1-tur3-simple",
+      "calculator": "guard-banding",
+      "operation": "worst-case-global-pfa",
+      "title": "Worst-case global PFA over all EOPRs, TUR 3:1, simple acceptance",
+      "inputs": {
+        "tur": {
+          "value": 3,
+          "unit": "1"
+        },
+        "coverage_factor": {
+          "value": 1.96,
+          "unit": "1"
+        },
+        "guard_band_multiplier": {
+          "value": 0,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "max_pfa": {
+          "value": 0.02968,
+          "unit": "1",
+          "tolerance": 0.000005,
+          "published": "2.968 %"
+        },
+        "eopr_at_max": {
+          "value": 0.6355,
+          "unit": "1",
+          "tolerance": 0.003,
+          "published": "63.55 %"
+        }
+      },
+      "source": {
+        "document": "Dobbert, M., A Guard-Band Strategy for Managing False-Accept Risk, NCSL International Workshop & Symposium 2008 (Keysight white paper 5991-1267EN)",
+        "publisher": "Keysight Technologies",
+        "edition": "2008 (white paper published 2018-12-19)",
+        "url": "https://keysight.zinfi.net/concierge/OEMs/keysight/wwwcontent/Syndication/pdf/MeasurementFundamentasKR/5991-1267.pdf",
+        "kind": "secondary",
+        "note": "Original paper of the managed guard band method; cited by Global ACI-TECH-1-002.",
+        "location": "Table 1, pp. 5–6"
+      },
+      "notes": "Tolerance ±1, U95 = 1.96u, centered normal process. The EOPR at the maximum is located with a tolerance of 0.3 percentage points because the PFA curve is flat there."
+    },
+    {
+      "id": "guard-banding/dobbert2008-table1-tur3-managed",
+      "calculator": "guard-banding",
+      "operation": "worst-case-global-pfa",
+      "title": "Worst-case global PFA with the managed guard band M = 0.1536, TUR 3:1",
+      "inputs": {
+        "tur": {
+          "value": 3,
+          "unit": "1"
+        },
+        "coverage_factor": {
+          "value": 1.96,
+          "unit": "1"
+        },
+        "guard_band_multiplier": {
+          "value": 0.1536,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "max_pfa": {
+          "value": 0.02,
+          "unit": "1",
+          "tolerance": 0.0002,
+          "published": "2 %"
+        }
+      },
+      "source": {
+        "document": "Dobbert, M., A Guard-Band Strategy for Managing False-Accept Risk, NCSL International Workshop & Symposium 2008 (Keysight white paper 5991-1267EN)",
+        "publisher": "Keysight Technologies",
+        "edition": "2008 (white paper published 2018-12-19)",
+        "url": "https://keysight.zinfi.net/concierge/OEMs/keysight/wwwcontent/Syndication/pdf/MeasurementFundamentasKR/5991-1267.pdf",
+        "kind": "secondary",
+        "note": "Original paper of the managed guard band method; cited by Global ACI-TECH-1-002.",
+        "location": "Table 1, pp. 5–6"
+      },
+      "notes": "Acceptance limit A = L − M·U."
+    },
+    {
+      "id": "guard-banding/dobbert2008-eq4-tur3",
+      "calculator": "guard-banding",
+      "operation": "dobbert-multiplier",
+      "title": "Equation 4 fit of the guard band multiplier, TUR 3:1",
+      "inputs": {
+        "tur": {
+          "value": 3,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "guard_band_multiplier": {
+          "value": 0.1536,
+          "unit": "1",
+          "tolerance": 0.003,
+          "published": "Table 1: 0.1536"
+        }
+      },
+      "source": {
+        "document": "Dobbert, M., A Guard-Band Strategy for Managing False-Accept Risk, NCSL International Workshop & Symposium 2008 (Keysight white paper 5991-1267EN)",
+        "publisher": "Keysight Technologies",
+        "edition": "2008 (white paper published 2018-12-19)",
+        "url": "https://keysight.zinfi.net/concierge/OEMs/keysight/wwwcontent/Syndication/pdf/MeasurementFundamentasKR/5991-1267.pdf",
+        "kind": "secondary",
+        "note": "Original paper of the managed guard band method; cited by Global ACI-TECH-1-002.",
+        "location": "equation 4 and Table 1, pp. 5–6"
+      },
+      "notes": "Equation 4 is an approximate fit to Table 1, so the check uses a tolerance of 0.003."
+    },
+    {
+      "id": "guard-banding/dobbert2008-table1-tur4-simple",
+      "calculator": "guard-banding",
+      "operation": "worst-case-global-pfa",
+      "title": "Worst-case global PFA over all EOPRs, TUR 4:1, simple acceptance",
+      "inputs": {
+        "tur": {
+          "value": 4,
+          "unit": "1"
+        },
+        "coverage_factor": {
+          "value": 1.96,
+          "unit": "1"
+        },
+        "guard_band_multiplier": {
+          "value": 0,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "max_pfa": {
+          "value": 0.02281,
+          "unit": "1",
+          "tolerance": 0.000005,
+          "published": "2.281 %"
+        },
+        "eopr_at_max": {
+          "value": 0.6465,
+          "unit": "1",
+          "tolerance": 0.003,
+          "published": "64.65 %"
+        }
+      },
+      "source": {
+        "document": "Dobbert, M., A Guard-Band Strategy for Managing False-Accept Risk, NCSL International Workshop & Symposium 2008 (Keysight white paper 5991-1267EN)",
+        "publisher": "Keysight Technologies",
+        "edition": "2008 (white paper published 2018-12-19)",
+        "url": "https://keysight.zinfi.net/concierge/OEMs/keysight/wwwcontent/Syndication/pdf/MeasurementFundamentasKR/5991-1267.pdf",
+        "kind": "secondary",
+        "note": "Original paper of the managed guard band method; cited by Global ACI-TECH-1-002.",
+        "location": "Table 1, pp. 5–6"
+      },
+      "notes": "Tolerance ±1, U95 = 1.96u, centered normal process. The EOPR at the maximum is located with a tolerance of 0.3 percentage points because the PFA curve is flat there."
+    },
+    {
+      "id": "guard-banding/dobbert2008-table1-tur4-managed",
+      "calculator": "guard-banding",
+      "operation": "worst-case-global-pfa",
+      "title": "Worst-case global PFA with the managed guard band M = 0.0532, TUR 4:1",
+      "inputs": {
+        "tur": {
+          "value": 4,
+          "unit": "1"
+        },
+        "coverage_factor": {
+          "value": 1.96,
+          "unit": "1"
+        },
+        "guard_band_multiplier": {
+          "value": 0.0532,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "max_pfa": {
+          "value": 0.02,
+          "unit": "1",
+          "tolerance": 0.0002,
+          "published": "2 %"
+        }
+      },
+      "source": {
+        "document": "Dobbert, M., A Guard-Band Strategy for Managing False-Accept Risk, NCSL International Workshop & Symposium 2008 (Keysight white paper 5991-1267EN)",
+        "publisher": "Keysight Technologies",
+        "edition": "2008 (white paper published 2018-12-19)",
+        "url": "https://keysight.zinfi.net/concierge/OEMs/keysight/wwwcontent/Syndication/pdf/MeasurementFundamentasKR/5991-1267.pdf",
+        "kind": "secondary",
+        "note": "Original paper of the managed guard band method; cited by Global ACI-TECH-1-002.",
+        "location": "Table 1, pp. 5–6"
+      },
+      "notes": "Acceptance limit A = L − M·U."
+    },
+    {
+      "id": "guard-banding/dobbert2008-eq4-tur4",
+      "calculator": "guard-banding",
+      "operation": "dobbert-multiplier",
+      "title": "Equation 4 fit of the guard band multiplier, TUR 4:1",
+      "inputs": {
+        "tur": {
+          "value": 4,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "guard_band_multiplier": {
+          "value": 0.0532,
+          "unit": "1",
+          "tolerance": 0.003,
+          "published": "Table 1: 0.0532"
+        }
+      },
+      "source": {
+        "document": "Dobbert, M., A Guard-Band Strategy for Managing False-Accept Risk, NCSL International Workshop & Symposium 2008 (Keysight white paper 5991-1267EN)",
+        "publisher": "Keysight Technologies",
+        "edition": "2008 (white paper published 2018-12-19)",
+        "url": "https://keysight.zinfi.net/concierge/OEMs/keysight/wwwcontent/Syndication/pdf/MeasurementFundamentasKR/5991-1267.pdf",
+        "kind": "secondary",
+        "note": "Original paper of the managed guard band method; cited by Global ACI-TECH-1-002.",
+        "location": "equation 4 and Table 1, pp. 5–6"
+      },
+      "notes": "Equation 4 is an approximate fit to Table 1, so the check uses a tolerance of 0.003."
+    }
+  ]
+}

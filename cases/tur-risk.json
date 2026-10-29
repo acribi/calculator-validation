@@ -1,0 +1,1990 @@
+{
+  "$schema": "./_schema.json",
+  "calculator": "TUR, TAR and measurement decision risk",
+  "acribi_page": "https://acribi.com/tools/tur-calculator/",
+  "reference_implementation": [
+    "reference/risk.ts"
+  ],
+  "license": "CC-BY-4.0",
+  "cases": [
+    {
+      "id": "tur-risk/mimbs2007-ex1-tar",
+      "calculator": "tur-risk",
+      "operation": "tar",
+      "title": "TAR: UUT ±4, standard ±1",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -4,
+          "unit": "1"
+        },
+        "tolerance_upper": {
+          "value": 4,
+          "unit": "1"
+        },
+        "standard_accuracy": {
+          "value": 1,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "tar": {
+          "value": 4,
+          "unit": "1",
+          "tolerance": 1e-9,
+          "published": "4:1"
+        }
+      },
+      "source": {
+        "document": "Mimbs, S. M., Measurement Decision Risk – The Importance of Definitions, NCSL International Workshop & Symposium (KSC-2007-096)",
+        "publisher": "NASA Kennedy Space Center (NTRS 20130011498)",
+        "edition": "2007",
+        "url": "https://ntrs.nasa.gov/citations/20130011498",
+        "kind": "secondary",
+        "note": "Conference paper by a NASA author, with worked examples.",
+        "location": "Example 1, Table 1, p. 8"
+      }
+    },
+    {
+      "id": "tur-risk/mimbs2007-ex1-tur",
+      "calculator": "tur-risk",
+      "operation": "tur",
+      "title": "TUR: UUT ±4, calibration process u = 0.67, k = 2",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -4,
+          "unit": "1"
+        },
+        "tolerance_upper": {
+          "value": 4,
+          "unit": "1"
+        },
+        "standard_uncertainty": {
+          "value": 0.67,
+          "unit": "1"
+        },
+        "coverage_factor": {
+          "value": 2,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "tur": {
+          "value": 3,
+          "unit": "1",
+          "tolerance": 0.02,
+          "published": "3:1",
+          "recomputed": {
+            "value": 2.98507,
+            "tolerance": 0.00001
+          }
+        }
+      },
+      "source": {
+        "document": "Mimbs, S. M., Measurement Decision Risk – The Importance of Definitions, NCSL International Workshop & Symposium (KSC-2007-096)",
+        "publisher": "NASA Kennedy Space Center (NTRS 20130011498)",
+        "edition": "2007",
+        "url": "https://ntrs.nasa.gov/citations/20130011498",
+        "kind": "secondary",
+        "note": "Conference paper by a NASA author, with worked examples.",
+        "location": "Example 1, Table 1, p. 8"
+      },
+      "notes": "The source states the ratio rounded to 3:1; the exact value is 8 / (2 × 2 × 0.67) = 2.985."
+    },
+    {
+      "id": "tur-risk/mimbs2007-ex2-tar",
+      "calculator": "tur-risk",
+      "operation": "tar",
+      "title": "TAR: digital micrometer ±0.0001 in, gage block ±0.000004 in",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -0.0001,
+          "unit": "in"
+        },
+        "tolerance_upper": {
+          "value": 0.0001,
+          "unit": "in"
+        },
+        "standard_accuracy": {
+          "value": 0.000004,
+          "unit": "in"
+        }
+      },
+      "expected": {
+        "tar": {
+          "value": 25,
+          "unit": "1",
+          "tolerance": 1e-9,
+          "published": "25:1"
+        }
+      },
+      "source": {
+        "document": "Mimbs, S. M., Measurement Decision Risk – The Importance of Definitions, NCSL International Workshop & Symposium (KSC-2007-096)",
+        "publisher": "NASA Kennedy Space Center (NTRS 20130011498)",
+        "edition": "2007",
+        "url": "https://ntrs.nasa.gov/citations/20130011498",
+        "kind": "secondary",
+        "note": "Conference paper by a NASA author, with worked examples.",
+        "location": "Example 2, pp. 9–10"
+      }
+    },
+    {
+      "id": "tur-risk/mimbs2007-ex2-tur",
+      "calculator": "tur-risk",
+      "operation": "tur",
+      "title": "TUR: digital micrometer, combined u = 0.0000168 in, k = 2",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -0.0001,
+          "unit": "in"
+        },
+        "tolerance_upper": {
+          "value": 0.0001,
+          "unit": "in"
+        },
+        "standard_uncertainty": {
+          "value": 0.0000168,
+          "unit": "in"
+        },
+        "coverage_factor": {
+          "value": 2,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "tur": {
+          "atMost": 4,
+          "unit": "1",
+          "published": "below 4:1",
+          "recomputed": {
+            "value": 2.97619,
+            "tolerance": 0.00001
+          }
+        }
+      },
+      "source": {
+        "document": "Mimbs, S. M., Measurement Decision Risk – The Importance of Definitions, NCSL International Workshop & Symposium (KSC-2007-096)",
+        "publisher": "NASA Kennedy Space Center (NTRS 20130011498)",
+        "edition": "2007",
+        "url": "https://ntrs.nasa.gov/citations/20130011498",
+        "kind": "secondary",
+        "note": "Conference paper by a NASA author, with worked examples.",
+        "location": "Example 2, pp. 9–10"
+      },
+      "notes": "The source shows the TUR falls below 4:1 even though the TAR is 25:1. Only that bound is checked against the source."
+    },
+    {
+      "id": "tur-risk/mimbs2007-ex3-tur",
+      "calculator": "tur-risk",
+      "operation": "tur",
+      "title": "TUR: vernier micrometer ±0.0001 in, combined u = 0.0000326 in, k = 2",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -0.0001,
+          "unit": "in"
+        },
+        "tolerance_upper": {
+          "value": 0.0001,
+          "unit": "in"
+        },
+        "standard_uncertainty": {
+          "value": 0.0000326,
+          "unit": "in"
+        },
+        "coverage_factor": {
+          "value": 2,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "tur": {
+          "value": 1.5,
+          "unit": "1",
+          "tolerance": 0.05,
+          "published": "1.5",
+          "recomputed": {
+            "value": 1.53374,
+            "tolerance": 0.00001
+          }
+        }
+      },
+      "source": {
+        "document": "Mimbs, S. M., Measurement Decision Risk – The Importance of Definitions, NCSL International Workshop & Symposium (KSC-2007-096)",
+        "publisher": "NASA Kennedy Space Center (NTRS 20130011498)",
+        "edition": "2007",
+        "url": "https://ntrs.nasa.gov/citations/20130011498",
+        "kind": "secondary",
+        "note": "Conference paper by a NASA author, with worked examples.",
+        "location": "Example 3, pp. 10–11"
+      }
+    },
+    {
+      "id": "tur-risk/jcgm106-8.2.3-cm",
+      "calculator": "tur-risk",
+      "operation": "tur",
+      "title": "Measurement capability index with U = Emax / 3",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -3,
+          "unit": "1"
+        },
+        "tolerance_upper": {
+          "value": 3,
+          "unit": "1"
+        },
+        "expanded_uncertainty": {
+          "value": 1,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "tur": {
+          "value": 3,
+          "unit": "1",
+          "tolerance": 1e-9,
+          "published": "Cm = 3"
+        }
+      },
+      "source": {
+        "document": "JCGM 106:2012 Evaluation of measurement data – The role of measurement uncertainty in conformity assessment (also ISO/IEC Guide 98-4:2012)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2012, 1st edition",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_106_2012_E.pdf",
+        "kind": "official",
+        "location": "§8.2.3, legal metrology example, p. 20"
+      },
+      "notes": "Cm = (TU − TL) / (4u) equals the TUR when U = 2u. Here U is given directly."
+    },
+    {
+      "id": "tur-risk/jcgm106-7.3.3-ex1",
+      "calculator": "tur-risk",
+      "operation": "specific-risk",
+      "title": "Probability of conformity, Zener voltage with an upper limit",
+      "inputs": {
+        "measured_value": {
+          "value": -5.47,
+          "unit": "V"
+        },
+        "standard_uncertainty": {
+          "value": 0.05,
+          "unit": "V"
+        },
+        "tolerance_lower": {
+          "value": null,
+          "unit": "V"
+        },
+        "tolerance_upper": {
+          "value": -5.4,
+          "unit": "V"
+        }
+      },
+      "expected": {
+        "probability_of_conformity": {
+          "value": 0.92,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "0.92",
+          "recomputed": {
+            "value": 0.91924,
+            "tolerance": 0.00005
+          }
+        }
+      },
+      "source": {
+        "document": "JCGM 106:2012 Evaluation of measurement data – The role of measurement uncertainty in conformity assessment (also ISO/IEC Guide 98-4:2012)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2012, 1st edition",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_106_2012_E.pdf",
+        "kind": "official",
+        "location": "§7.3.3, Example 1, p. 15"
+      }
+    },
+    {
+      "id": "tur-risk/jcgm106-7.3.3-ex2",
+      "calculator": "tur-risk",
+      "operation": "specific-risk",
+      "title": "Probability of conformity, pressure with a lower limit",
+      "inputs": {
+        "measured_value": {
+          "value": 509.7,
+          "unit": "kPa"
+        },
+        "standard_uncertainty": {
+          "value": 8.6,
+          "unit": "kPa"
+        },
+        "tolerance_lower": {
+          "value": 490,
+          "unit": "kPa"
+        },
+        "tolerance_upper": {
+          "value": null,
+          "unit": "kPa"
+        }
+      },
+      "expected": {
+        "probability_of_conformity": {
+          "value": 0.99,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "0.99",
+          "recomputed": {
+            "value": 0.98901,
+            "tolerance": 0.00005
+          }
+        }
+      },
+      "source": {
+        "document": "JCGM 106:2012 Evaluation of measurement data – The role of measurement uncertainty in conformity assessment (also ISO/IEC Guide 98-4:2012)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2012, 1st edition",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_106_2012_E.pdf",
+        "kind": "official",
+        "location": "§7.3.3, Example 2, p. 15"
+      }
+    },
+    {
+      "id": "tur-risk/jcgm106-7.4-oil",
+      "calculator": "tur-risk",
+      "operation": "specific-risk",
+      "title": "Probability of conformity, two-sided tolerance (kinematic viscosity)",
+      "inputs": {
+        "measured_value": {
+          "value": 13.6,
+          "unit": "mm²/s"
+        },
+        "standard_uncertainty": {
+          "value": 1.8,
+          "unit": "mm²/s"
+        },
+        "tolerance_lower": {
+          "value": 12.5,
+          "unit": "mm²/s"
+        },
+        "tolerance_upper": {
+          "value": 16.3,
+          "unit": "mm²/s"
+        }
+      },
+      "expected": {
+        "probability_of_conformity": {
+          "value": 0.66,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "0.66",
+          "recomputed": {
+            "value": 0.66263,
+            "tolerance": 0.00005
+          }
+        }
+      },
+      "source": {
+        "document": "JCGM 106:2012 Evaluation of measurement data – The role of measurement uncertainty in conformity assessment (also ISO/IEC Guide 98-4:2012)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2012, 1st edition",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_106_2012_E.pdf",
+        "kind": "official",
+        "location": "§7.4, p. 16"
+      },
+      "notes": "The source rounds the z values before looking them up; with exact z values the result is 0.6626, which also rounds to 0.66."
+    },
+    {
+      "id": "tur-risk/gaci002-table1-w-3U",
+      "calculator": "tur-risk",
+      "operation": "specific-risk",
+      "title": "Maximum specific PFA at the acceptance limit, guard band w = 3U",
+      "inputs": {
+        "measured_value": {
+          "value": 4,
+          "unit": "1"
+        },
+        "standard_uncertainty": {
+          "value": 1,
+          "unit": "1"
+        },
+        "tolerance_lower": {
+          "value": null,
+          "unit": "1"
+        },
+        "tolerance_upper": {
+          "value": 10,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "probability_of_nonconformity": {
+          "atMost": 0.000001,
+          "unit": "1",
+          "published": "less than 1 ppm",
+          "recomputed": {
+            "value": 9.87e-10,
+            "tolerance": 1.974e-12
+          }
+        }
+      },
+      "source": {
+        "document": "Global ACI-TECH-1-002 (G) Guidelines on Decision Rules and Statements of Conformity (formerly ILAC G8:09/2019)",
+        "publisher": "Global Accreditation Cooperation Inc. (Global ACI)",
+        "edition": "v1.0, 2026-06-26 (ILAC G8:09/2019 reissued without technical changes; section numbers shifted by +1)",
+        "url": "https://sys.global-aci.org/uploads/documents/TECH-1-002(G)_Guidelines_on_Decision_Rules_and_Statements_of_Conformity_v1_0.pdf",
+        "kind": "official",
+        "location": "§6.2, Table 1, p. 12 (ILAC G8:09/2019 §5.2, Table 1)"
+      },
+      "notes": "One-sided upper limit TU = 10, u = 1, U = 2u; the measured value sits on the acceptance limit TU − w. The source gives upper bounds; the k = 2 assumption is implicit in the table."
+    },
+    {
+      "id": "tur-risk/gaci002-table1-w-1_5U",
+      "calculator": "tur-risk",
+      "operation": "specific-risk",
+      "title": "Maximum specific PFA at the acceptance limit, guard band w = 1.5U",
+      "inputs": {
+        "measured_value": {
+          "value": 7,
+          "unit": "1"
+        },
+        "standard_uncertainty": {
+          "value": 1,
+          "unit": "1"
+        },
+        "tolerance_lower": {
+          "value": null,
+          "unit": "1"
+        },
+        "tolerance_upper": {
+          "value": 10,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "probability_of_nonconformity": {
+          "atMost": 0.0016,
+          "unit": "1",
+          "published": "less than 0.16 %",
+          "recomputed": {
+            "value": 0.00135,
+            "tolerance": 0.0000027000000000000004
+          }
+        }
+      },
+      "source": {
+        "document": "Global ACI-TECH-1-002 (G) Guidelines on Decision Rules and Statements of Conformity (formerly ILAC G8:09/2019)",
+        "publisher": "Global Accreditation Cooperation Inc. (Global ACI)",
+        "edition": "v1.0, 2026-06-26 (ILAC G8:09/2019 reissued without technical changes; section numbers shifted by +1)",
+        "url": "https://sys.global-aci.org/uploads/documents/TECH-1-002(G)_Guidelines_on_Decision_Rules_and_Statements_of_Conformity_v1_0.pdf",
+        "kind": "official",
+        "location": "§6.2, Table 1, p. 12 (ILAC G8:09/2019 §5.2, Table 1)"
+      },
+      "notes": "One-sided upper limit TU = 10, u = 1, U = 2u; the measured value sits on the acceptance limit TU − w. The source gives upper bounds; the k = 2 assumption is implicit in the table."
+    },
+    {
+      "id": "tur-risk/gaci002-table1-w-1U",
+      "calculator": "tur-risk",
+      "operation": "specific-risk",
+      "title": "Maximum specific PFA at the acceptance limit, guard band w = U",
+      "inputs": {
+        "measured_value": {
+          "value": 8,
+          "unit": "1"
+        },
+        "standard_uncertainty": {
+          "value": 1,
+          "unit": "1"
+        },
+        "tolerance_lower": {
+          "value": null,
+          "unit": "1"
+        },
+        "tolerance_upper": {
+          "value": 10,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "probability_of_nonconformity": {
+          "atMost": 0.025,
+          "unit": "1",
+          "published": "less than 2.5 %",
+          "recomputed": {
+            "value": 0.02275,
+            "tolerance": 0.0000455
+          }
+        }
+      },
+      "source": {
+        "document": "Global ACI-TECH-1-002 (G) Guidelines on Decision Rules and Statements of Conformity (formerly ILAC G8:09/2019)",
+        "publisher": "Global Accreditation Cooperation Inc. (Global ACI)",
+        "edition": "v1.0, 2026-06-26 (ILAC G8:09/2019 reissued without technical changes; section numbers shifted by +1)",
+        "url": "https://sys.global-aci.org/uploads/documents/TECH-1-002(G)_Guidelines_on_Decision_Rules_and_Statements_of_Conformity_v1_0.pdf",
+        "kind": "official",
+        "location": "§6.2, Table 1, p. 12 (ILAC G8:09/2019 §5.2, Table 1)"
+      },
+      "notes": "One-sided upper limit TU = 10, u = 1, U = 2u; the measured value sits on the acceptance limit TU − w. The source gives upper bounds; the k = 2 assumption is implicit in the table."
+    },
+    {
+      "id": "tur-risk/gaci002-table1-w-0_83U",
+      "calculator": "tur-risk",
+      "operation": "specific-risk",
+      "title": "Maximum specific PFA at the acceptance limit, guard band w = 0.83U",
+      "inputs": {
+        "measured_value": {
+          "value": 8.34,
+          "unit": "1"
+        },
+        "standard_uncertainty": {
+          "value": 1,
+          "unit": "1"
+        },
+        "tolerance_lower": {
+          "value": null,
+          "unit": "1"
+        },
+        "tolerance_upper": {
+          "value": 10,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "probability_of_nonconformity": {
+          "atMost": 0.05,
+          "unit": "1",
+          "published": "less than 5 %",
+          "recomputed": {
+            "value": 0.04846,
+            "tolerance": 0.00009692000000000001
+          }
+        }
+      },
+      "source": {
+        "document": "Global ACI-TECH-1-002 (G) Guidelines on Decision Rules and Statements of Conformity (formerly ILAC G8:09/2019)",
+        "publisher": "Global Accreditation Cooperation Inc. (Global ACI)",
+        "edition": "v1.0, 2026-06-26 (ILAC G8:09/2019 reissued without technical changes; section numbers shifted by +1)",
+        "url": "https://sys.global-aci.org/uploads/documents/TECH-1-002(G)_Guidelines_on_Decision_Rules_and_Statements_of_Conformity_v1_0.pdf",
+        "kind": "official",
+        "location": "§6.2, Table 1, p. 12 (ILAC G8:09/2019 §5.2, Table 1)"
+      },
+      "notes": "One-sided upper limit TU = 10, u = 1, U = 2u; the measured value sits on the acceptance limit TU − w. The source gives upper bounds; the k = 2 assumption is implicit in the table."
+    },
+    {
+      "id": "tur-risk/gaci002-table1-w-0U",
+      "calculator": "tur-risk",
+      "operation": "specific-risk",
+      "title": "Maximum specific PFA at the acceptance limit, guard band w = 0 (simple acceptance)",
+      "inputs": {
+        "measured_value": {
+          "value": 10,
+          "unit": "1"
+        },
+        "standard_uncertainty": {
+          "value": 1,
+          "unit": "1"
+        },
+        "tolerance_lower": {
+          "value": null,
+          "unit": "1"
+        },
+        "tolerance_upper": {
+          "value": 10,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "probability_of_nonconformity": {
+          "atMost": 0.5,
+          "unit": "1",
+          "published": "not more than 50 %",
+          "recomputed": {
+            "value": 0.5,
+            "tolerance": 0.001
+          }
+        }
+      },
+      "source": {
+        "document": "Global ACI-TECH-1-002 (G) Guidelines on Decision Rules and Statements of Conformity (formerly ILAC G8:09/2019)",
+        "publisher": "Global Accreditation Cooperation Inc. (Global ACI)",
+        "edition": "v1.0, 2026-06-26 (ILAC G8:09/2019 reissued without technical changes; section numbers shifted by +1)",
+        "url": "https://sys.global-aci.org/uploads/documents/TECH-1-002(G)_Guidelines_on_Decision_Rules_and_Statements_of_Conformity_v1_0.pdf",
+        "kind": "official",
+        "location": "§6.2, Table 1, p. 12 (ILAC G8:09/2019 §5.2, Table 1)"
+      },
+      "notes": "One-sided upper limit TU = 10, u = 1, U = 2u; the measured value sits on the acceptance limit TU − w. The source gives upper bounds; the k = 2 assumption is implicit in the table."
+    },
+    {
+      "id": "tur-risk/jcgm106-8.3.2.3-w-U",
+      "calculator": "tur-risk",
+      "operation": "specific-risk",
+      "title": "Maximum PFA with guard band w = U (ISO 14253-1 rule)",
+      "inputs": {
+        "measured_value": {
+          "value": 8,
+          "unit": "1"
+        },
+        "standard_uncertainty": {
+          "value": 1,
+          "unit": "1"
+        },
+        "tolerance_lower": {
+          "value": null,
+          "unit": "1"
+        },
+        "tolerance_upper": {
+          "value": 10,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "probability_of_nonconformity": {
+          "value": 0.023,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "2.3 %",
+          "recomputed": {
+            "value": 0.02275,
+            "tolerance": 0.00001
+          }
+        }
+      },
+      "source": {
+        "document": "JCGM 106:2012 Evaluation of measurement data – The role of measurement uncertainty in conformity assessment (also ISO/IEC Guide 98-4:2012)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2012, 1st edition",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_106_2012_E.pdf",
+        "kind": "official",
+        "location": "§8.3.2.3, p. 22"
+      },
+      "notes": "Measured value on the acceptance limit TU − U, with U = 2u."
+    },
+    {
+      "id": "tur-risk/jcgm106-7.7.5-cm1",
+      "calculator": "tur-risk",
+      "operation": "conformity-interval",
+      "title": "With Cm = 1, the measured values that give at least 95 % probability of conformity",
+      "inputs": {
+        "tolerance_lower": {
+          "value": 0,
+          "unit": "1"
+        },
+        "tolerance_upper": {
+          "value": 1,
+          "unit": "1"
+        },
+        "standard_uncertainty": {
+          "value": 0.25,
+          "unit": "1"
+        },
+        "min_probability": {
+          "value": 0.95,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "lowest_measured_value": {
+          "value": 0.45,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "0.45",
+          "recomputed": {
+            "value": 0.4491,
+            "tolerance": 0.0001
+          }
+        },
+        "highest_measured_value": {
+          "value": 0.55,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "0.55",
+          "recomputed": {
+            "value": 0.5509,
+            "tolerance": 0.0001
+          }
+        }
+      },
+      "source": {
+        "document": "JCGM 106:2012 Evaluation of measurement data – The role of measurement uncertainty in conformity assessment (also ISO/IEC Guide 98-4:2012)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2012, 1st edition",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_106_2012_E.pdf",
+        "kind": "official",
+        "location": "§7.7.5, p. 19"
+      },
+      "notes": "Tolerance normalized to [0, 1]; Cm = 1 means u = T/4."
+    },
+    {
+      "id": "tur-risk/jcgm106-8.3.3-radar",
+      "calculator": "tur-risk",
+      "operation": "guarded-rejection-relative",
+      "title": "Speed radar: guarded rejection at 99.9 %",
+      "inputs": {
+        "limit": {
+          "value": 100,
+          "unit": "km/h"
+        },
+        "relative_standard_uncertainty": {
+          "value": 0.02,
+          "unit": "1"
+        },
+        "probability": {
+          "value": 0.999,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "z": {
+          "value": 3.09,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "3.09",
+          "recomputed": {
+            "value": 3.0902,
+            "tolerance": 0.0001
+          }
+        },
+        "rejection_threshold": {
+          "value": 107,
+          "unit": "km/h",
+          "tolerance": 0.5,
+          "published": "107 km/h",
+          "recomputed": {
+            "value": 106.59,
+            "tolerance": 0.01
+          }
+        }
+      },
+      "source": {
+        "document": "JCGM 106:2012 Evaluation of measurement data – The role of measurement uncertainty in conformity assessment (also ISO/IEC Guide 98-4:2012)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2012, 1st edition",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_106_2012_E.pdf",
+        "kind": "official",
+        "location": "§8.3.3, Example 1, pp. 22–23"
+      },
+      "notes": "Also quoted in Global ACI-TECH-1-002 §6.1 and UKAS LAB 48 Example 11."
+    },
+    {
+      "id": "tur-risk/nasa4-table5-4-r0.1pct",
+      "calculator": "tur-risk",
+      "operation": "acceptance-limit-for-specific-risk",
+      "title": "Confidence-level guard band, maximum specific risk 0.1 %",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -10,
+          "unit": "mV"
+        },
+        "tolerance_upper": {
+          "value": 10,
+          "unit": "mV"
+        },
+        "standard_uncertainty": {
+          "value": 1.2755,
+          "unit": "mV"
+        },
+        "max_specific_risk": {
+          "value": 0.001,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "acceptance_limit": {
+          "value": 6.0584,
+          "unit": "mV",
+          "tolerance": 0.0002,
+          "published": "±6.0584 mV"
+        }
+      },
+      "source": {
+        "document": "NASA-HDBK-8739.19-4 Estimation and Evaluation of Measurement Decision Risk (Measurement Quality Assurance Handbook, Annex 4)",
+        "publisher": "NASA",
+        "edition": "Baseline, 2010-07-13",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/nasa-hdbk-873919-4.pdf",
+        "kind": "official",
+        "location": "Table 5-4, p. 65"
+      },
+      "notes": "u = 1.2755 mV comes from U95 = 2.5 mV with k = 1.96 (TUR 4:1). Tolerance 2e-4 mV allows for the rounding of u."
+    },
+    {
+      "id": "tur-risk/nasa4-table5-4-r0.5pct",
+      "calculator": "tur-risk",
+      "operation": "acceptance-limit-for-specific-risk",
+      "title": "Confidence-level guard band, maximum specific risk 0.5 %",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -10,
+          "unit": "mV"
+        },
+        "tolerance_upper": {
+          "value": 10,
+          "unit": "mV"
+        },
+        "standard_uncertainty": {
+          "value": 1.2755,
+          "unit": "mV"
+        },
+        "max_specific_risk": {
+          "value": 0.005,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "acceptance_limit": {
+          "value": 6.7145,
+          "unit": "mV",
+          "tolerance": 0.0002,
+          "published": "±6.7145 mV"
+        }
+      },
+      "source": {
+        "document": "NASA-HDBK-8739.19-4 Estimation and Evaluation of Measurement Decision Risk (Measurement Quality Assurance Handbook, Annex 4)",
+        "publisher": "NASA",
+        "edition": "Baseline, 2010-07-13",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/nasa-hdbk-873919-4.pdf",
+        "kind": "official",
+        "location": "Table 5-4, p. 65"
+      },
+      "notes": "u = 1.2755 mV comes from U95 = 2.5 mV with k = 1.96 (TUR 4:1). Tolerance 2e-4 mV allows for the rounding of u."
+    },
+    {
+      "id": "tur-risk/nasa4-table5-4-r1pct",
+      "calculator": "tur-risk",
+      "operation": "acceptance-limit-for-specific-risk",
+      "title": "Confidence-level guard band, maximum specific risk 1 %",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -10,
+          "unit": "mV"
+        },
+        "tolerance_upper": {
+          "value": 10,
+          "unit": "mV"
+        },
+        "standard_uncertainty": {
+          "value": 1.2755,
+          "unit": "mV"
+        },
+        "max_specific_risk": {
+          "value": 0.01,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "acceptance_limit": {
+          "value": 7.0327,
+          "unit": "mV",
+          "tolerance": 0.0002,
+          "published": "±7.0327 mV"
+        }
+      },
+      "source": {
+        "document": "NASA-HDBK-8739.19-4 Estimation and Evaluation of Measurement Decision Risk (Measurement Quality Assurance Handbook, Annex 4)",
+        "publisher": "NASA",
+        "edition": "Baseline, 2010-07-13",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/nasa-hdbk-873919-4.pdf",
+        "kind": "official",
+        "location": "Table 5-4, p. 65"
+      },
+      "notes": "u = 1.2755 mV comes from U95 = 2.5 mV with k = 1.96 (TUR 4:1). Tolerance 2e-4 mV allows for the rounding of u."
+    },
+    {
+      "id": "tur-risk/nasa4-table5-4-r2pct",
+      "calculator": "tur-risk",
+      "operation": "acceptance-limit-for-specific-risk",
+      "title": "Confidence-level guard band, maximum specific risk 2 %",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -10,
+          "unit": "mV"
+        },
+        "tolerance_upper": {
+          "value": 10,
+          "unit": "mV"
+        },
+        "standard_uncertainty": {
+          "value": 1.2755,
+          "unit": "mV"
+        },
+        "max_specific_risk": {
+          "value": 0.02,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "acceptance_limit": {
+          "value": 7.3804,
+          "unit": "mV",
+          "tolerance": 0.0002,
+          "published": "±7.3804 mV"
+        }
+      },
+      "source": {
+        "document": "NASA-HDBK-8739.19-4 Estimation and Evaluation of Measurement Decision Risk (Measurement Quality Assurance Handbook, Annex 4)",
+        "publisher": "NASA",
+        "edition": "Baseline, 2010-07-13",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/nasa-hdbk-873919-4.pdf",
+        "kind": "official",
+        "location": "Table 5-4, p. 65"
+      },
+      "notes": "u = 1.2755 mV comes from U95 = 2.5 mV with k = 1.96 (TUR 4:1). Tolerance 2e-4 mV allows for the rounding of u."
+    },
+    {
+      "id": "tur-risk/nasa4-table5-4-r3pct",
+      "calculator": "tur-risk",
+      "operation": "acceptance-limit-for-specific-risk",
+      "title": "Confidence-level guard band, maximum specific risk 3 %",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -10,
+          "unit": "mV"
+        },
+        "tolerance_upper": {
+          "value": 10,
+          "unit": "mV"
+        },
+        "standard_uncertainty": {
+          "value": 1.2755,
+          "unit": "mV"
+        },
+        "max_specific_risk": {
+          "value": 0.03,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "acceptance_limit": {
+          "value": 7.601,
+          "unit": "mV",
+          "tolerance": 0.0002,
+          "published": "±7.6010 mV"
+        }
+      },
+      "source": {
+        "document": "NASA-HDBK-8739.19-4 Estimation and Evaluation of Measurement Decision Risk (Measurement Quality Assurance Handbook, Annex 4)",
+        "publisher": "NASA",
+        "edition": "Baseline, 2010-07-13",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/nasa-hdbk-873919-4.pdf",
+        "kind": "official",
+        "location": "Table 5-4, p. 65"
+      },
+      "notes": "u = 1.2755 mV comes from U95 = 2.5 mV with k = 1.96 (TUR 4:1). Tolerance 2e-4 mV allows for the rounding of u."
+    },
+    {
+      "id": "tur-risk/nasa4-table5-4-r4pct",
+      "calculator": "tur-risk",
+      "operation": "acceptance-limit-for-specific-risk",
+      "title": "Confidence-level guard band, maximum specific risk 4 %",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -10,
+          "unit": "mV"
+        },
+        "tolerance_upper": {
+          "value": 10,
+          "unit": "mV"
+        },
+        "standard_uncertainty": {
+          "value": 1.2755,
+          "unit": "mV"
+        },
+        "max_specific_risk": {
+          "value": 0.04,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "acceptance_limit": {
+          "value": 7.767,
+          "unit": "mV",
+          "tolerance": 0.0002,
+          "published": "±7.7670 mV"
+        }
+      },
+      "source": {
+        "document": "NASA-HDBK-8739.19-4 Estimation and Evaluation of Measurement Decision Risk (Measurement Quality Assurance Handbook, Annex 4)",
+        "publisher": "NASA",
+        "edition": "Baseline, 2010-07-13",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/nasa-hdbk-873919-4.pdf",
+        "kind": "official",
+        "location": "Table 5-4, p. 65"
+      },
+      "notes": "u = 1.2755 mV comes from U95 = 2.5 mV with k = 1.96 (TUR 4:1). Tolerance 2e-4 mV allows for the rounding of u."
+    },
+    {
+      "id": "tur-risk/nasa4-table5-4-r5pct",
+      "calculator": "tur-risk",
+      "operation": "acceptance-limit-for-specific-risk",
+      "title": "Confidence-level guard band, maximum specific risk 5 %",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -10,
+          "unit": "mV"
+        },
+        "tolerance_upper": {
+          "value": 10,
+          "unit": "mV"
+        },
+        "standard_uncertainty": {
+          "value": 1.2755,
+          "unit": "mV"
+        },
+        "max_specific_risk": {
+          "value": 0.05,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "acceptance_limit": {
+          "value": 7.902,
+          "unit": "mV",
+          "tolerance": 0.0002,
+          "published": "±7.9020 mV"
+        }
+      },
+      "source": {
+        "document": "NASA-HDBK-8739.19-4 Estimation and Evaluation of Measurement Decision Risk (Measurement Quality Assurance Handbook, Annex 4)",
+        "publisher": "NASA",
+        "edition": "Baseline, 2010-07-13",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/nasa-hdbk-873919-4.pdf",
+        "kind": "official",
+        "location": "Table 5-4, p. 65"
+      },
+      "notes": "u = 1.2755 mV comes from U95 = 2.5 mV with k = 1.96 (TUR 4:1). Tolerance 2e-4 mV allows for the rounding of u."
+    },
+    {
+      "id": "tur-risk/nasa4-sigma-from-eopr-10",
+      "calculator": "tur-risk",
+      "operation": "sigma-from-eopr",
+      "title": "Process standard deviation from EOPR 95 %, limit ±10",
+      "inputs": {
+        "tolerance_limit": {
+          "value": 10,
+          "unit": "mV"
+        },
+        "eopr": {
+          "value": 0.95,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "process_sd": {
+          "value": 5.1021,
+          "unit": "mV",
+          "tolerance": 0.00005,
+          "published": "5.1021 mV"
+        }
+      },
+      "source": {
+        "document": "NASA-HDBK-8739.19-4 Estimation and Evaluation of Measurement Decision Risk (Measurement Quality Assurance Handbook, Annex 4)",
+        "publisher": "NASA",
+        "edition": "Baseline, 2010-07-13",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/nasa-hdbk-873919-4.pdf",
+        "kind": "official",
+        "location": "§5 examples (Tables 5-3 and 5-4 inputs)"
+      }
+    },
+    {
+      "id": "tur-risk/nasa4-sigma-from-eopr-100",
+      "calculator": "tur-risk",
+      "operation": "sigma-from-eopr",
+      "title": "Process standard deviation from EOPR 95 %, limit ±100",
+      "inputs": {
+        "tolerance_limit": {
+          "value": 100,
+          "unit": "µm"
+        },
+        "eopr": {
+          "value": 0.95,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "process_sd": {
+          "value": 51.0214,
+          "unit": "µm",
+          "tolerance": 0.0001,
+          "published": "51.0214 µm"
+        }
+      },
+      "source": {
+        "document": "NASA-HDBK-8739.19-4 Estimation and Evaluation of Measurement Decision Risk (Measurement Quality Assurance Handbook, Annex 4)",
+        "publisher": "NASA",
+        "edition": "Baseline, 2010-07-13",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/nasa-hdbk-873919-4.pdf",
+        "kind": "official",
+        "location": "Table 5-1 inputs, p. 59"
+      },
+      "notes": "The exact value is 51.02135; the source prints 51.0214, hence a tolerance of 1e-4."
+    },
+    {
+      "id": "tur-risk/jcgm106-9.5.3-resistors",
+      "calculator": "tur-risk",
+      "operation": "global-risk",
+      "title": "Global consumer and producer risk, precision resistors with guard band",
+      "inputs": {
+        "tolerance_lower": {
+          "value": 1499.8,
+          "unit": "Ω"
+        },
+        "tolerance_upper": {
+          "value": 1500.2,
+          "unit": "Ω"
+        },
+        "standard_uncertainty": {
+          "value": 0.04,
+          "unit": "Ω"
+        },
+        "process_mean": {
+          "value": 1500,
+          "unit": "Ω"
+        },
+        "process_sd": {
+          "value": 0.12,
+          "unit": "Ω"
+        },
+        "acceptance_lower": {
+          "value": 1499.82,
+          "unit": "Ω"
+        },
+        "acceptance_upper": {
+          "value": 1500.18,
+          "unit": "Ω"
+        }
+      },
+      "expected": {
+        "probability_in_tolerance": {
+          "value": 0.9,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "0.90",
+          "recomputed": {
+            "value": 0.90442,
+            "tolerance": 0.00005
+          }
+        },
+        "pfa": {
+          "value": 0.01,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "1 %",
+          "recomputed": {
+            "value": 0.00988,
+            "tolerance": 0.00005
+          }
+        },
+        "pfr": {
+          "value": 0.07,
+          "unit": "1",
+          "tolerance": 0.005,
+          "published": "7 %",
+          "recomputed": {
+            "value": 0.06903,
+            "tolerance": 0.00005
+          }
+        }
+      },
+      "source": {
+        "document": "JCGM 106:2012 Evaluation of measurement data – The role of measurement uncertainty in conformity assessment (also ISO/IEC Guide 98-4:2012)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2012, 1st edition",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_106_2012_E.pdf",
+        "kind": "official",
+        "location": "§9.5.3, pp. 27–28"
+      }
+    },
+    {
+      "id": "tur-risk/jcgm106-9.5.6-cm2",
+      "calculator": "tur-risk",
+      "operation": "global-risk",
+      "title": "Global risks with Cm = 2, process u0 = T/6, simple acceptance",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -1,
+          "unit": "1"
+        },
+        "tolerance_upper": {
+          "value": 1,
+          "unit": "1"
+        },
+        "standard_uncertainty": {
+          "value": 0.25,
+          "unit": "1"
+        },
+        "process_mean": {
+          "value": 0,
+          "unit": "1"
+        },
+        "process_sd": {
+          "value": 0.3333333333333333,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "pfa": {
+          "value": 0.001,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "about 0.1 %",
+          "recomputed": {
+            "value": 0.000982,
+            "tolerance": 0.000003
+          }
+        },
+        "pfr": {
+          "value": 0.015,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "about 1.5 %",
+          "recomputed": {
+            "value": 0.01468,
+            "tolerance": 0.00003
+          }
+        }
+      },
+      "source": {
+        "document": "JCGM 106:2012 Evaluation of measurement data – The role of measurement uncertainty in conformity assessment (also ISO/IEC Guide 98-4:2012)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2012, 1st edition",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_106_2012_E.pdf",
+        "kind": "official",
+        "location": "§9.5.6 and Figure 17, pp. 32–33"
+      },
+      "notes": "Tolerance normalized to ±1 (T = 2); u = T/(4·Cm)."
+    },
+    {
+      "id": "tur-risk/jcgm106-9.5.6-cm10",
+      "calculator": "tur-risk",
+      "operation": "global-risk",
+      "title": "Global risks with Cm = 10, process u0 = T/6, simple acceptance",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -1,
+          "unit": "1"
+        },
+        "tolerance_upper": {
+          "value": 1,
+          "unit": "1"
+        },
+        "standard_uncertainty": {
+          "value": 0.05,
+          "unit": "1"
+        },
+        "process_mean": {
+          "value": 0,
+          "unit": "1"
+        },
+        "process_sd": {
+          "value": 0.3333333333333333,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "pfa": {
+          "value": 0.0004,
+          "unit": "1",
+          "tolerance": 0.00005,
+          "published": "about 0.04 %",
+          "recomputed": {
+            "value": 0.000408,
+            "tolerance": 0.000003
+          }
+        },
+        "pfr": {
+          "value": 0.0007,
+          "unit": "1",
+          "tolerance": 0.00005,
+          "published": "about 0.07 %",
+          "recomputed": {
+            "value": 0.000717,
+            "tolerance": 0.00003
+          }
+        }
+      },
+      "source": {
+        "document": "JCGM 106:2012 Evaluation of measurement data – The role of measurement uncertainty in conformity assessment (also ISO/IEC Guide 98-4:2012)",
+        "publisher": "JCGM / BIPM",
+        "edition": "2012, 1st edition",
+        "url": "https://www.bipm.org/documents/20126/2071204/JCGM_106_2012_E.pdf",
+        "kind": "official",
+        "location": "§9.5.6 and Figure 17, pp. 32–33"
+      },
+      "notes": "Tolerance normalized to ±1 (T = 2); u = T/(4·Cm)."
+    },
+    {
+      "id": "tur-risk/nasa4-table5-1-ucal-5.1021",
+      "calculator": "tur-risk",
+      "operation": "acceptance-limit-for-global-pfa",
+      "title": "Guard band for 1 % UFAR, u_cal = 5.1021 µm",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -100,
+          "unit": "µm"
+        },
+        "tolerance_upper": {
+          "value": 100,
+          "unit": "µm"
+        },
+        "standard_uncertainty": {
+          "value": 5.1021,
+          "unit": "µm"
+        },
+        "process_mean": {
+          "value": 0,
+          "unit": "µm"
+        },
+        "eopr": {
+          "value": 0.95,
+          "unit": "1"
+        },
+        "target_pfa": {
+          "value": 0.01,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "acceptance_ratio": {
+          "value": 1.0464835,
+          "unit": "1",
+          "tolerance": 0.00002,
+          "published": "1.0464835"
+        },
+        "pfr": {
+          "value": 0.001262,
+          "unit": "1",
+          "tolerance": 0.00002,
+          "published": "0.1262 %"
+        }
+      },
+      "source": {
+        "document": "NASA-HDBK-8739.19-4 Estimation and Evaluation of Measurement Decision Risk (Measurement Quality Assurance Handbook, Annex 4)",
+        "publisher": "NASA",
+        "edition": "Baseline, 2010-07-13",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/nasa-hdbk-873919-4.pdf",
+        "kind": "official",
+        "location": "Table 5-1, pp. 59–60"
+      },
+      "notes": "acceptance_ratio = A/L; values above 1 are negative guard bands. The uncertainty ratio in the source table is u_UUT/u_cal, not the TUR."
+    },
+    {
+      "id": "tur-risk/nasa4-table5-1-ucal-10.2043",
+      "calculator": "tur-risk",
+      "operation": "acceptance-limit-for-global-pfa",
+      "title": "Guard band for 1 % UFAR, u_cal = 10.2043 µm",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -100,
+          "unit": "µm"
+        },
+        "tolerance_upper": {
+          "value": 100,
+          "unit": "µm"
+        },
+        "standard_uncertainty": {
+          "value": 10.2043,
+          "unit": "µm"
+        },
+        "process_mean": {
+          "value": 0,
+          "unit": "µm"
+        },
+        "eopr": {
+          "value": 0.95,
+          "unit": "1"
+        },
+        "target_pfa": {
+          "value": 0.01,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "acceptance_ratio": {
+          "value": 1.0285771,
+          "unit": "1",
+          "tolerance": 0.00002,
+          "published": "1.0285771"
+        },
+        "pfr": {
+          "value": 0.008061,
+          "unit": "1",
+          "tolerance": 0.00002,
+          "published": "0.8061 %"
+        }
+      },
+      "source": {
+        "document": "NASA-HDBK-8739.19-4 Estimation and Evaluation of Measurement Decision Risk (Measurement Quality Assurance Handbook, Annex 4)",
+        "publisher": "NASA",
+        "edition": "Baseline, 2010-07-13",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/nasa-hdbk-873919-4.pdf",
+        "kind": "official",
+        "location": "Table 5-1, pp. 59–60"
+      },
+      "notes": "acceptance_ratio = A/L; values above 1 are negative guard bands. The uncertainty ratio in the source table is u_UUT/u_cal, not the TUR."
+    },
+    {
+      "id": "tur-risk/nasa4-table5-1-ucal-25.5107",
+      "calculator": "tur-risk",
+      "operation": "acceptance-limit-for-global-pfa",
+      "title": "Guard band for 1 % UFAR, u_cal = 25.5107 µm",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -100,
+          "unit": "µm"
+        },
+        "tolerance_upper": {
+          "value": 100,
+          "unit": "µm"
+        },
+        "standard_uncertainty": {
+          "value": 25.5107,
+          "unit": "µm"
+        },
+        "process_mean": {
+          "value": 0,
+          "unit": "µm"
+        },
+        "eopr": {
+          "value": 0.95,
+          "unit": "1"
+        },
+        "target_pfa": {
+          "value": 0.01,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "acceptance_ratio": {
+          "value": 0.9339747,
+          "unit": "1",
+          "tolerance": 0.00002,
+          "published": "0.9339747"
+        },
+        "pfr": {
+          "value": 0.061568,
+          "unit": "1",
+          "tolerance": 0.00002,
+          "published": "6.1568 %"
+        }
+      },
+      "source": {
+        "document": "NASA-HDBK-8739.19-4 Estimation and Evaluation of Measurement Decision Risk (Measurement Quality Assurance Handbook, Annex 4)",
+        "publisher": "NASA",
+        "edition": "Baseline, 2010-07-13",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/nasa-hdbk-873919-4.pdf",
+        "kind": "official",
+        "location": "Table 5-1, pp. 59–60"
+      },
+      "notes": "acceptance_ratio = A/L; values above 1 are negative guard bands. The uncertainty ratio in the source table is u_UUT/u_cal, not the TUR."
+    },
+    {
+      "id": "tur-risk/nasa4-table5-1-ucal-51.0214",
+      "calculator": "tur-risk",
+      "operation": "acceptance-limit-for-global-pfa",
+      "title": "Guard band for 1 % UFAR, u_cal = 51.0214 µm",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -100,
+          "unit": "µm"
+        },
+        "tolerance_upper": {
+          "value": 100,
+          "unit": "µm"
+        },
+        "standard_uncertainty": {
+          "value": 51.0214,
+          "unit": "µm"
+        },
+        "process_mean": {
+          "value": 0,
+          "unit": "µm"
+        },
+        "eopr": {
+          "value": 0.95,
+          "unit": "1"
+        },
+        "target_pfa": {
+          "value": 0.01,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "acceptance_ratio": {
+          "value": 0.7391005,
+          "unit": "1",
+          "tolerance": 0.00002,
+          "published": "0.7391005"
+        },
+        "pfr": {
+          "value": 0.265683,
+          "unit": "1",
+          "tolerance": 0.00002,
+          "published": "26.5683 %"
+        }
+      },
+      "source": {
+        "document": "NASA-HDBK-8739.19-4 Estimation and Evaluation of Measurement Decision Risk (Measurement Quality Assurance Handbook, Annex 4)",
+        "publisher": "NASA",
+        "edition": "Baseline, 2010-07-13",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/nasa-hdbk-873919-4.pdf",
+        "kind": "official",
+        "location": "Table 5-1, pp. 59–60"
+      },
+      "notes": "acceptance_ratio = A/L; values above 1 are negative guard bands. The uncertainty ratio in the source table is u_UUT/u_cal, not the TUR."
+    },
+    {
+      "id": "tur-risk/nasa4-table5-2-ucal-0.5102",
+      "calculator": "tur-risk",
+      "operation": "global-risk",
+      "title": "False reject rate with fixed guard band A = L − 2·u_cal, u_cal = 0.5102 µm",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -100,
+          "unit": "µm"
+        },
+        "tolerance_upper": {
+          "value": 100,
+          "unit": "µm"
+        },
+        "standard_uncertainty": {
+          "value": 0.5102,
+          "unit": "µm"
+        },
+        "process_mean": {
+          "value": 0,
+          "unit": "µm"
+        },
+        "eopr": {
+          "value": 0.95,
+          "unit": "1"
+        },
+        "acceptance_lower": {
+          "value": -98.9796,
+          "unit": "µm"
+        },
+        "acceptance_upper": {
+          "value": 98.9796,
+          "unit": "µm"
+        }
+      },
+      "expected": {
+        "pfr": {
+          "value": 0.002406,
+          "unit": "1",
+          "tolerance": 0.00002,
+          "published": "0.2406 %"
+        }
+      },
+      "source": {
+        "document": "NASA-HDBK-8739.19-4 Estimation and Evaluation of Measurement Decision Risk (Measurement Quality Assurance Handbook, Annex 4)",
+        "publisher": "NASA",
+        "edition": "Baseline, 2010-07-13",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/nasa-hdbk-873919-4.pdf",
+        "kind": "official",
+        "location": "Table 5-2, p. 60"
+      },
+      "notes": "Only the false reject column is used. The false accept column of this table could not be reproduced (it is not monotonic and appears to contain editing errors)."
+    },
+    {
+      "id": "tur-risk/nasa4-table5-2-ucal-5.1021",
+      "calculator": "tur-risk",
+      "operation": "global-risk",
+      "title": "False reject rate with fixed guard band A = L − 2·u_cal, u_cal = 5.1021 µm",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -100,
+          "unit": "µm"
+        },
+        "tolerance_upper": {
+          "value": 100,
+          "unit": "µm"
+        },
+        "standard_uncertainty": {
+          "value": 5.1021,
+          "unit": "µm"
+        },
+        "process_mean": {
+          "value": 0,
+          "unit": "µm"
+        },
+        "eopr": {
+          "value": 0.95,
+          "unit": "1"
+        },
+        "acceptance_lower": {
+          "value": -89.7958,
+          "unit": "µm"
+        },
+        "acceptance_upper": {
+          "value": 89.7958,
+          "unit": "µm"
+        }
+      },
+      "expected": {
+        "pfr": {
+          "value": 0.03,
+          "unit": "1",
+          "tolerance": 0.00002,
+          "published": "3.0000 %"
+        }
+      },
+      "source": {
+        "document": "NASA-HDBK-8739.19-4 Estimation and Evaluation of Measurement Decision Risk (Measurement Quality Assurance Handbook, Annex 4)",
+        "publisher": "NASA",
+        "edition": "Baseline, 2010-07-13",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/nasa-hdbk-873919-4.pdf",
+        "kind": "official",
+        "location": "Table 5-2, p. 60"
+      },
+      "notes": "Only the false reject column is used. The false accept column of this table could not be reproduced (it is not monotonic and appears to contain editing errors)."
+    },
+    {
+      "id": "tur-risk/nasa4-table5-2-ucal-10.2043",
+      "calculator": "tur-risk",
+      "operation": "global-risk",
+      "title": "False reject rate with fixed guard band A = L − 2·u_cal, u_cal = 10.2043 µm",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -100,
+          "unit": "µm"
+        },
+        "tolerance_upper": {
+          "value": 100,
+          "unit": "µm"
+        },
+        "standard_uncertainty": {
+          "value": 10.2043,
+          "unit": "µm"
+        },
+        "process_mean": {
+          "value": 0,
+          "unit": "µm"
+        },
+        "eopr": {
+          "value": 0.95,
+          "unit": "1"
+        },
+        "acceptance_lower": {
+          "value": -79.5914,
+          "unit": "µm"
+        },
+        "acceptance_upper": {
+          "value": 79.5914,
+          "unit": "µm"
+        }
+      },
+      "expected": {
+        "pfr": {
+          "value": 0.076273,
+          "unit": "1",
+          "tolerance": 0.00002,
+          "published": "7.6273 %"
+        }
+      },
+      "source": {
+        "document": "NASA-HDBK-8739.19-4 Estimation and Evaluation of Measurement Decision Risk (Measurement Quality Assurance Handbook, Annex 4)",
+        "publisher": "NASA",
+        "edition": "Baseline, 2010-07-13",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/nasa-hdbk-873919-4.pdf",
+        "kind": "official",
+        "location": "Table 5-2, p. 60"
+      },
+      "notes": "Only the false reject column is used. The false accept column of this table could not be reproduced (it is not monotonic and appears to contain editing errors)."
+    },
+    {
+      "id": "tur-risk/nasa4-table5-2-ucal-25.5107",
+      "calculator": "tur-risk",
+      "operation": "global-risk",
+      "title": "False reject rate with fixed guard band A = L − 2·u_cal, u_cal = 25.5107 µm",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -100,
+          "unit": "µm"
+        },
+        "tolerance_upper": {
+          "value": 100,
+          "unit": "µm"
+        },
+        "standard_uncertainty": {
+          "value": 25.5107,
+          "unit": "µm"
+        },
+        "process_mean": {
+          "value": 0,
+          "unit": "µm"
+        },
+        "eopr": {
+          "value": 0.95,
+          "unit": "1"
+        },
+        "acceptance_lower": {
+          "value": -48.9786,
+          "unit": "µm"
+        },
+        "acceptance_upper": {
+          "value": 48.9786,
+          "unit": "µm"
+        }
+      },
+      "expected": {
+        "pfr": {
+          "value": 0.340917,
+          "unit": "1",
+          "tolerance": 0.00002,
+          "published": "34.0917 %"
+        }
+      },
+      "source": {
+        "document": "NASA-HDBK-8739.19-4 Estimation and Evaluation of Measurement Decision Risk (Measurement Quality Assurance Handbook, Annex 4)",
+        "publisher": "NASA",
+        "edition": "Baseline, 2010-07-13",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/nasa-hdbk-873919-4.pdf",
+        "kind": "official",
+        "location": "Table 5-2, p. 60"
+      },
+      "notes": "Only the false reject column is used. The false accept column of this table could not be reproduced (it is not monotonic and appears to contain editing errors)."
+    },
+    {
+      "id": "tur-risk/nasa4-appB-ufar-cfar",
+      "calculator": "tur-risk",
+      "operation": "uncertainty-for-global-pfa",
+      "title": "UFAR versus CFAR: 75 % in tolerance, UFAR 6 %, no guard band",
+      "inputs": {
+        "tolerance_upper": {
+          "value": 1,
+          "unit": "1"
+        },
+        "probability_in_tolerance": {
+          "value": 0.75,
+          "unit": "1"
+        },
+        "target_pfa": {
+          "value": 0.06,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "probability_accept": {
+          "value": 0.687,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "0.687"
+        },
+        "pfr": {
+          "value": 0.123,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "0.123"
+        },
+        "cfar": {
+          "value": 0.087,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "8.7 %"
+        }
+      },
+      "source": {
+        "document": "NASA-HDBK-8739.19-4 Estimation and Evaluation of Measurement Decision Risk (Measurement Quality Assurance Handbook, Annex 4)",
+        "publisher": "NASA",
+        "edition": "Baseline, 2010-07-13",
+        "url": "https://standards.nasa.gov/sites/default/files/standards/NASA/Baseline/0/nasa-hdbk-873919-4.pdf",
+        "kind": "official",
+        "location": "Appendix B, §B.3.2–B.3.4, pp. 112–114"
+      },
+      "notes": "The source fixes the probabilities, not u; the operation finds u (normalized tolerance ±1) that gives UFAR = 6 %, then computes the rest."
+    },
+    {
+      "id": "tur-risk/mimbs2007-vernier-eopr-973",
+      "calculator": "tur-risk",
+      "operation": "global-risk",
+      "title": "Global PFA of the vernier micrometer at EOPR 97.3 %",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -0.0001,
+          "unit": "in"
+        },
+        "tolerance_upper": {
+          "value": 0.0001,
+          "unit": "in"
+        },
+        "standard_uncertainty": {
+          "value": 0.0000326,
+          "unit": "in"
+        },
+        "process_mean": {
+          "value": 0,
+          "unit": "in"
+        },
+        "eopr": {
+          "value": 0.973,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "pfa": {
+          "value": 0.009,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "0.9 %"
+        }
+      },
+      "source": {
+        "document": "Mimbs, S. M., Measurement Decision Risk – The Importance of Definitions, NCSL International Workshop & Symposium (KSC-2007-096)",
+        "publisher": "NASA Kennedy Space Center (NTRS 20130011498)",
+        "edition": "2007",
+        "url": "https://ntrs.nasa.gov/citations/20130011498",
+        "kind": "secondary",
+        "note": "Conference paper by a NASA author, with worked examples.",
+        "location": "pp. 11–12"
+      },
+      "notes": "TUR is only 1.5:1, yet the PFA stays below 2 % because the EOPR is high."
+    },
+    {
+      "id": "tur-risk/mimbs2007-vernier-eopr-960",
+      "calculator": "tur-risk",
+      "operation": "global-risk",
+      "title": "Global PFA of the vernier micrometer at EOPR 96 %",
+      "inputs": {
+        "tolerance_lower": {
+          "value": -0.0001,
+          "unit": "in"
+        },
+        "tolerance_upper": {
+          "value": 0.0001,
+          "unit": "in"
+        },
+        "standard_uncertainty": {
+          "value": 0.0000326,
+          "unit": "in"
+        },
+        "process_mean": {
+          "value": 0,
+          "unit": "in"
+        },
+        "eopr": {
+          "value": 0.96,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "pfa": {
+          "value": 0.013,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "about 1.3 %"
+        }
+      },
+      "source": {
+        "document": "Mimbs, S. M., Measurement Decision Risk – The Importance of Definitions, NCSL International Workshop & Symposium (KSC-2007-096)",
+        "publisher": "NASA Kennedy Space Center (NTRS 20130011498)",
+        "edition": "2007",
+        "url": "https://ntrs.nasa.gov/citations/20130011498",
+        "kind": "secondary",
+        "note": "Conference paper by a NASA author, with worked examples.",
+        "location": "pp. 11–12"
+      },
+      "notes": "TUR is only 1.5:1, yet the PFA stays below 2 % because the EOPR is high."
+    },
+    {
+      "id": "tur-risk/mimbs2007-fig3-tur4",
+      "calculator": "tur-risk",
+      "operation": "eopr-for-global-pfa",
+      "title": "EOPR at which PFA = 2 % with TUR 4:1",
+      "inputs": {
+        "tur": {
+          "value": 4,
+          "unit": "1"
+        },
+        "coverage_factor": {
+          "value": 2,
+          "unit": "1"
+        },
+        "target_pfa": {
+          "value": 0.02,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "eopr": {
+          "value": 0.792,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "79.2 %"
+        }
+      },
+      "source": {
+        "document": "Mimbs, S. M., Measurement Decision Risk – The Importance of Definitions, NCSL International Workshop & Symposium (KSC-2007-096)",
+        "publisher": "NASA Kennedy Space Center (NTRS 20130011498)",
+        "edition": "2007",
+        "url": "https://ntrs.nasa.gov/citations/20130011498",
+        "kind": "secondary",
+        "note": "Conference paper by a NASA author, with worked examples.",
+        "location": "Figure 3, pp. 8–9"
+      },
+      "notes": "Values annotated on the figure; simple acceptance, centered process, u = L/(k·TUR)."
+    },
+    {
+      "id": "tur-risk/mimbs2007-fig3-tur3",
+      "calculator": "tur-risk",
+      "operation": "eopr-for-global-pfa",
+      "title": "EOPR at which PFA = 2 % with TUR 3:1",
+      "inputs": {
+        "tur": {
+          "value": 3,
+          "unit": "1"
+        },
+        "coverage_factor": {
+          "value": 2,
+          "unit": "1"
+        },
+        "target_pfa": {
+          "value": 0.02,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "eopr": {
+          "value": 0.872,
+          "unit": "1",
+          "tolerance": 0.0005,
+          "published": "87.2 %"
+        }
+      },
+      "source": {
+        "document": "Mimbs, S. M., Measurement Decision Risk – The Importance of Definitions, NCSL International Workshop & Symposium (KSC-2007-096)",
+        "publisher": "NASA Kennedy Space Center (NTRS 20130011498)",
+        "edition": "2007",
+        "url": "https://ntrs.nasa.gov/citations/20130011498",
+        "kind": "secondary",
+        "note": "Conference paper by a NASA author, with worked examples.",
+        "location": "Figure 3, pp. 8–9"
+      },
+      "notes": "Values annotated on the figure; simple acceptance, centered process, u = L/(k·TUR)."
+    },
+    {
+      "id": "tur-risk/mimbs2011-observed-eopr-89",
+      "calculator": "tur-risk",
+      "operation": "max-pfa-over-tur-observed-eopr",
+      "title": "Observed EOPR of 89 % keeps PFA at or below 2 % for any TUR",
+      "inputs": {
+        "observed_eopr": {
+          "value": 0.89,
+          "unit": "1"
+        }
+      },
+      "expected": {
+        "max_pfa": {
+          "atMost": 0.02,
+          "unit": "1",
+          "published": "PFA ≤ 2 %",
+          "recomputed": {
+            "value": 0.0195,
+            "tolerance": 0.0005
+          }
+        }
+      },
+      "source": {
+        "document": "Mimbs, S. M., Using Reliability to Meet Z540.3's 2% Rule, NCSL International Workshop & Symposium (KSC-2011-151)",
+        "publisher": "NASA Kennedy Space Center (NTRS 20110014475)",
+        "edition": "2011",
+        "url": "https://ntrs.nasa.gov/citations/20110014475",
+        "kind": "secondary",
+        "note": "Conference paper by a NASA author.",
+        "location": "pp. 1–2 and 10–11"
+      },
+      "notes": "Holds only when the observed EOPR is corrected to the true EOPR (NASA-HDBK-8739.19-4, eq. 4-17). The maximum, 1.95 %, occurs near TUR 2:1."
+    }
+  ]
+}
